@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+--small-font: 15px;
+--big-font:70px;
+--medium-font:40px;
+--icon-size: 23px;
+--white-color:white;
+--white-grey:rgb(248, 248, 248);
+}
+
+
+.light-theme{
+--white-color:white;
+--black-color:black;
+--red-color:#FF5959;
+--dark-red-color: #dc3535;
+--white-grey:rgb(248, 248, 248);
+
+}
+
+
+.dark-theme{
+--white-color:black;
+--black-color:white;
+--red-color:#FF5959;
+--dark-red-color: #dc3535;
+--white-grey:rgb(13, 12, 12);
+
+}
+
+
+body{
+    background-color: var(--white-color);
+}
+
+a, li{
+    text-decoration: none;
+    list-style: none;
+    color: var(--black-color);
+}
+
+.dashboard_head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8vw 8vw 2vw 8vw;
+    text-align: left;
+    align-items: center;
+}
+
+.dashboard_head .das_left {
+    color: var(--black-color);
+}
+
+.das_left img {
+    border-radius: 50%;
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.das_left p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.das_left h2 {
+    font-weight: 600;
+    width: 450px;
+    font-size: 40px;
+    line-height: 45px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.das_left button {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.das_left button i {
+    margin-right: 4px;
+    font-size: 15px;
+}
+
+.das_left .das_btn1 {
+    background-color: #fff;
+    border: 1px solid rgb(190, 190, 190);
+    margin-right: 15px;
+}
+
+.das_left .das_btn2 {
+    background-color: #FF5959;
+    color: #fff;
+}
+
+.das_right div {
+    background: #FF4F5A;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 25%;
+    height: 60%;
+}
+
+.das_right img {
+    position: relative;
+    width: 100%;
+    max-width: 578px;
+
+}
+
+.section_container {
+    padding: 0vw 8vw;
+}
+
+.section_ul {
+    display: flex;
+    width: 100%;
+    padding: 30px 0;
+    scroll-behavior: smooth;
+    font-weight: 500;
+}
+
+.section_ul li {
+    margin-right: 30px;
+}
+
+.section_ul li a .count {
+    color: #AEAEAE;
+}

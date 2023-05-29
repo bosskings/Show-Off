@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - ShowOff</title>
+    <title>Dashboard - Liked_Shot</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/likeShot.css">
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
     <nav id="narve-bar">
@@ -19,14 +19,14 @@
             <li>About</li>
             <li>Gallery</li>
             <li>Shop</li>
-            <li class="category">Category 
+            <li class="category">Category
                 <i class="uil uil-angle-down"></i>
 
                 <ul class="category-items">
                     <li><i class="uil uil-annoyed-alt"></i> Animation</li>
                     <li><i class="uil uil-pen"></i> Branding</li>
                     <li><i class="uil uil-illustration"></i> Illustration</li>
-                    <li><i class="uil uil-brush-alt"></i>  Paint</li>
+                    <li><i class="uil uil-brush-alt"></i> Paint</li>
                     <li><i class="uil uil-print"></i> Print</li>
                     <li><i class="uil uil-window"></i> Web Design</li>
                     <li><i class="uil uil-text-fields"></i> typography</li>
@@ -37,42 +37,52 @@
             <i class="uil uil-moon" id="light"></i>
         </ul>
     </nav>
+
     <main>
-        <section class="about-head">
-            <div class="about-info-head">
-                <h2>The Heart of the Designer Community</h2>
-                <p>We’re on a mission to build the world’s best community for creatives to share, grow, and get hired.</p>
+        <section class="dashboard_head">
+            <div class="das_left">
+                <img src="/images/301c9ef303e9dc613190b06b5844e939 1.png" alt="">
+                <p>Carazan Brands</p>
+                <h2>Branding Design Studio with love for brands.</h2>
+                <button class="das_btn1"><i class="uil uil-plus"></i>Follow</button>
+                <button class="das_btn2"><i class="uil uil-envelope"></i>Hire Me</button>
             </div>
-            <div class="about-info-img">
-                <img src="/images/about 1.png" alt="">
-            </div>
-        </section>
-
-        <section class="about-body">
-            <div class="about-body-img">
-                <img src="/images/images1.png" alt="">
-            </div>
-            <div class="about-body-info">
-                <h2>One of fastest-growing start-ups</h2>
-                <p class="fp">
-                    Tens of millions of people look for design inspiration and feedback on Showoff. We help players like you share small screenshots (shots) to show off your current projects, boost your portfolio, and love what you do—no matter what kind of creative professional you are.
-                </p>
-                <p class="sp">
-                    Founded in 2023, we are a bootstrapped and profitable Platform helping design talent share, grow, and get hired by over 40,000 of today’s most innovative brands around the world.
-                </p>
+            <div class="das_right">
+                <div></div>
+                <img src="/images/original-31895495532a30a2ec44b2a8a12d0ae6 1.png" alt="">
             </div>
         </section>
 
-        <section class="banner">
-            <p>Showoff is the single most important social network for anyone that cares about design. It’s done more to help us build our team and brand than Facebook, Twitter and Instagram combined.</p>
-        </section>
-
-        <section class="join">
-            <h2>Join Us Now</h2>
-            <p>Since we are a 100% distributed team, you can work from anywhere. No need to move for a job. We are proud of a culture of communication, collaboration, trust and kindness.</p>
-            <button><a href="/signup.html">Sign Up Now</a></button>
-        </section>
+        <div class="section_container">
+            <ul class="section_ul">
+                <li class="work">
+                    <a href="/dashboard/dashboard.html">
+                        <span class="label">Work</span>
+                        <span class="count">418</span>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="/dashboard/project.html">
+                        <span class="label">Project</span>
+                        <span class="count">18</span>
+                    </a>
+                </li>
+                <li class="like_shot">
+                    <a href="/dashboard/likeShot.html">
+                        <span class="label">Liked Shot</span>
+                        <span class="count">300</span>
+                    </a>
+                </li>
+                <li class="about">
+                    <a href="/dashboard/about.html">
+                        <span class="label">About</span>
+                    </a>
+                </li>
+            </ul>
+            <hr>
+        </div>
     </main>
+
     <footer>
         <div class="footer">
             <div class="footer_image">
@@ -118,6 +128,6 @@
 
     </footer>
 
-    <script src="./js/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

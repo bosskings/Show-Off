@@ -15,6 +15,7 @@
     --icon-size: 23px;
     --white-color: white;
     --white-grey: rgb(248, 248, 248);
+    --black-color: black;
 }
 
 
@@ -144,7 +145,6 @@ li {
 }
 
 .dashboard_body {
-    background-color: var(--white-grey);
     padding: 2vw 8vw 2vw 8vw;
 }
 
@@ -154,6 +154,11 @@ li {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 45px;
     margin-bottom: 45px;
+}
+
+.overlay_container{
+    position: relative;
+    overflow: hidden;
 }
 
 .content img {
@@ -171,4 +176,42 @@ li {
 .content2 img {
     border-radius: 10px;
     width: 100%;
+}
+
+.content_overlay div{
+    font-size: 19px;
+    font-weight: 500;
+}
+.content_overlay ul li{
+    display: inline-block;
+    font-size: var(--icon-size);
+    margin-right: 10px;
+    padding: 0 9px 0 9px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.content_overlay {
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    border-radius: 8px;
+    opacity: 0;
+    background: linear-gradient(180deg, transparent 62%, rgba(0,0,0,0.00345888) 63.94%, rgba(0,0,0,0.014204) 65.89%, rgba(0,0,0,0.0326639) 67.83%, rgba(0,0,0,0.0589645) 69.78%, rgba(0,0,0,0.0927099) 71.72%, rgba(0,0,0,0.132754) 73.67%, rgba(0,0,0,0.177076) 75.61%, rgba(0,0,0,0.222924) 77.56%, rgba(0,0,0,0.267246) 79.5%, rgba(0,0,0,0.30729) 81.44%, rgba(0,0,0,0.341035) 83.39%, rgba(0,0,0,0.367336) 85.33%, rgba(0,0,0,0.385796) 87.28%, rgba(0,0,0,0.396541) 89.22%, rgba(0,0,0,0.4) 91.17%);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+}
+.content_overlay:hover{
+    opacity: 1;
 }
