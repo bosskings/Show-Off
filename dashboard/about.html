@@ -9,33 +9,41 @@
 
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/dashboardAbout.css">
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
     <nav id="narve-bar">
-        <div class="logo">SHOWOFF</div>
-        <ul class="narv-ul">
-            <li>Home</li>
-            <li><a href="/About.html">About</a></li>
-            <li>Gallery</li>
-            <li>Shop</li>
-            <li class="category">Category 
-                <i class="uil uil-angle-down"></i>
+        <div class="logo">
+            <h2>SHOWOFF</h2>
+            <ul class="narv-ul">
+                <a href="/index.html"><li>Home</li></a>
+                <a href="/About.html"><li>About</li></a>
+                <a href="/gallery.html"><li>Gallery</li></a>
+                <a href="#"><li>Shop</li></a>
+                <li class="category">Category 
+                    <i class="uil uil-angle-down"></i>
 
-                <ul class="category-items">
-                    <li><i class="uil uil-annoyed-alt"></i> Animation</li>
-                    <li><i class="uil uil-pen"></i> Branding</li>
-                    <li><i class="uil uil-illustration"></i> Illustration</li>
-                    <li><i class="uil uil-brush-alt"></i>  Paint</li>
-                    <li><i class="uil uil-print"></i> Print</li>
-                    <li><i class="uil uil-window"></i> Web Design</li>
-                    <li><i class="uil uil-text-fields"></i> typography</li>
-                </ul>
-            </li>
-            <i class="uil uil-search-alt"></i>
-            <a href="/cart.html"><i class="uil uil-shopping-cart"></i></a>
+                    <ul class="category-items">
+                        <a href=""><li><i class="uil uil-annoyed-alt"></i> Animation</li></a>
+                        <a href=""><li><i class="uil uil-pen"></i> Branding</li></a>
+                        <a href=""><li><i class="uil uil-illustration"></i> Illustration</li></a>
+                        <a href=""><li><i class="uil uil-brush-alt"></i>  Paint</li></a>
+                        <a href=""><li><i class="uil uil-print"></i> Print</li></a>
+                        <a href=""><li><i class="uil uil-window"></i> Design</i></a>
+                        <a href=""><li><i class="uil uil-text-fields"></i> Typography</li></a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="narve-right">
+            <i class="uil uil-search"></i><input type="text" placeholder="search. . .">
+            <a href="/cart.html"><i class="uil uil-shopping-cart first"></i></a>
             <i class="uil uil-moon" id="light"></i>
-        </ul>
+            <img src="/images/Profile-Icon.png" alt="">
+            <button>Upload</button>
+        </div>
     </nav>
 
     <main>
@@ -104,7 +112,7 @@
 
             <div class="quick_links">
                 <h4>QUICK LINKS</h4>
-                <a href="#"><span>Gallery</span></a>
+                <a href="/gallery.html"><span>Gallery</span></a>
                 <a href="/About.html"><span>About us</span></a>
                 <a href="#"><span>Contact us</span></a>
                 <a href="/dashboard/dashboard.html"><span>Dashboard</span></a>

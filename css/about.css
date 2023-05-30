@@ -46,6 +46,7 @@ a, li{
     text-decoration: none;
     list-style: none;
 }
+
 /********** About Page **********/
 /* main{
     padding: 6vw 8vw;
@@ -62,7 +63,7 @@ a, li{
     width: 509px;
 }
 .about-info-head h2{
-    color: #FF4F5A;
+    color: var(--red-color);
     font-size: 45px;
     margin-bottom: 15px;
 }
@@ -95,7 +96,7 @@ a, li{
     text-transform: capitalize;
     font-size: 30px;
     font-weight: 600;
-    color: #FF4F5A;
+    color: var(--red-color);
     margin-bottom: 15px;
 }
 .about-body-info .fp{
@@ -133,11 +134,11 @@ a, li{
     align-items: center;
     text-align: center;
     padding: 6vw 8vw;
-    background-color: var(--white-grey);
+    /* background-color: var(--white-grey); */
 }
 
 .join h2{
-    color: #F2D227;
+    color: var(--red-color);
     margin-bottom: 20px;
 }
 .join p{
@@ -148,14 +149,14 @@ a, li{
     padding: 0 260px;
 }
 .join button{
-    color: var(--white-color);
+    color: #fff;
     font-weight: 500;
-    background: #FF5959;
+    background: var(--red-color);
     border-radius: 10px;
     border: none;
     padding: 10px 20px;
 }
 .join button a{
-    color: var(--white-color);
+    color: #fff;
     font-weight: 500;
 }

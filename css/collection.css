@@ -94,9 +94,10 @@ a, li{
 }
 
 .das_left .das_btn1 {
-    background-color: #fff;
+    background-color: var(--white-color);
     border: 1px solid rgb(190, 190, 190);
     margin-right: 15px;
+    color: var(--black-color);
 }
 
 .das_left .das_btn2 {
@@ -105,7 +106,7 @@ a, li{
 }
 
 .das_right div {
-    background: #FF4F5A;
+    background: var(--red-color);
     position: absolute;
     top: -40px;
     right: 0;
