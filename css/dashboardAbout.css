@@ -141,3 +141,123 @@ a, li{
 .section_ul li a .count {
     color: #AEAEAE;
 }
+
+section{
+    padding: 4vw 8vw 4vw 8vw;
+    display: flex;
+    justify-content: center;
+}
+section .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.bio_info{
+    width: 100%;
+}
+.bio_info .bio{
+    padding: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    background-color: #fff;
+}
+.bio_info .bio ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bio_info .bio ul li{
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #797979;
+}
+.bio_info .bio h2{
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.bio_info .bio p{
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+}
+
+.bio_info .skill{
+    padding: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    background-color: #fff;
+}
+.bio_info .skill h2{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.bio_info .skill ul li{
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #000;
+}
+
+.bio_links{
+    width: 100%;
+}
+.bio_links .location{
+    padding: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    background-color: #fff;
+}
+.bio_links .location ul{
+    line-height: 35px;
+    align-items: center;
+}
+.bio_links .location ul li{
+    color: #000;
+    font-weight: 500;
+}
+.bio_links .location ul li i{
+    font-size: 25px;
+    color: var(--red-color);
+    font-weight: 600;
+}
+
+.bio_links .link{
+    padding: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    background-color: #fff;
+}
+.bio_links .link h2{
+    font-size: 17px;
+}
+.bio_links .link ul{
+    line-height: 30px;
+    align-items: center;
+}
+.bio_links .link ul li{
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    align-items: center;
+}
+.bio_links .link ul li i{
+    font-size: 25px;
+    color: var(--red-color);
+    font-weight: 600;
+    margin-right: 5px;
+    align-items: center;
+}

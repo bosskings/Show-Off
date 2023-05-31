@@ -141,3 +141,57 @@ a, li{
 .section_ul li a .count {
     color: #AEAEAE;
 }
+
+
+section{
+    padding: 4vw 8vw 4vw 8vw;
+}
+section .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 45px;
+}
+
+.container .shot{
+}
+.shot img{
+    width: 100%;
+    border-radius: 10px;
+}
+.shot_sec{
+    display: flex;
+    justify-content: space-between;
+}
+
+.shot_sec div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shot_sec div img{
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+.shot_sec div p{
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.shot_sec ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.shot_sec ul li{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-color);
+    margin-left: 5px
+}
+.shot_sec ul li i{
+    color: #AEAEAE;
+}
+.shot_sec ul li i:hover{
+    color: var(--red-color);
+}

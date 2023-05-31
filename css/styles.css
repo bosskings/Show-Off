@@ -269,7 +269,7 @@ a, li{
 .signup-right form .signup-btns .g{
     font-size: 15px;
     font-weight: 500;
-    color: var(--white-color);
+    color: #fff;
     padding: 8px 20px;
     margin-bottom: 15px;
     margin-right: 15px;
@@ -280,7 +280,7 @@ a, li{
 .signup-right form .signup-btns .t{
     font-size: 15px;
     font-weight: 500;
-    color: var(--white-color);
+    color: #fff;
     padding: 8px 20px;
     margin-bottom: 15px;
     margin-right: 15px;
@@ -345,7 +345,7 @@ a, li{
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    color: var(--white-color);
+    color: #fff;
     padding: 5px 50px;
     border: none;
     border-radius: 5px;

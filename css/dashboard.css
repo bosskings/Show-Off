@@ -152,7 +152,7 @@ li {
 
 .dashboard_body .content_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 45px;
     margin-bottom: 45px;
 }
@@ -163,18 +163,6 @@ li {
 }
 
 .content img {
-    border-radius: 10px;
-    width: 100%;
-}
-
-.dashboard_body .content_container2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 45px;
-    align-items: center;
-}
-
-.content2 img {
     border-radius: 10px;
     width: 100%;
 }
