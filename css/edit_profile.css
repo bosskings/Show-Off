@@ -137,30 +137,73 @@ main{
 .bottom_right_side{
     flex: 0.7;
 }
-.bottom_right_side form div{
-    width: 100%;
-    margin-bottom: 40px;
+
+.bottom_right_side .profile_pic{
     display: flex;
-    flex-direction: column;
-    gap: 7px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
 }
-.bottom_right_side form div label{
-    font-size: 16px;
+.bottom_right_side .profile_pic img{
+    width: 90px;
+    height: 90px;
+    border-radius: 500px;
+}
+.bottom_right_side .profile_pic #upload{
+    padding: 10px;
+    font-weight: 600;
+    margin: 0;
+    height: 50px;
+}
+.bottom_right_side .profile_pic #upload:hover{
+    background-color: var(--hover-red-color);
+}
+.bottom_right_side .profile_pic #delete{
+    padding: 10px;
+    font-weight: 600;
+    background: rgb(233, 233, 233);
+    color: #000;
+    margin: 0;
+    height: 50px;
+}
+
+.field_first_sec{
+    margin-bottom: 50px;
+}
+
+.bottom_right_side .field{
+    margin-bottom: 20px;
+}
+.bottom_right_side .field label{
+    font-size: 14px;
     font-weight: 500;
     color: var(--black-color);
 }
-.bottom_right_side form div input{
+.bottom_right_side .field input, textarea{
     width: 100%;
     padding: 10px;
     border-radius: 5px;
     border: 2px solid rgb(231, 231, 231);
 }
-.bottom_right_side form button{
-    background-color: var(--red-color);
-    font-weight: 600;
-    margin-top: 0;
-    padding: 10px 15px 10px 15px;
+
+.field_second_sec{
+
 }
-.bottom_right_side form button:hover{
+.field_second_sec h3{
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: gray;
+    font-weight: 500;
+}
+.field_second_sec hr{
+    margin-bottom: 25px;
+}
+
+.bottom_right_side .save_btn{
+    padding: 10px;
+    font-weight: 600;
+}
+.bottom_right_side .save_btn:hover{
     background-color: var(--hover-red-color);
 }

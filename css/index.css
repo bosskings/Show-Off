@@ -198,6 +198,7 @@ button:hover{
     grid-gap: 10px;
     align-items: center;
     justify-content: center;
+    background-color: var(--white-grey);
     
 }
 
@@ -236,7 +237,6 @@ button:hover{
     grid-gap: 10px;
     align-items: center;
     justify-content: center;
-    background-color: var(--white-grey);
 }
 
 #after-body2 img{
@@ -271,6 +271,7 @@ button:hover{
 #collections{
     padding: 30px 10%; 
     justify-items: center;
+    background-color: var(--white-grey);
 }
 
 .collect1{
