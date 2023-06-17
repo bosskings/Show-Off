@@ -164,3 +164,58 @@ main{
 .bottom_right_side form button:hover{
     background-color: var(--hover-red-color);
 }
+
+dialog {
+  z-index: 10;
+  top: 10%;
+  left: 35%;
+  background: white;
+  border: none;
+  border-radius: 1rem;
+  transition: -50% -50%;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+}
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.50);
+}
+dialog img{
+    width: 100%;
+    height: inherit;
+}
+dialog h1{
+    font-size: 3rem;
+    line-height: 50px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+dialog #p1{
+    color: rgb(105, 105, 105);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+dialog #p1 span{
+    color: var(--red-color);
+}
+dialog #p2{
+    color: rgb(105, 105, 105);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+dialog button{
+    margin-top: 0;
+}
+dialog #close{
+    font-weight: 600;
+    margin-top: 0;
+}
+dialog #close:hover{
+    background-color: var(--hover-red-color);
+}
+dialog #delete_account{
+    background-color: white;
+    border: 1px solid rgb(202, 202, 202);
+    color: black;
+    font-weight: 600;
+}

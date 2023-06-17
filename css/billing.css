@@ -137,128 +137,87 @@ main{
 .bottom_right_side{
     flex: 0.7;
 }
-
-.bottom_right_side .profile_pic{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 40px;
+.bottom_right_side h1{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 20px;
 }
-.bottom_right_side .profile_pic img{
-    width: 90px;
-    height: 90px;
-    border-radius: 500px;
-}
-.bottom_right_side .profile_pic #upload{
-    padding: 10px;
-    font-weight: 600;
-    margin: 0;
-    height: 50px;
-}
-.bottom_right_side .profile_pic #upload:hover{
-    background-color: var(--hover-red-color);
-}
-.bottom_right_side .profile_pic #delete{
-    padding: 10px;
-    font-weight: 600;
-    background: rgb(233, 233, 233);
-    color: #000;
-    margin: 0;
-    height: 50px;
-}
-
-.field_first_sec{
-    margin-bottom: 50px;
-}
-
-.bottom_right_side .field{
+.bottom_right_side hr{
+    color: rgb(237, 237, 237);
     margin-bottom: 20px;
 }
-.bottom_right_side .field label{
-    font-size: 14px;
+.bottom_right_side p{
+    font-weight: 600;
+    text-align: right;
+}
+.bottom_right_side button{
+    background-color: white;
+    border: 1px solid rgb(205, 205, 205);
+    margin: 10px 5px 0 0;
+    color: black;
     font-weight: 500;
-    color: var(--black-color);
+    transition: 0.3s;
 }
-.bottom_right_side .field input, textarea{
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 2px solid rgb(231, 231, 231);
+.bottom_right_side button i{
+    font-size: 20px;
+    margin-right: 5px;
 }
-
-.field_second_sec{
-
-}
-.field_second_sec h3{
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: gray;
-    font-weight: 600;
-}
-.field_second_sec hr{
-    margin-bottom: 25px;
-}
-
-.bottom_right_side .save_btn{
-    padding: 10px;
-    font-weight: 600;
-}
-.bottom_right_side .save_btn:hover{
+.bottom_right_side button:hover{
     background-color: var(--hover-red-color);
+    color: #fff;
 }
 
 dialog {
-    z-index: 10;
-    top: 10%;
-    left: 35%;
-    background: white;
-    border: none;
-    border-radius: 1rem;
-    transition: -50% -50%;
-    align-items: center;
-    width: 500px;
-    padding: 20px;
-  }
-  dialog::backdrop{
-      background: rgba(0, 0, 0, 0.50);
-  }
-  dialog img{
-      width: 100%;
-      height: inherit;
-  }
-  dialog h1{
-      font-size: 3rem;
-      line-height: 50px;
-      width: 80%;
-      margin-bottom: 10px;
-  }
-  dialog #p1{
-      color: rgb(105, 105, 105);
-      font-weight: 500;
-      margin-bottom: 10px;
-  }
-  dialog #p1 span{
-      color: var(--red-color);
-  }
-  dialog #p2{
-      color: rgb(105, 105, 105);
-      font-weight: 500;
-      margin-bottom: 20px;
-  }
-  dialog button{
-      margin-top: 0;
-  }
-  dialog #close{
-      font-weight: 600;
-      margin-top: 0;
-  }
-  dialog #close:hover{
-      background-color: var(--hover-red-color);
-  }
-  dialog #delete_account{
-      background-color: white;
-      border: 1px solid rgb(202, 202, 202);
-      color: black;
-      font-weight: 600;
-  }
+  z-index: 10;
+  top: 10%;
+  left: 35%;
+  background: white;
+  border: none;
+  border-radius: 1rem;
+  transition: -50% -50%;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+}
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.50);
+}
+dialog img{
+    width: 100%;
+    height: inherit;
+}
+dialog h1{
+    font-size: 3rem;
+    line-height: 50px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+dialog #p1{
+    color: rgb(105, 105, 105);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+dialog #p1 span{
+    color: var(--red-color);
+}
+dialog #p2{
+    color: rgb(105, 105, 105);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+dialog button{
+    margin-top: 0;
+}
+dialog #close{
+    font-weight: 600;
+    margin-top: 0;
+}
+dialog #close:hover{
+    background-color: var(--hover-red-color);
+}
+dialog #delete_account{
+    background-color: white;
+    border: 1px solid rgb(202, 202, 202);
+    color: black;
+    font-weight: 600;
+}

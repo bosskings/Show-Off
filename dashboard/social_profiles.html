@@ -70,7 +70,7 @@
                     </div>
                     <div class="page">
                         <a href="../dashboard/dashboard.html"><span class="username">Carazan Brands /</span></a><span>Social Profiles</span>
-                        <p>Update your username and manage your account</p>
+                        <p>Add elsewhere links to your profile</p>
                     </div>
                 </div>
                 <div class="bottom_content">
@@ -79,16 +79,47 @@
                             <a href="../dashboard/setting.html"><li>General</li></a>
                             <a href="../dashboard/edit_profile.html"><li>Edit Profile</li></a>
                             <a href="../dashboard/password.html"><li>Password</li></a>
-                            <a href="../dashboard/social_profiles.html" class="active"><li>Social Profiles</li></a>
+                            <a href="../dashboard/social_profiles.html"><li class="active">Social Profiles</li></a>
                             <a href="../dashboard/billing.html"><li>Billing</li></a>
                             <hr>
-                            <a href="../dashboard/delete_account.html"><p class="">Delete Account</p></a>
+                            <p id="delete">Delete Account</p>
                         </ul>
                     </div>
                     <div class="bottom_right_side">
-                        
+                        <form action="">
+                            <div>
+                                <label for="">Instagram</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">Twitter</label>
+                                <input type="email">
+                            </div>
+                            <div>
+                                <label for="">Facebook</label>
+                                <input type="email">
+                            </div>
+                            <div>
+                                <label for="">Linkedin</label>
+                                <input type="email">
+                            </div>
+                            <div>
+                                <label for="">Behance</label>
+                                <input type="email">
+                            </div>
+                            <button>Update Social Profile</button>
+                        </form>
                     </div>
                 </div>
+
+                <dialog data-modal>
+                    <img src="/images/delete_account.jpg" alt="">
+                    <h1>We're sorry to see you go</h1>
+                    <p id="p1">if there was any reason for your decision, please send us a <span>message</span></p>
+                    <p id="p2">Be advised, account deletion is final. There will be no way to restore your account.</p>
+                    <button id="close">Nevermind</button>
+                    <button id="delete_account">Delete my account</button>
+                </dialog>
             </section>
         </main>
 
@@ -138,5 +169,17 @@
     </body>
 
 <script src="/js/app.js"></script>
+<script>
+    const deleteBtn = document.querySelector("#delete")
+    const modal = document.querySelector("[data-modal]")
+    const closeBtn = document.querySelector("#close")
+
+    deleteBtn.addEventListener('click', () => {
+        modal.showModal()
+    })
+    closeBtn.addEventListener("click", () => {
+        modal.close()
+    })
+</script>
 
 </html>

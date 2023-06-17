@@ -70,19 +70,19 @@
                     </div>
                     <div class="page">
                         <a href="../dashboard/dashboard.html"><span class="username">Carazan Brands /</span></a><span>Edit Profile</span>
-                        <p>Update your username and manage your account</p>
+                        <p>Set up your Dribbble presence and hiring needs</p>
                     </div>
                 </div>
                 <div class="bottom_content">
                     <div class="bottom_left_side">
                         <ul>
                             <a href="../dashboard/setting.html"><li>General</li></a>
-                            <a href="../dashboard/edit_profile.html" class="active"><li>Edit Profile</li></a>
+                            <a href="../dashboard/edit_profile.html"><li class="active">Edit Profile</li></a>
                             <a href="../dashboard/password.html"><li>Password</li></a>
                             <a href="../dashboard/social_profiles.html"><li>Social Profiles</li></a>
                             <a href="../dashboard/billing.html"><li>Billing</li></a>
                             <hr>
-                            <a href="../dashboard/delete_account.html"><p class="">Delete Account</p></a>
+                            <p id="delete">Delete Account</p>
                         </ul>
                     </div>
                     <div class="bottom_right_side">
@@ -124,6 +124,15 @@
                         <button class="save_btn">Save Profile</button>
                     </div>
                 </div>
+
+                <dialog data-modal>
+                    <img src="/images/delete_account.jpg" alt="">
+                    <h1>We're sorry to see you go</h1>
+                    <p id="p1">if there was any reason for your decision, please send us a <span>message</span></p>
+                    <p id="p2">Be advised, account deletion is final. There will be no way to restore your account.</p>
+                    <button id="close">Nevermind</button>
+                    <button id="delete_account">Delete my account</button>
+                </dialog>
             </section>
         </main>
 
@@ -177,6 +186,7 @@
     // Upload click
     const upload = document.querySelector("#user_profile");
     const img = document.querySelector("#img");
+    const delete_img = document.querySelector("#delete")
 
     function fileBtnActive() {
     upload.click();
@@ -192,6 +202,23 @@
         reader.readAsDataURL(file);
     }
     });
+
+    delete_img.addEventListener('click', () => {
+        img.src = "/images/301c9ef303e9dc613190b06b5844e939 1.png"
+    })
+
+
+    const deleteBtn = document.querySelector("#delete")
+    const modal = document.querySelector("[data-modal]")
+    const closeBtn = document.querySelector("#close")
+
+    deleteBtn.addEventListener('click', () => {
+        modal.showModal()
+    })
+    closeBtn.addEventListener("click", () => {
+        modal.close()
+    })
+
 </script>
 
 </html>
