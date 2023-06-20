@@ -168,7 +168,7 @@ a, li{
   background-color: var(--white-color);
   color: var(--black-color);
   outline-style: var(--dark-red-color);
-  
+  align-items: center;
 }
 
 
@@ -185,7 +185,6 @@ a, li{
 .uil-search{
   position: absolute;
   left: 15px;
-  top: 10px;
   z-index: 2;
   font-size: 18px;
 }
@@ -210,7 +209,7 @@ a, li{
   padding: 0.2em 0.5em;
   background: var(--white-color);
   border: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;  border-radius: 0.5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(7, 17, 27, 0.15) 0px -2px 6px 0px inset;  border-radius: 0.5em;
   color: #9fa5b5;
   position: absolute;
   top: 5em;
@@ -227,6 +226,7 @@ a, li{
   margin: 0.3em 0;
   border-radius: 0.5em;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .menu li:hover{

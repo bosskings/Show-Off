@@ -89,8 +89,8 @@
                         <h1>Payment Method</h1>
                         <hr>
                         <p>Add payment method</p>
-                        <button><i class="uil uil-university"></i>Bank Details</button>
-                        <button><i class="uil uil-wallet"></i>Crypto Wallet</button>
+                        <button id="add_bank"><i class="uil uil-university"></i>Bank Details</button>
+                        <button id="add_wallet"><i class="uil uil-wallet"></i>Crypto Wallet</button>
                     </div>
                 </div>
 
@@ -101,6 +101,45 @@
                     <p id="p2">Be advised, account deletion is final. There will be no way to restore your account.</p>
                     <button id="close">Nevermind</button>
                     <button id="delete_account">Delete my account</button>
+                </dialog>
+
+                <dialog data-bank-modal>
+                    <div>
+                        <label for="">Bank Name</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Account Holder Name</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Account Number</label>
+                        <input type="text">
+                    </div>
+                    <button id="cls_bank">cancel</button>
+                    <button id="bank">Add Bank</button>
+                </dialog>
+
+                <dialog data-crypto-modal>
+                    <div>
+                        <label for="">Wallet Address</label>
+                        <input type="text">
+                    </div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Bitcoin</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li>Etherium</li>
+                            <li>Binance</li>
+                            <li>Tron</li>
+                            <li class="active">Bitcoin</li>
+                            <li>Dodge</li>
+                        </ul>
+                    </div>
+                    <button id="cls_crypto">cancel</button>
+                    <button id="crypto">Add Wallet</button>
                 </dialog>
             </section>
         </main>
@@ -156,12 +195,83 @@
     const modal = document.querySelector("[data-modal]")
     const closeBtn = document.querySelector("#close")
 
+    const addBank = document.querySelector("#add_bank")
+    const bankModal = document.querySelector("[data-bank-modal]")
+    const cls_bank = document.querySelector("#cls_bank")
+
+    const addCrypto = document.querySelector("#add_wallet")
+    const cryptoModal = document.querySelector("[data-crypto-modal]")
+    const cls_crypto = document.querySelector("#cls_crypto")
+
     deleteBtn.addEventListener('click', () => {
         modal.showModal()
     })
     closeBtn.addEventListener("click", () => {
         modal.close()
     })
+
+
+    addBank.addEventListener("click", () => {
+        bankModal.showModal()
+    })
+    cls_bank.addEventListener("click", () => {
+        bankModal.close()
+    })
+
+    addCrypto.addEventListener("click", () => {
+        cryptoModal.showModal()
+    })
+    cls_crypto.addEventListener("click", () => {
+        cryptoModal.close()
+    })
+
+
+    // Get all dropdowns from the document
+const dropdowns = document.querySelectorAll(".dropdown");
+
+// loop througn all dropdown elements
+dropdowns.forEach((dropdown) => {
+  // Get inner elements from each dropdown
+  const select = dropdown.querySelector(".select");
+  const caret = dropdown.querySelector(".caret");
+  const menu = dropdown.querySelector(".menu");
+  const options = dropdown.querySelectorAll(".menu li");
+  const selected = dropdown.querySelector(".selected");
+
+  /* 
+    We are using this method in order to have multiple dropdown menus on the page work
+ */
+
+  // Add all click event to the select element
+  select.addEventListener("click", () => {
+    // Add the rotate style to the caret element
+    caret.classList.toggle("caret-rotate");
+    // Add the open styles to the menu element
+    menu.classList.toggle("menu-open");
+  });
+
+  // loop through all option elements
+  options.forEach((option) => {
+    // Add a click event to the option element
+    option.addEventListener("click", () => {
+      // Change selected inner text to clicked option inner text
+      selected.innerHTML = option.innerHTML;
+      // Add the clicked select styles to the select element
+      select.classList.remove("select-clicked");
+      // Add the rotate styles to the caret element
+      caret.classList.remove("caret-rotate");
+      // Add the open styles to the menu element
+      menu.classList.remove("menu-open");
+      // Remove active class from all option elements
+      options.forEach((option) => {
+        option.classList.remove("active");
+      });
+      // Add active class to clicked option element
+      option.classList.add("active");
+    });
+  });
+});
+
 </script>
 
 </html>
