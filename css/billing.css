@@ -172,6 +172,7 @@ dialog[data-modal] {
   top: 5%;
   left: 35%;
   background: white;
+  color: black;
   border: none;
   border-radius: 1rem;
   transition: -50% -50%;
@@ -191,6 +192,7 @@ dialog h1{
     line-height: 50px;
     width: 80%;
     margin-bottom: 10px;
+    color: black;
 }
 dialog #p1{
     color: rgb(105, 105, 105);
@@ -233,7 +235,7 @@ dialog div{
 dialog div label{
     font-size: 16px;
     font-weight: 500;
-    color: var(--black-color);
+    color: black;
 }
 dialog div input{
     width: 100%;
@@ -246,6 +248,7 @@ dialog[data-bank-modal] {
     top: 20%;
     left: 35%;
     background: white;
+    color: var(--black-color);
     border: none;
     border-radius: 1rem;
     transition: -50% -50%;
@@ -261,6 +264,7 @@ dialog[data-bank-modal] {
     top: 20%;
     left: 35%;
     background: white;
+    color: var(--black-color);
     border: none;
     border-radius: 1rem;
     transition: -50% -50%;
