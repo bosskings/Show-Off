@@ -18,15 +18,6 @@ themeBtn.onclick = function () {
   }
 };
 
-// =========================== Category Clicked =======================
-let btn = document.querySelector(".category");
-
-let items = document.querySelector(".category-items");
-
-btn.onclick = function () {
-  items.classList.toggle("none");
-};
-
 // Get all dropdowns from the document
 const dropdown = document.querySelector(".dropdown");
 
