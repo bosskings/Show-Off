@@ -189,23 +189,13 @@ button:hover{
 .shot_sec{
     display: flex;
     justify-content: space-between;
-}
-
-.shot_sec div{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.shot_sec div img{
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-}
-.shot_sec div p{
+.shot_sec p{
     font-size: 14px;
     font-weight: 600;
-    margin-left: 5px;
     color: var(--black-color);
+    margin-left: 5px
 }
 .shot_sec ul{
     display: flex;
@@ -219,8 +209,10 @@ button:hover{
     margin-left: 5px
 }
 .shot_sec ul li i{
+    font-size: 19px;
     color: #AEAEAE;
 }
 .shot_sec ul li i:hover{
     color: var(--red-color);
+    cursor: pointer;
 }
