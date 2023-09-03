@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  :root{
+    --small-font: 15px;
+    --big-font:70px;
+    --medium-font:40px;
+    --icon-size: 23px;
+    --white-color:white;
+    --white-grey:rgb(248, 248, 248);
+  }
+
+
+  .light-theme{
+    --white-color:white;
+    --black-color:black;
+    --red-color:#FF5959;
+    --dark-red-color: #dc3535;
+    --white-grey:rgb(248, 248, 248);
+
+  }
+
+
+  .dark-theme{
+    --white-color:black;
+    --black-color:white;
+    --red-color:#FF5959;
+    --dark-red-color: #dc3535;
+    --white-grey:rgb(13, 12, 12);
+    
+  }
+
+
+  body{
+    background-color: var(--white-color);
+  }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart - ShowOff</title>
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+		/>
+
+		<link rel="stylesheet" href="./css/nav.css" />
+		<link rel="stylesheet" href="./css/cart.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<link rel="stylesheet" href="./css/footer.css" />
+	</head>
+	<body>
+		<nav id="narve-bar">
+			<div class="logo">
+				<h2>SHOWOFF</h2>
+				<ul class="narv-ul">
+					<a href="./index.html"><li>Home</li></a>
+					<a href="./About.html"><li>About</li></a>
+					<a href="#"><li>Artist</li></a>
+					<a href="./gallery.html"><li>Gallery</li></a>
+					<a href="./shop.html"><li>Shop</li></a>
+				</ul>
+			</div>
+
+			<div class="narve-right">
+				<i class="uil uil-search"></i
+				><input type="text" placeholder="search. . ." />
+				<a href="./cart.html"><i class="uil uil-shopping-cart first"></i></a>
+				<i class="uil uil-moon" id="light"></i>
+				<div class="dropdown">
+					<a href="./dashboard/dashboard.html"
+						><div class="select">
+							<img
+								src="./images/Profile-Icon.png"
+								alt=""
+								width="50"
+								class="image"
+							/>
+						</div>
+					</a>
+				</div>
+				<a href="./dashboard/upload.html"><button>Upload</button></a>
+			</div>
+		</nav>
+
+		<!-- ================================ *main body* ============================== -->
+		<main>
+			<section class="container">
+				<div>
+					<div class="head">
+						<div class="cart">
+							<p>Item</p>
+							<p>Price</p>
+							<p>Quantity</p>
+							<p>Total</p>
+						</div>
+						<div class="item">
+							<div class="product">
+								<img src="./images/3266662_655 10.png" alt="" width="100px" />
+								<p>Digtal Art</p>
+							</div>
+							<p class="price">$100</p>
+							<div class="product-quan">
+								<i class="uil uil-minus"></i>
+								<p class="quantity">1</p>
+								<i class="uil uil-plus"></i>
+							</div>
+							<p class="total">$100</p>
+						</div>
+						<button>Continue Shopping</button>
+					</div>
+
+					<div class="bottom">
+						<div class="subtotal">
+							<p>Subtotal</p>
+							<p>$100</p>
+						</div>
+						<div class="total_price">
+							<p>Total</p>
+							<p>$100</p>
+						</div>
+						<button>Proceed To Checkout</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ======================== *Footer starts* ========================= -->
+
+		<footer>
+			<div class="footer">
+				<div class="footer_image">
+					Showoff
+					<span>
+						Showcase And Display Your Arts, Design And Skill On The Worlds
+						Biggest Stage
+					</span>
+				</div>
+
+				<div class="quick_links">
+					<h4>QUICK LINKS</h4>
+					<a href="./gallery.html"><span>Gallery</span></a>
+					<a href="./About.html"><span>About us</span></a>
+					<a href="./gallery.html"><span>gallery</span></a>
+					<a href="./contact.html"><span>Contact us</span></a>
+				</div>
+
+				<div class="social">
+					<h4>SOCIAL MEDIA</h4>
+					<i class="uil uil-facebook"></i>
+					<i class="uil uil-instagram"></i>
+					<i class="uil uil-twitter"></i>
+					<i class="uil uil-github"></i>
+					<button>Sign Up</button>
+				</div>
+			</div>
+
+			<hr
+				style="
+					height: 0.5px;
+					border-width: 0;
+					color: rgb(237, 3, 69);
+					background-color: rgb(210, 210, 210);
+					margin-bottom: 40px;
+				"
+			/>
+			<span class="copy"
+				>Copyright © 2021-2023 Showoff Company S.L. All rights reserved.</span
+			>
+		</footer>
+		<script src="./js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SHOWOFF</title>
+
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+        <link rel="stylesheet" href="../css/nav.css">
+        <link rel="stylesheet" href="../css/setting.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/footer.css">
+
+    </head>
+    <body>
+
+        <!-- ================================== Narv Bar ======================== -->
+
+        <nav id="narve-bar">
+      <div class="logo">
+        <a href="../index.html"><h2>SHOWOFF</h2></a>
+        <ul class="narv-ul">
+          <a href="#"><li>Artist</li></a>
+          <a href="../shop.html"><li>Shop</li></a>
+          <a href="../dashboard/setting.html"><li>Setting</li></a>
+        </ul>
+      </div>
+
+      <div class="narve-right">
+        <i class="uil uil-search"></i
+        ><input type="text" placeholder="search. . ." />
+        <a href="../cart.html"><i class="uil uil-shopping-cart first"></i></a>
+        <i class="uil uil-moon" id="light"></i>
+        <div class="dropdown">
+          <div class="select">
+            <img
+              src="../images/Profile-Icon.png"
+              alt=""
+              width="50"
+              class="image"
+            />
+          </div>
+
+          <ul class="menu">
+            <li>Sign Out</li>
+          </ul>
+        </div>
+        <a href="./upload.html"><button>Upload</button></a>
+      </div>
+    </nav>
+
+        <!-- ==================================== main Body ======================= -->
+        <main>
+            <section class="container">
+                <div class="top_content">
+                    <div class="top_content_img">
+                        <a href="./dashboard.html">
+                          <img src="../images/301c9ef303e9dc613190b06b5844e939 1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="./dashboard.html">
+                          <span class="username">Carazan Brands /</span>
+                        </a>
+                        <span>Social Profiles</span>
+                        <p>Add elsewhere links to your profile</p>
+                    </div>
+                </div>
+                <div class="bottom_content">
+                    <div class="bottom_left_side">
+                        <ul>
+                            <a href="./setting.html"><li>General</li></a>
+                            <a href="./edit_profile.html"><li>Edit Profile</li></a>
+                            <a href="./password.html"><li>Password</li></a>
+                            <a href="./social_profiles.html"><li class="active">Social Profiles</li></a>
+                            <a href="./billing.html"><li>Billing</li></a>
+                            <hr>
+                            <p id="delete">Delete Account</p>
+                        </ul>
+                    </div>
+                    <div class="bottom_right_side">
+                        <form action="">
+                            <div>
+                                <label for="">Instagram</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">Twitter</label>
+                                <input type="email">
+                            </div>
+                            <div>
+                                <label for="">Facebook</label>
+                                <input type="email">
+                            </div>
+                            <div>
+                                <label for="">Linkedin</label>
+                                <input type="email">
+                            </div>
+                            <div>
+                                <label for="">Behance</label>
+                                <input type="email">
+                            </div>
+                            <button>Update Social Profile</button>
+                        </form>
+                    </div>
+                </div>
+
+                <dialog data-modal>
+                    <img src="../images/delete_account.jpg" alt="">
+                    <h1>We're sorry to see you go</h1>
+                    <p id="p1">if there was any reason for your decision, please send us a <span>message</span></p>
+                    <p id="p2">Be advised, account deletion is final. There will be no way to restore your account.</p>
+                    <button id="close">Nevermind</button>
+                    <button id="delete_account">Delete my account</button>
+                </dialog>
+            </section>
+        </main>
+
+        <!-- ============================footer============================ -->
+        <footer>
+      <div class="footer">
+        <div class="footer_image">
+          Showoff
+          <span>
+            Showcase And Display Your Arts, Design And Skill On The Worlds
+            Biggest Stage
+          </span>
+        </div>
+
+        <div class="quick_links">
+          <h4>QUICK LINKS</h4>
+          <a href="../gallery.html"><span>Gallery</span></a>
+          <a href="../About.html"><span>About us</span></a>
+          <a href="../gallery.html"><span>gallery</span></a>
+          <a href="../contact.html"><span>Contact us</span></a>
+        </div>
+
+        <div class="social">
+          <h4>SOCIAL MEDIA</h4>
+          <i class="uil uil-facebook"></i>
+          <i class="uil uil-instagram"></i>
+          <i class="uil uil-twitter"></i>
+          <i class="uil uil-github"></i>
+          <button>Sign Up</button>
+        </div>
+      </div>
+
+      <hr
+        style="
+          height: 0.5px;
+          border-width: 0;
+          color: rgb(237, 3, 69);
+          background-color: rgb(210, 210, 210);
+          margin-bottom: 40px;
+        "
+      />
+      <span class="copy"
+        >Copyright © 2021-2023 Showoff Company S.L. All rights reserved.</span
+      >
+    </footer>
+
+    </body>
+
+<script src="../js/app.js"></script>
+<script>
+    const deleteBtn = document.querySelector("#delete")
+    const modal = document.querySelector("[data-modal]")
+    const closeBtn = document.querySelector("#close")
+
+    deleteBtn.addEventListener('click', () => {
+        modal.showModal()
+    })
+    closeBtn.addEventListener("click", () => {
+        modal.close()
+    })
+</script>
+
+</html>

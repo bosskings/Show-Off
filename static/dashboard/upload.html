@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShowOff - Upload</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/upload.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+  <body>
+    <nav id="narve-bar">
+      <div class="logo">
+        <a href="../index.html"><h2>SHOWOFF</h2></a>
+        <ul class="narv-ul">
+          <a href="#"><li>Artist</li></a>
+          <a href="../shop.html"><li>Shop</li></a>
+          <a href="./setting.html"><li>Setting</li></a>
+        </ul>
+      </div>
+
+      <div class="narve-right">
+        <i class="uil uil-search"></i
+        ><input type="text" placeholder="search. . ." />
+        <a href="../cart.html"><i class="uil uil-shopping-cart first"></i></a>
+        <i class="uil uil-moon" id="light"></i>
+        <div class="dropdown">
+          <div class="select">
+            <img
+              src="../images/Profile-Icon.png"
+              alt=""
+              width="50"
+              class="image"
+            />
+          </div>
+
+          <ul class="menu">
+            <li>Sign Out</li>
+          </ul>
+        </div>
+        <a href="./upload.html"><button>Upload</button></a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="container">
+        <div class="content">
+          <div class="buttons">
+            <a href="./dashboard.html"
+              ><button id="cancel">Cancel</button></a
+            >
+            <button id="continue">Continue</button>
+          </div>
+          <div class="upload">
+            <h2>Post Your Work Here</h2>
+            <div class="upload_content" onclick="fileBtnActive()">
+              <div class="image">
+                <img src="" id="img" alt="" />
+              </div>
+              <img src="../images/placeholder.png" alt="" />
+              <p>
+                Minimum 1600px width recommended. Max 10MB each (20MB for
+                videos)
+              </p>
+              <ul>
+                <li>High resolution images (png, jpg, gif)</li>
+                <li>Videos (mp4)</li>
+                <li>Only upload media you own the rights to</li>
+                <li>Animated gifs</li>
+              </ul>
+            </div>
+            <input type="file" id="file" hidden />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer_image">
+          Showoff
+          <span>
+            Showcase And Display Your Arts, Design And Skill On The Worlds
+            Biggest Stage
+          </span>
+        </div>
+
+        <div class="quick_links">
+          <h4>QUICK LINKS</h4>
+          <a href="../gallery.html"><span>Gallery</span></a>
+          <a href="../About.html"><span>About us</span></a>
+          <a href="../gallery.html"><span>gallery</span></a>
+          <a href="../contact.html"><span>Contact us</span></a>
+        </div>
+
+        <div class="social">
+          <h4>SOCIAL MEDIA</h4>
+          <i class="uil uil-facebook"></i>
+          <i class="uil uil-instagram"></i>
+          <i class="uil uil-twitter"></i>
+          <i class="uil uil-github"></i>
+          <button>Sign Up</button>
+        </div>
+      </div>
+
+      <hr
+        style="
+          height: 0.5px;
+          border-width: 0;
+          color: rgb(237, 3, 69);
+          background-color: rgb(210, 210, 210);
+          margin-bottom: 40px;
+        "
+      />
+      <span class="copy"
+        >Copyright © 2021-2023 Showoff Company S.L. All rights reserved.</span
+      >
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script>
+      // Upload click
+      const upload = document.querySelector("#file");
+      const box = document.querySelector("upload_content");
+      const img = document.querySelector("#img");
+
+      function fileBtnActive() {
+        upload.click();
+      }
+      upload.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function () {
+            const result = reader.result;
+            img.src = result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+--small-font: 15px;
+--big-font:70px;
+--medium-font:40px;
+--icon-size: 23px;
+--white-color:white;
+--white-grey:rgb(248, 248, 248);
+--hover-red-color: #dc3535;
+}
+
+
+.light-theme{
+--white-color:white;
+--black-color:black;
+--red-color:#FF5959;
+--dark-red-color: #dc3535;
+--white-grey:rgb(248, 248, 248);
+--hover-red-color: #dc3535;
+}
+
+
+.dark-theme{
+--white-color:black;
+--black-color:white;
+--red-color:#FF5959;
+--dark-red-color: #dc3535;
+--white-grey:rgb(13, 12, 12);
+--hover-red-color: rgb(228, 175, 0);
+}
+
+
+body{
+    background-color: var(--white-color);
+}
+
+a, li{
+    text-decoration: none;
+    list-style: none;
+}
+
+main{
+    padding: 8vw;
+}
+
+.container{
+    padding: 4vw 10vw 4vw 10vw;
+}
+
+
+
+/* Top content */
+.container .top_content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.container .top_content .top_content_img{
+   cursor: pointer;
+}
+.container .top_content .top_content_img img{
+    width: 50px;
+}
+
+.container .top_content .page{
+    align-items: center;
+}
+.container .top_content .page span{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black-color);
+}
+.container .top_content .page span:hover{
+    color: rgb(120, 120, 120);
+    cursor: pointer;
+}
+.container .top_content .page p{
+    font-size: 15px;
+    color: rgb(120, 120, 120);
+}
+
+
+
+/* Bottom content */
+.container .bottom_content{
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+/* Bottom Left Side */
+.bottom_left_side{
+    flex: 0.2;
+}
+.container .bottom_content .bottom_left_side ul{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: var(--black-color);
+}
+.container .bottom_content .bottom_left_side ul li{
+    font-size: 15px;
+    color: var(--black-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container .bottom_content .bottom_left_side ul li:hover{
+    color: rgb(105, 105, 105);
+}
+.container .bottom_content .bottom_left_side ul p{
+    font-size: 15px;
+    color: var(--red-color);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.container .bottom_content .bottom_left_side ul p:hover{
+    color: var(--hover-red-color);
+}
+.active{
+    color: var(--black-color);
+    font-weight: 700;
+}
+
+
+/* Bottom rigth Side */
+.bottom_right_side{
+    flex: 0.7;
+}
+.bottom_right_side form div{
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.bottom_right_side form div label{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+.bottom_right_side form div input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(231, 231, 231);
+}
+.bottom_right_side form button{
+    background-color: var(--red-color);
+    font-weight: 600;
+    margin-top: 0;
+    padding: 10px 15px 10px 15px;
+}
+.bottom_right_side form button:hover{
+    background-color: var(--hover-red-color);
+}
+
+dialog {
+  z-index: 10;
+  top: 10%;
+  left: 35%;
+  background: white;
+  border: none;
+  border-radius: 1rem;
+  transition: -50% -50%;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+}
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.50);
+}
+dialog img{
+    width: 100%;
+    height: inherit;
+}
+dialog h1{
+    font-size: 3rem;
+    line-height: 50px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+dialog #p1{
+    color: rgb(105, 105, 105);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+dialog #p1 span{
+    color: var(--red-color);
+}
+dialog #p2{
+    color: rgb(105, 105, 105);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+dialog button{
+    margin-top: 0;
+}
+dialog #close{
+    font-weight: 600;
+    margin-top: 0;
+}
+dialog #close:hover{
+    background-color: var(--hover-red-color);
+}
+dialog #delete_account{
+    background-color: white;
+    border: 1px solid rgb(202, 202, 202);
+    color: black;
+    font-weight: 600;
+}
