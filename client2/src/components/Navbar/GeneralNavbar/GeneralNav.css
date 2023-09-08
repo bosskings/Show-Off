@@ -1,0 +1,106 @@
+#narve-bar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  padding: 15px 10%;
+  width: 100%;
+  z-index: 3;
+}
+.nav__toggle {
+  display: none;
+}
+.logo h2 {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--red-color);
+}
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__close {
+  display: none;
+}
+.narv_ul {
+  display: flex;
+  gap: 1.5rem;
+}
+.narv_ul li {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--black-color);
+  font-weight: 600;
+}
+.narve_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.narve_right a {
+  color: var(--black-color);
+  font-weight: 600;
+}
+.narve_right a button {
+  padding: 13px 20px;
+  color: white;
+  background-color: var(--red-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.narve_right button:hover {
+  background-color: var(--dark-red-color);
+  transition: all ease-in-out 0.5s;
+}
+.uil-search,
+.uil-shopping-cart,
+.uil-moon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--black-color);
+}
+@media screen and (max-width: 426px) {
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  #narve-bar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px 5%;
+    width: 100%;
+    z-index: 3;
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #narve-bar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px 5%;
+    width: 100%;
+    z-index: 3;
+    gap: 1rem;
+  }
+  .nav__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
