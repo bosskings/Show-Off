@@ -28,12 +28,28 @@ const Banner = () => {
                         <div className='image__holder'>
                             <img src={Bg1} alt="" />
                         </div>
+                        <div className='text__holder1'>
+                            <h2>Explore our world leading unique</h2>
+                            <h1>Digital Art Creation</h1>
+                            <p>
+                                Millions of designers and agencies around the world showcase their
+                                portfolio work on ShowOff <br />
+                                home to the world’s best design and creative professionals.
+                            </p>
+                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="swiper2">
                         <div className='image__holder'>
                             <img src={Bg2} alt="" height="573" width="933" />
+                        </div>
+                        <div className='text__holder2'>
+                            <h1>Hire the world’s top creative talent.</h1>
+                            <p>
+                                Connect with a community of millions of top-rated designers & agencies around the world.
+                            </p>
+                            <button>Start hiring today!</button>
                         </div>
                     </div>
                 </SwiperSlide>

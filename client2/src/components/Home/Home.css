@@ -42,3 +42,44 @@
 .image__holder img {
   max-width: 100%;
 }
+.text__holder1,
+.text__holder2 {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  z-index: 2;
+  text-align: center;
+}
+.text__holder1 h2 {
+  font-size: 1.5rem;
+}
+.text__holder1 h1 {
+  font-size: 3.5rem;
+}
+.text__holder1 p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.text__holder2 h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.text__holder2 p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.text__holder2 button {
+  padding: 15px 20px;
+  color: white;
+  background-color: var(--red-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.text__holder2 button:hover {
+  background-color: var(--dark-red-color);
+  transition: all ease-in-out 0.5s;
+}
