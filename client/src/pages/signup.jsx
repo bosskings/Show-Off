@@ -3,6 +3,9 @@ import { Link } from "react-router-dom"
 // picture files
 import cc1 from  "./assets/images/cc 1.png";
 
+// css file
+import './assets/css/styles.css';
+
 const Signup = () => {
     return (  
         <div>
@@ -27,18 +30,18 @@ const Signup = () => {
 
                         <div className="fn">
                             <div>
-                                <label for="">Name</label>
-                                <input type="text" placeholder="Enter Name" />
+                                <label htmlFor="name">Name</label>
+                                <input type="text" placeholder="Enter Name" name="name" />
                             </div>
                             <div>
-                                <label for="">Username</label>
-                                <input type="text" placeholder="Enter Username" />
+                                <label htmlFor="username">Username</label>
+                                <input type="text" placeholder="Enter Username" name="username" />
                             </div>
                         </div>
-                        <label for="">Email</label>
-                        <input type="email" placeholder="Enter your Email Address" />
-                        <label for="">Password</label>
-                        <input type="password" placeholder="Enter your Password" />
+                        <label htmlFor="email">Email</label>
+                        <input type="email" placeholder="Enter your Email Address" name="email" />
+                        <label htmlFor="passwor">Password</label>
+                        <input type="password" placeholder="Enter your Password" autoComplete="true" name="password" />
 
                         <div className="terms">
                             <input type="checkbox" />

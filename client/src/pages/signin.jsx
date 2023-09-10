@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-// css files
-import "./assets/css/siginup"
-
 // picture files
 import bd from "./assets/images/bd.png";
 
-const signup = () => {
+// css file
+import './assets/css/styles.css';
+
+const Signin = () => {
 
     return (  
         <div>
@@ -45,4 +45,4 @@ const signup = () => {
     );
 }
  
-export default signup;
+export default Signin;
