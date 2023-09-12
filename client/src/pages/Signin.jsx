@@ -1,4 +1,4 @@
-import { FcGoogle } from 'react-icons/fc'
+// import { FcGoogle } from 'react-icons/fc'
 import { Link } from 'react-router-dom'
 
 import "../components/Login/login.css"
