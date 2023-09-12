@@ -20,7 +20,7 @@ app.use( (req,res, next)=>{
 });
 
 // API routes
-app.use('api/', router)
+app.use('/api/arts', router)
 
 
 // listen for requests
