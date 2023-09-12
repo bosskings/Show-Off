@@ -6,14 +6,14 @@ router.get('/galleryArts', (req,res)=>{
     res.status(201).json({msg: "here's all the arts from db"})
 });
 
-// get signle art
+// GET single art
 router.get('/galleryArts/:id', (req, res)=>{
     res.json({msg: "here's your single art"})
 })
 
-
 // POST a new art
 router.post('/uploadArt', (req, res)=>{
+    const {art_name, file_dir, description} = req.body;
     res.json({msg: "received your art"})
 })
 
@@ -29,7 +29,7 @@ router.delete('/removeArt/:id', (req, res)=>{
 
 // avoid wrong routes
 router.all('*', (req, res)=>{
-    res.send('Wrong route..')
+    res.status(404).send('Wrong route..')
 });
 
 
