@@ -70,7 +70,7 @@ const Navbar = () => {
                     ) : (
                         <>
                             <Link to='/login'>Login</Link>
-                            <Link to='/signup'>
+                            <Link to='/register'>
                                 <button>
                                     SignUp
                                 </button>
