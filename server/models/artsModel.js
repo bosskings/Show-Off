@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema
 
 const artsSchema = new Schema({
-    name:{
+    art_name:{
         type:String,
         required: true
     },
@@ -14,12 +14,12 @@ const artsSchema = new Schema({
 
     art_dir:{
         type: String,
-        required:true
+        // required:true
     },
 
     artist_id:{
         type: Number,
-        required:true
+        // required:true
     },
 
     art_rating:{
@@ -29,4 +29,4 @@ const artsSchema = new Schema({
 
 }, {timestamps:true});
 
-export default mongoose.model('art', artsSchema)
+export default mongoose.model('Art', artsSchema)

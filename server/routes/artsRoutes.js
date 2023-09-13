@@ -1,21 +1,16 @@
+import { createArt, getAllArts, getSingleArt } from "../controllers/artsController.js"
 import { Router } from "express";
+
 const router = Router()
 
 // GET all arts 
-router.get('/galleryArts', (req,res)=>{
-    res.status(201).json({msg: "here's all the arts from db"})
-});
+router.get('/galleryArts', getAllArts);
 
 // GET single art
-router.get('/galleryArts/:id', (req, res)=>{
-    res.json({msg: "here's your single art"})
-})
+router.get('/galleryArts/:id', getSingleArt)
 
 // POST a new art
-router.post('/uploadArt', (req, res)=>{
-    const {art_name, file_dir, description} = req.body;
-    res.json({msg: "received your art"})
-})
+router.post('/uploadArt', createArt)
 
 // UPDATE arts
 router.patch('/updateArt/:id', (req, res)=>{
