@@ -1,4 +1,4 @@
-import { createArt, getAllArts, getSingleArt } from "../controllers/artsController.js"
+import { createArt, deleteArt, getAllArts, getSingleArt, updateArt } from "../controllers/artsController.js"
 import { Router } from "express";
 
 const router = Router()
@@ -13,14 +13,10 @@ router.get('/galleryArts/:id', getSingleArt)
 router.post('/uploadArt', createArt)
 
 // UPDATE arts
-router.patch('/updateArt/:id', (req, res)=>{
-    res.json({msg: "Scheduled for update"})
-})
+router.patch('/updateArt/:id', updateArt)
 
 // DELETE arts
-router.delete('/removeArt/:id', (req, res)=>{
-    res.json({msg: "removed an art"})
-})
+router.delete('/removeArt/:id', deleteArt)
 
 // avoid wrong routes
 router.all('*', (req, res)=>{
