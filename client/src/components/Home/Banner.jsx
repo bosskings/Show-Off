@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel, Pagination, Autoplay } from 'swiper/modules';
+import { Mousewheel, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -18,7 +18,7 @@ const Banner = () => {
                 direction={'horizontal'}
                 slidesPerView={1}
                 spaceBetween={30}
-                mousewheel={true}
+                // mousewheel={true}
                 autoplay={{ delay: 6000 }}
                 modules={[Mousewheel, Autoplay]}
                 className="mySwiper"

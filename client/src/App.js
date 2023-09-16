@@ -27,7 +27,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/contactus" element={<Contact />} />
           <Route path="/login" element={<Signin />} />
           <Route path="/register" element={<Signup />} />
         </Routes>

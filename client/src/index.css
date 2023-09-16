@@ -6,7 +6,7 @@
   --medium-font: 40px;
   --icon-size: 23px;
   --white-color: #fafafa;
-  --white-grey: rgb(248, 248, 248);
+  --white-grey: rgb(244, 244, 244);
   --red-color: #ff5959;
   --button-red-color: #ffe2e2;
   --black-color: black;
@@ -19,12 +19,12 @@
   --black-color: black;
   --red-color: #ff5959;
   --dark-red-color: #dc3535;
-  --white-grey: rgb(248, 248, 248);
+  --white-grey: rgb(244, 244, 244);
   --button-red-color: #ffe2e2;
 }
 
 .dark-theme {
-  --white-color: black;
+  --white-color: rgb(0, 0, 0);
   --black-color: #fafafa;
   --red-color: rgb(255, 191, 0);
   --dark-red-color: rgb(238, 179, 0);

@@ -34,7 +34,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav id="narve-bar" className={`${isScrollHeader ? 'scroll-header' : ''}`}>
+        <nav className={`narve-bar ${isScrollHeader ? 'scroll-header' : ''}`}>
             <div className='nav__toggle' onClick={toggleShowMenu}>
                 <i className="uil uil-apps"></i>
             </div>

@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: var(--body-font);
-  background-color: #fafafa;
+  background-color: var(--white-color);
 }
 
 ul {
@@ -24,8 +24,7 @@ a {
 
 /* Change background header */
 .scroll-header {
-  background-color: var(--white-color);
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /*==================== LAYOUT ====================*/
@@ -41,6 +40,9 @@ a {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .small__section {
+  padding: 8rem 0 8rem;
+}
+.smaller__section {
   padding: 4rem 0 4rem;
 }
 
