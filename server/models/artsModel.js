@@ -14,12 +14,12 @@ const artsSchema = new Schema({
 
     art_dir:{
         type: String,
-        // required:true
+        required:true
     },
 
     artist_id:{
         type: Number,
-        // required:true
+        required:true
     },
 
     art_rating:{
@@ -29,4 +29,4 @@ const artsSchema = new Schema({
 
 }, {timestamps:true});
 
-export default mongoose.model('Art', artsSchema)
+export default mongoose.model('art', artsSchema)

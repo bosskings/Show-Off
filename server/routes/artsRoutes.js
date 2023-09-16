@@ -1,4 +1,10 @@
-import { createArt, deleteArt, getAllArts, getSingleArt, updateArt } from "../controllers/artsController.js"
+import { 
+    createArt, 
+    deleteArt, 
+    getAllArts, 
+    getSingleArt, 
+    updateArt 
+} from "../controllers/artsController.js"
 import { Router } from "express";
 
 const router = Router()
