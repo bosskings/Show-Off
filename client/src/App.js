@@ -1,35 +1,37 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// pages and components
-import Home from './pages/Home';
-import About from './pages/About';
-import Gallery from './pages/Gallery';
-import Shop from './pages/Shop';
-import Contact from './pages/Contact';
-import Cart from './pages/cart';
-import Signup from './pages/signup';
-import Signin from './pages/signin';
-
-// js files
-import './pages/assets/js/app'
+import "./App.css";
+import PrivateRoutes from "./utils/PrivateRoute";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Artists from "./pages/Artists";
+import Gallery from "./pages/Gallery";
+import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
+import Contact from "./pages/Contact";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>  
+    <div>
+      <Router>
         <Routes>
-          
-          <Route path='/'  element={<Home />}/>
-          <Route path='/about'  element={<About />}/>
-          <Route path='/gallery'  element={<Gallery />}/>
-          <Route path='/shop' element={<Shop />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/signup' element={<Signup /> } />
-          <Route path='/signin' element={<Signin /> } />
-        
+          <Route element={<PrivateRoutes />}>
+            <Route path="/dashboard/:userId" element={<Dashboard />} />
+          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/artists" element={<Artists />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/login" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

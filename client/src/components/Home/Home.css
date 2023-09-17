@@ -1,0 +1,85 @@
+.bg {
+  background-color: #fafafa;
+}
+.banner {
+  height: 100vh;
+}
+/* ==================================== Swiper ============================ */
+.swiper1 {
+  background: url(../../assets/fullscreen-peaces-background1-img-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+.swiper2 {
+  background: url(../../assets/fullscreen-peaces-background2-img-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.swiper3 {
+  background: url(../../assets/fullscreen-peaces-background3-img-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+.image__holder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+}
+.image__holder img {
+  max-width: 100%;
+}
+.text__holder1,
+.text__holder2 {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  z-index: 2;
+  text-align: center;
+}
+.text__holder1 h2 {
+  font-size: 1.5rem;
+}
+.text__holder1 h1 {
+  font-size: 3.5rem;
+}
+.text__holder1 p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.text__holder2 h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.text__holder2 p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.text__holder2 button {
+  padding: 15px 20px;
+  color: white;
+  background-color: var(--red-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.text__holder2 button:hover {
+  background-color: var(--dark-red-color);
+  transition: all ease-in-out 0.5s;
+}
