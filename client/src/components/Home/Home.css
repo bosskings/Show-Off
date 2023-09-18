@@ -4,9 +4,6 @@
 .bg2 {
   background-color: var(--white-color);
 }
-.bg3 {
-  background: linear-gradient(96deg, #f2d227 11.1%, #f49f20 114.42%);
-}
 .banner {
   height: 100vh;
 }

@@ -1,0 +1,128 @@
+.light-theme {
+  --linear_bg: #ffbcbc;
+}
+.dark-theme {
+  --linear_bg: #ac8100;
+}
+.bg {
+  background-color: var(--white-grey);
+}
+.bg2 {
+  background-color: var(--white-color);
+}
+.linear_bg {
+  background: linear-gradient(
+    180deg,
+    var(--white-color) 0%,
+    var(--linear_bg) 466.72%
+  );
+}
+
+/* ============================================= About Head ================================= */
+.about_head_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.about_head_container h3 {
+  color: var(--black-color);
+  font-size: 1rem;
+  color: var(--red-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.about_head_container h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.about_head_container p {
+  font-size: 1rem;
+}
+
+/* ============================================ Trusted By ========================================== */
+.trusted_by {
+  display: grid;
+  -ms-flex-align: center;
+  grid-auto-columns: -webkit-min-content;
+  grid-auto-columns: min-content;
+  grid-auto-flow: column;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.trusted_by p {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.icon {
+  color: var(--black-color);
+}
+
+/* ============================================ Goal and Number ========================================== */
+.goal_and_nubmer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.goal_and_nubmer_left {
+  width: 100%;
+}
+.goal_and_nubmer_left h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.goal_and_nubmer_left h2 span {
+  color: var(--red-color);
+  font-weight: 500;
+}
+.goal_and_nubmer_left #p1 {
+  margin-bottom: 10px;
+  color: var(--black-color);
+}
+
+.css-4juikq {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 8px;
+  gap: 0.3rem;
+}
+.css-4juikq i {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--red-color);
+}
+.css-1d452j3 {
+  margin: 0px 0px 0px 12px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+.goal_and_nubmer_right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 1rem;
+  padding-left: 27px;
+}
+.goal_and_nubmer_right div {
+  padding-left: 27px;
+  border-left: 1px solid var(--red-color);
+}
+.goal_and_nubmer_right div h2 {
+  color: var(--red-color);
+}

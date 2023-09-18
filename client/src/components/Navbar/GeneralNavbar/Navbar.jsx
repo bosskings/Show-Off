@@ -39,7 +39,9 @@ const Navbar = () => {
                 <i className="uil uil-apps"></i>
             </div>
             <div className="logo">
-                <h2>SHOWOFF</h2>
+                <Link to="/">
+                    <h2>SHOWOFF</h2>
+                </Link>
             </div>
             <div className={`nav__menu ${removeMenu}`}>
                 <i className="uil uil-times nav__close" onClick={toggleRemoveMenu}></i>
