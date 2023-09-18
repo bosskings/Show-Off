@@ -7,6 +7,7 @@ import ReasonsHire from '../components/Home/ReasonsHire'
 import GetStarted from '../components/Home/GetStarted'
 import WhyShowOff from '../components/Home/WhyShowOff'
 import QualityWork from '../components/Home/QualityWork'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <ReasonsHire />
             <WhyShowOff />
             <QualityWork />
+            <Footer />
         </>
     )
 }

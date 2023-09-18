@@ -16,7 +16,7 @@ import media9 from '../../assets/media9.jpg'
 
 const QualityWork = () => {
     return (
-        <div className='bg2 section'>
+        <div className='bg2 small__section'>
             <div className="container">
                 <div className="quality__work">
                     <div className="quality__work__head">
