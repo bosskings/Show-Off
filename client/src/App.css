@@ -11,7 +11,8 @@ html {
 
 body {
   font-family: var(--body-font);
-  background-color: #fafafa;
+  background-color: var(--white-color);
+  color: var(--black-color);
 }
 
 ul {
@@ -24,8 +25,7 @@ a {
 
 /* Change background header */
 .scroll-header {
-  background-color: var(--white-color);
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /*==================== LAYOUT ====================*/
@@ -41,6 +41,9 @@ a {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .small__section {
+  padding: 8rem 0 8rem;
+}
+.smaller__section {
   padding: 4rem 0 4rem;
 }
 
@@ -51,15 +54,15 @@ a {
 /*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
   width: 0.6rem;
-  background-color: var(--scroll-bar-color);
+  background-color: var(--white-gray);
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb-color);
+  background-color: rgb(190, 190, 190);
   border-radius: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-color-light);
+  background-color: var(--white-gray);
 }
