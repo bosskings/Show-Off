@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PrivateRoutes from "./utils/PrivateRoute";
 
 import "./App.css";
-import PrivateRoutes from "./utils/PrivateRoute";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Artists from "./pages/Artists";
