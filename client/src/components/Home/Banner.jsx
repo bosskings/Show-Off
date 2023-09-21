@@ -18,7 +18,7 @@ const Banner = () => {
                 direction={'horizontal'}
                 slidesPerView={1}
                 spaceBetween={30}
-                mousewheel={true}
+                // mousewheel={true}
                 autoplay={{ delay: 6000 }}
                 modules={[Mousewheel, Autoplay]}
                 className="mySwiper"

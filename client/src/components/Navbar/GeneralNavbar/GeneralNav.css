@@ -1,14 +1,13 @@
-#narve-bar {
+.narve-bar {
   position: fixed;
   display: grid;
   grid-template-columns: 430px 1fr;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
-  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  background-color: var(--white-color);
   padding: 15px 10%;
   width: 100%;
-  z-index: 3;
+  z-index: 9;
 }
 .nav__toggle {
   display: none;

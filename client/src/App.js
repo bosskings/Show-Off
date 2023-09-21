@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PrivateRoutes from "./utils/PrivateRoute";
 
 import "./App.css";
-import PrivateRoutes from "./utils/PrivateRoute";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Artists from "./pages/Artists";
@@ -29,7 +29,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/login" element={<Signin />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/register" element={<Signup />} />
         </Routes>
       </Router>
     </div>
