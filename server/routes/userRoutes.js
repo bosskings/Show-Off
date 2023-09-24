@@ -4,7 +4,6 @@ import { Router } from "express";
 const router = Router();
 
 
-
 // sign up routes 
 // router.get('/signup', signUpUser);
 router.post('/signup', signUpUser);
