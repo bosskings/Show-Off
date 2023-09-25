@@ -6,8 +6,8 @@ const Footer = () => {
     return (
         <div className='smaller__section bg'>
             <div className="container">
-                <div class="footer">
-                    <div class="footer_image">
+                <div className="footer">
+                    <div className="footer_image">
                         Showoff
                         <span>
                             Showcase And Display Your Arts, Design And Skill On The Worlds
@@ -15,7 +15,7 @@ const Footer = () => {
                         </span>
                     </div>
 
-                    <div class="quick_links">
+                    <div className="quick_links">
                         <h4>QUICK LINKS</h4>
                         <Link to='/gallery'>
                             <span>Gallery</span>
@@ -28,7 +28,7 @@ const Footer = () => {
                         </Link>
                     </div>
 
-                    <div class="social">
+                    <div className="social">
                         <h4>SOCIAL MEDIA</h4>
                         <i className="uil uil-facebook"></i>
                         <i className="uil uil-instagram"></i>
@@ -47,7 +47,7 @@ const Footer = () => {
                         marginBottom: "40px",
                     }}
                 />
-                <span class="copy">
+                <span className="copy">
                     Copyright © 2021-2023 Showoff Company S.L. All rights reserved.
                 </span>
             </div>
