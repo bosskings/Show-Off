@@ -26,6 +26,7 @@
   flex-direction: column;
   width: 100%;
   text-align: center;
+  color: var(--black-color);
 }
 .about_head_container h3 {
   color: var(--black-color);
@@ -63,6 +64,7 @@
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
+  color: var(--black-color);
 }
 .icon {
   color: var(--black-color);
@@ -81,6 +83,7 @@
 .goal_and_nubmer_left h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: var(--black-color);
 }
 .goal_and_nubmer_left h2 span {
   color: var(--red-color);
@@ -125,4 +128,164 @@
 }
 .goal_and_nubmer_right div h2 {
   color: var(--red-color);
+}
+.goal_and_nubmer_right div p {
+  color: var(--black-color);
+}
+
+/* ============================================ Testimonials ========================================== */
+.testimonies__container {
+  width: 100%;
+}
+.testimonies__container h2 {
+  font-weight: 400;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  color: var(--black-color);
+}
+.testimonies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.testimony {
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+  height: fit-content;
+}
+.testimony:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  background-color: var(--red-color);
+  color: #fff;
+}
+#comment {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.testimony__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.testimony__user img {
+  width: 50px;
+  border-radius: 10px;
+}
+.testimony__user p {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* ============================================ Advertise ========================================== */
+.advertise__container {
+  width: 100%;
+  color: var(--black-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+#advertise__head {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.advert {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  align-items: center;
+  gap: 2.5rem;
+}
+.advert__content {
+  width: 100%;
+}
+.advert__content h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.advert__content p {
+  margin-bottom: 20px;
+}
+.advert__content button {
+  padding: 1rem 1.5rem;
+  border-radius: 40px;
+  background-color: var(--red-color);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.advert__content button:hover {
+  background-color: var(--dark-red-color);
+}
+.ads {
+  width: 100%;
+}
+.ad {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.ad video,
+img {
+  width: 100%;
+}
+
+/* ============================================ Why Advertise With us ========================================== */
+.why-advertise_container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  color: var(--black-color);
+}
+
+.why-advertise__content {
+  width: 100%;
+}
+.why-advertise__content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  margin-bottom: 15px;
+}
+.why-advertise__content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.why-advertise_line {
+  align-self: stretch;
+  background-color: var(--black-color, #e7e7e9);
+  flex: 0 0 auto;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1px;
+}
+
+.why-advertise__numbers {
+  width: 60%;
+}
+.why_advertise {
+  margin-bottom: 20px;
+}
+.why_advertise h2 {
+  font-weight: 500;
+}
+.why_advertise p {
+  font-size: 0.9rem;
 }

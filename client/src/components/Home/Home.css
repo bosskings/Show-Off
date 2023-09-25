@@ -293,7 +293,7 @@
   border-radius: 24px;
 }
 
-/* =============================== Media ============================== */
+/* =============================== Quality Work ============================== */
 .quality__work__head {
   display: flex;
 }
@@ -342,24 +342,4 @@
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: inherit;
-}
-
-/* =============================== Start hiring ============================== */
-.start__hiring__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  /* height: 50vh; */
-  color: #fff;
-  gap: 20px;
-}
-.start__hiring__container h3 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-.start__hiring__container p {
-  font-size: 1.5rem;
-  font-size: 400;
 }

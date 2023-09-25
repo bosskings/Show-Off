@@ -8,7 +8,7 @@ const GoalAndNumber = () => {
                     <div className='goal_and_nubmer_left'>
                         <h2>Our <span>ultimate</span> goal</h2>
                         <p id='p1'>
-                            We help players like you share small screenshots (shots) to show off your current projects, boost your portfolio, and love what you do—no matter what kind of creative professional you are. Hundreds of millions of people look for design inspiration and feedback on Dribbble
+                            We help players like you share small screenshots (shots) to show off your current projects, boost your portfolio, and love what you do—no matter what kind of creative professional you are. Hundreds of millions of people look for design inspiration and feedback on ShowOff
                         </p>
                         <p id='p1'>
                             we are a bootstrapped and profitable company helping design talent share, grow, and get hired by over tens of thousands of today’s most innovative brands around the world.

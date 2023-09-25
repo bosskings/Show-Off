@@ -1,6 +1,7 @@
 import React from 'react'
 
 // import Navbar from '../components/Navbar/GeneralNavbar/Navbar'
+import "../components/Home/Home.css"
 import Banner from '../components/Home/Banner'
 import PopularArt from '../components/Home/PopularArt'
 import ReasonsHire from '../components/Home/ReasonsHire'
