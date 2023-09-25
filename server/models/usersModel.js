@@ -10,7 +10,7 @@ const UserSchema = new Mongoose.Schema({
     user_email:{
         type : String ,
         required  : [ true ,"Email is Required..."],
-        unique   : [false,'This Email Already Exist'],
+        unique   : [true,'This Email Already Exist'],
     },
     user_password:{
         type:String,
@@ -53,5 +53,30 @@ UserSchema.statics.signup = async function(type, email, password){
 
     
 }
+
+// signin users
+UserSchema.statics.signin = async function(user_email, user_password){
+
+    if(!user_email || !user_password){
+        throw Error("Both fields are required!");
+    }
+    
+    const user = await this.findOne({user_email});
+    
+    if (!user){
+        throw Error("Account does not exists")
+    }
+
+    // check if passwords match
+    const match = await bcrypt.compare(user_password, user.user_password)
+    if ( !match ) {
+        throw Error("Password does not match the email")
+    }
+
+    return user
+
+}
+
+
 
 export default Mongoose.model('User', UserSchema)
