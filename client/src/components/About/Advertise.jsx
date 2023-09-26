@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -44,7 +44,9 @@ const Advertise = () => {
                             <p>
                                 Whether driving awareness, announcing a product launch, or showcasing a special offer, we have your hard to reach audience and you have control over the design, copy, CTA, and destination.
                             </p>
-                            <button>Advertise with us</button>
+                            <Link to="/about#lookingtoadvertise">
+                                <button>Advertise with us</button>
+                            </Link>
                         </div>
                         <div className='ads'>
                             <Carousel

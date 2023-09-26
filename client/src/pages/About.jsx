@@ -9,6 +9,7 @@ import GoalAndNumber from '../components/About/GoalAndNumber'
 import OurWallOfLove from '../components/About/OurWallOfLove'
 import Advertise from '../components/About/Advertise'
 import WhyAdvertise from '../components/About/WhyAdvertise'
+import LookingToAdvertise from '../components/About/LookingToAdvertise'
 
 const About = () => {
     return (
@@ -20,6 +21,7 @@ const About = () => {
             <OurWallOfLove />
             <Advertise />
             <WhyAdvertise />
+            <LookingToAdvertise />
             <Footer />
         </>
     )

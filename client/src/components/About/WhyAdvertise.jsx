@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhyAdvertise = () => {
     return (
-        <div className='bg2 small__section'>
+        <div className='bg2 smaller__section'>
             <div className="container">
                 <div className="why-advertise_container">
                     <div className='why-advertise__content'>
