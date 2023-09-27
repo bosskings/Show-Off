@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PrivateRoutes from "./utils/PrivateRoute";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 import "./App.css";
 import Home from "./pages/Home";
@@ -14,25 +15,29 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 
 function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route element={<PrivateRoutes />}>
-            <Route path="/dashboard/:userId" element={<Dashboard />} />
-          </Route>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/artists" element={<Artists />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/contact-us" element={<Contact />} />
-          <Route path="/login" element={<Signin />} />
-          <Route path="/register" element={<Signup />} />
-        </Routes>
-      </Router>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <Router>
+          <Routes>
+            <Route element={<PrivateRoutes />}>
+              <Route path="/dashboard/:userId" element={<Dashboard />} />
+            </Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/artists" element={<Artists />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/login" element={<Signin />} />
+            <Route path="/register" element={<Signup />} />
+          </Routes>
+        </Router>
+      </div>
+    </QueryClientProvider>
   );
 }
 
