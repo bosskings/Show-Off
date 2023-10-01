@@ -3,6 +3,10 @@ import bcrypt from "bcrypt";
 import validator from "validator";
 
 const UserSchema = new Mongoose.Schema({
+    name:{
+        type:String,
+        required:[true, "Name must be provided"]
+    },
     user_type:{
         type:String,
         required:[true,"Please select a User Type"]
@@ -19,7 +23,7 @@ const UserSchema = new Mongoose.Schema({
 })
 
 // create a static signup function
-UserSchema.statics.signup = async function(type, email, password){
+UserSchema.statics.signup = async function(name, type, email, password){
     
     // validate users input
     if(!email || !password || !type){
@@ -46,7 +50,7 @@ UserSchema.statics.signup = async function(type, email, password){
     const hash = await bcrypt.hash(password, salt);
 
     // Create new user with hashed password
-    const user = await this.create({user_type:type, user_email:email, user_password:hash})
+    const user = await this.create({name, user_type:type, user_email:email, user_password:hash})
 
     // Return created user
     return user
@@ -57,7 +61,7 @@ UserSchema.statics.signup = async function(type, email, password){
 // signin users
 UserSchema.statics.signin = async function(user_email, user_password){
 
-    if(!user_email || !user_password){
+    if(!user_email || !user_password){ //make sure email and pass are available
         throw Error("Both fields are required!");
     }
     

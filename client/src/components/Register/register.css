@@ -136,6 +136,20 @@ form {
   font-weight: 500;
   font-size: 1rem;
 }
+
+#input__field select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: var(--white-color);
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+}
+#input__field select::placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
 #terms {
   display: flex;
   align-items: center;

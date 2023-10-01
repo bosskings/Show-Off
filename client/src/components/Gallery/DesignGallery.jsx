@@ -1,7 +1,7 @@
 // src/components/DesignGallery.js
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import axios from 'axios';
+// import axios from 'axios';
 import DesignItem from './DesignItem';
 import { designs } from './mockData';
 
@@ -13,7 +13,7 @@ const DesignGallery = () => {
         setShowCount((prevCount) => prevCount + 4);
     };
 
-    const { isLoading, error, data } = useQuery('designs', () => {
+    const { isLoading, error } = useQuery('designs', () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve({ data: designs.slice(0, showCount) });
