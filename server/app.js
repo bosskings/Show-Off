@@ -2,13 +2,14 @@ import express from 'express';
 import dotenv from 'dotenv';
 // import cors from 'cors';
 import mongoose from 'mongoose';
+import artsRoutes from "./routes/artsRoutes.js"
+import usersRoutes from "./routes/userRoutes.js"
 
-import router from "./routes/artsRoutes.js"
+
 dotenv.config()
 
 // create an express app
 const app  = express();
-
 
 // middleware
 app.use(express.json())
@@ -20,7 +21,8 @@ app.use( (req,res, next)=>{
 });
 
 // API routes
-app.use('/api/arts', router)
+app.use('/api/arts', artsRoutes)
+app.use('/api/users', usersRoutes)
 
 
 // connect to DB
