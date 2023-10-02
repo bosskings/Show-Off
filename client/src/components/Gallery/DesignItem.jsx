@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const DesignItem = ({ design }) => {
+    const [like, setLike] = useState(design.likes)
+
+    const handleLike = () => {
+        setLike(like + 1)
+    }
+
     return (
         <div class="design">
             <img id='shot__main__img' src={design.img} alt="" />
@@ -13,8 +19,8 @@ const DesignItem = ({ design }) => {
                     <p>{design.username}</p>
                 </div>
                 <ul>
-                    <li><i class="uil uil-heart"></i> 179</li>
-                    <li><i class="uil uil-eye"></i> 15.7k</li>
+                    <li onClick={handleLike}><i class="uil uil-heart"></i> {like}</li>
+                    <li><i class="uil uil-eye"></i> {design.views}K</li>
                 </ul>
             </div>
         </div>

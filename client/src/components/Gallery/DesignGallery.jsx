@@ -40,6 +40,7 @@ const DesignGallery = () => {
                         <div className="gallery__buttons">
                             <div id='gallery__search'>
                                 <input type="text" placeholder='Search..' />
+                                <button>submit</button>
                             </div>
                             <div className='category__buttons'>
                                 <button onClick={() => filterDesignsByCategory(null)}>All</button>
@@ -71,7 +72,7 @@ const DesignGallery = () => {
                         </div>
                         <div className='load__more'>
                             {showCount < filteredDesigns.length && (
-                                <button onClick={loadMore}>Load More</button>
+                                <button id='load__more' onClick={loadMore}>Load More</button>
                             )}
                         </div>
                     </div>

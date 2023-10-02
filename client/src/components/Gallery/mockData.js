@@ -12,6 +12,8 @@ export const designs = [
     img: img1,
     username: "Carazan Brands",
     profilePic: profileIcon,
+    likes: 200,
+    views: 17.5,
   },
   {
     id: 2,
@@ -19,6 +21,8 @@ export const designs = [
     img: img2,
     username: "Carazan Brands",
     profilePic: profileIcon,
+    likes: 200,
+    views: 150,
   },
   {
     id: 3,
@@ -26,6 +30,8 @@ export const designs = [
     img: img3,
     username: "Carazan Brands",
     profilePic: profileIcon,
+    likes: 200,
+    views: 17.9,
   },
   {
     id: 4,
@@ -33,6 +39,8 @@ export const designs = [
     img: img4,
     username: "Carazan Brands",
     profilePic: profileIcon,
+    likes: 200,
+    views: 30.5,
   },
   {
     id: 5,
@@ -40,6 +48,8 @@ export const designs = [
     img: img5,
     username: "Carazan Brands",
     profilePic: profileIcon,
+    likes: 200,
+    views: 30,
   },
   {
     id: 6,
@@ -47,5 +57,7 @@ export const designs = [
     img: img6,
     username: "Carazan Brands",
     profilePic: profileIcon,
+    likes: 200,
+    views: 20,
   },
 ];
