@@ -127,8 +127,8 @@ form {
 #input__field input {
   padding: 0.5rem;
   border-radius: 5px;
-  border: 1px solid gray;
-  background-color: var(--white-color);
+  border: none;
+  background-color: var(--white-grey);
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
 }

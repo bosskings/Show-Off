@@ -11,6 +11,29 @@
   justify-content: center;
   align-items: center;
 }
+.design__gallery__container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.gallery__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.category__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#gallery__search {
+  flex: 0 0 150px;
+  margin-right: 30px;
+}
 
 .content {
   display: grid;
@@ -39,8 +62,8 @@
   height: 24px;
 }
 .shot_sec div p {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   margin-left: 5px;
   color: var(--black-color);
 }
@@ -50,7 +73,7 @@
   align-items: center;
 }
 .shot_sec ul li {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--black-color);
   margin-left: 5px;
