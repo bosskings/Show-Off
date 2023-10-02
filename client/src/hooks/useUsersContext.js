@@ -11,4 +11,4 @@ const useUsersContext = () =>{
     return context;
 }
 
-export default useUsersContext;
+export { useUsersContext };

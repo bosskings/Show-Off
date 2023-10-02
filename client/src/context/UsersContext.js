@@ -3,6 +3,7 @@ import { createContext, useReducer } from 'react'
 const AuthContext = createContext();
 
 const authReducer = (state,action)=>{
+   
     switch(action.type){
         case 'LOGIN':
             return {user: action.payload};
@@ -16,7 +17,7 @@ const authReducer = (state,action)=>{
 }
 
 const AuthContextProvider = ({children}) => {
-    const [state, dispatch] = useReducer({authReducer}, {
+    const [state, dispatch] = useReducer(authReducer, {
         user: null
     })
 
