@@ -36,27 +36,34 @@ const DesignGallery = () => {
         <div className="bg2 section">
             <div className="container">
                 <div className="design_gallery">
-                    <div className=''>
-                        <div className="category_buttons">
-                            <button onClick={() => filterDesignsByCategory(null)}>All</button>
-                            <button onClick={() => filterDesignsByCategory('Animations')}>
-                                Animations
-                            </button>
-                            <button onClick={() => filterDesignsByCategory('Branding')}>
-                                Branding
-                            </button>
-                            <button onClick={() => filterDesignsByCategory('Illustrations')}>
-                                Illustrations
-                            </button>
-                            <button onClick={() => filterDesignsByCategory('Paint')}>
-                                Paint
-                            </button>
-                            <button onClick={() => filterDesignsByCategory('Web Design')}>
-                                Web Design
-                            </button>
-                            <button onClick={() => filterDesignsByCategory('Print')}>
-                                Print
-                            </button>
+                    <div className='design__gallery__container'>
+                        <div className="gallery__buttons">
+                            <div id='gallery__search'>
+                                <input type="text" placeholder='Search..' />
+                                <button>submit</button>
+                            </div>
+                            <div className='category__buttons'>
+                                <button onClick={() => filterDesignsByCategory(null)}>All</button>
+                                <button onClick={() => filterDesignsByCategory('Animations')}>
+                                    Animations
+                                </button>
+                                <button onClick={() => filterDesignsByCategory('Branding')}>
+                                    Branding
+                                </button>
+                                <button onClick={() => filterDesignsByCategory('Illustrations')}>
+                                    Illustrations
+                                </button>
+                                <button onClick={() => filterDesignsByCategory('Paint')}>
+                                    Paint
+                                </button>
+                                <button onClick={() => filterDesignsByCategory('Web Design')}>
+                                    Web Design
+                                </button>
+                                <button onClick={() => filterDesignsByCategory('Print')}>
+                                    Print
+                                </button>
+                            </div>
+                            <div></div>
                         </div>
                         <div className="content">
                             {filteredDesigns.slice(0, showCount).map((design) => (
@@ -65,7 +72,7 @@ const DesignGallery = () => {
                         </div>
                         <div className='load__more'>
                             {showCount < filteredDesigns.length && (
-                                <button onClick={loadMore}>Load More</button>
+                                <button id='load__more' onClick={loadMore}>Load More</button>
                             )}
                         </div>
                     </div>

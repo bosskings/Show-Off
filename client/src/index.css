@@ -10,6 +10,7 @@
   --red-color: #ff5959;
   --button-red-color: #ffe2e2;
   --black-color: black;
+  --linear_bg: #ffbcbc;
 
   --body-font: "Poppins", sans-serif;
 }
@@ -21,6 +22,7 @@
   --dark-red-color: #dc3535;
   --white-grey: rgb(244, 244, 244);
   --button-red-color: #ffe2e2;
+  --linear_bg: #ffbcbc;
 }
 
 .dark-theme {
@@ -30,4 +32,5 @@
   --dark-red-color: rgb(238, 179, 0);
   --white-grey: rgb(13, 12, 12);
   --button-red-color: #484847;
+  --linear_bg: #ac8100;
 }
