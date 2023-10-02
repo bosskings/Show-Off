@@ -3,17 +3,20 @@ import { Link } from 'react-router-dom'
 import "../components/Login/login.css"
 import LoginVideo from '../assets/video/walking_illustration_video_process.mp4'
 import { useState } from 'react'
+import { useLogin } from '../hooks/useLogin'
+
 
 const LoginForm = () => {
 
     // create states for user inputs
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const {login, error, isLoading } = useLogin();
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
 
-        console.log(email, password);
+        await login(email, password);
     } 
 
     return (
@@ -52,7 +55,8 @@ const LoginForm = () => {
                                     <Link>Forgot password?</Link>
                                 </div>
                             </div>
-                            <button type="submit" id='login__submit__btn'>Login</button>
+                            <button disabled={isLoading} id='login__submit__btn'>Login</button>
+                            { error && <div className="error">{ error }</div>  }
                             <p id='redirect'>Not registered yet? <Link to="/register">Register</Link></p>
                         </form>
                     </div>

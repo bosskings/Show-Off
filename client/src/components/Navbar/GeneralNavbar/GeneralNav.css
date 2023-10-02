@@ -42,11 +42,11 @@
   align-items: center;
   gap: 1.5rem;
 }
-.narve_right a {
+.narve_right {
   color: var(--black-color);
   font-weight: 600;
 }
-.narve_right a button {
+.narve_right button {
   padding: 13px 20px;
   color: white;
   background-color: var(--red-color);

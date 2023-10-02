@@ -8,9 +8,9 @@ const DesignItem = ({ design }) => {
     }
 
     return (
-        <div class="design">
+        <div className="design">
             <img id='shot__main__img' src={design.img} alt="" />
-            <div class="shot_sec">
+            <div className="shot_sec">
                 <div>
                     <img
                         src={design.profilePic}
@@ -19,8 +19,8 @@ const DesignItem = ({ design }) => {
                     <p>{design.username}</p>
                 </div>
                 <ul>
-                    <li onClick={handleLike}><i class="uil uil-heart"></i> {like}</li>
-                    <li><i class="uil uil-eye"></i> {design.views}K</li>
+                    <li onClick={handleLike}><i className="uil uil-heart"></i> {like}</li>
+                    <li><i className="uil uil-eye"></i> {design.views}K</li>
                 </ul>
             </div>
         </div>

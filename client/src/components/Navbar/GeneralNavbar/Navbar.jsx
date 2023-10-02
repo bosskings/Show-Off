@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom'
 import "./GeneralNav.css"
 import ProfileIcon from '../../../assets/Profile-Icon.png'
 import DarkThemeToggle from './ThemeButton'
+import useLogout from '../../../hooks/useLogout'
+import { useUsersContext } from '../../../hooks/useUsersContext'
+
+
 
 const Navbar = () => {
     const [removeMenu, setShowMenu] = useState('remove-menu')
     const [isScrollHeader, setIsScrollHeader] = useState(false);
+    const {user} = useUsersContext();
+
+    // logout context
+    const {logout} = useLogout()
 
     const handleScrollHeader = () => {
         if (window.scrollY >= 80) {
@@ -24,13 +32,17 @@ const Navbar = () => {
         };
     }, []);
 
-    const user = false
 
     const toggleRemoveMenu = () => {
         setShowMenu((curr) => (curr === "nav__menu" && "remove-menu"))
     }
     const toggleShowMenu = () => {
         setShowMenu((curr) => (curr === "remove-menu" && "nav__menu"))
+    }
+
+    // log user out
+    const handleSubmit = () =>{
+        logout()
     }
 
     return (
@@ -62,14 +74,17 @@ const Navbar = () => {
                                     <img
                                         src={ProfileIcon}
                                         alt=""
-                                        width="50"
+                                        style={{width:"50px"}}
                                         className="image"
                                     />
+                                    {user.userEmail}
                                 </div>
                             </Link>
-                            <Link to='/'>Logout</Link>
+                            <button onClick={handleSubmit}>
+                                LogOut
+                            </button>   
                         </>
-                    ) : (
+                    ) : ( 
                         <>
                             <Link to='/login'>Login</Link>
                             <Link to='/register'>
@@ -78,7 +93,7 @@ const Navbar = () => {
                                 </button>
                             </Link>
                         </>
-                    )}
+                    )} 
                 </div>
             </div>
         </nav>
