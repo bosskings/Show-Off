@@ -27,13 +27,13 @@ const signInUser = async (req, res)=>{
 // function to signup a user
 const signUpUser = async (req, res)=>{
    
-    const {user_type, user_email, user_password} = req.body;
+    const {name, userType, userEmail, userPassword} = req.body;
     try {
 
-        const user = await User.signup(user_type, user_email, user_password);
+        const user = await User.signup(name, userType, userEmail, userPassword);
         // create token
         const token = createToken(user._id);
-        res.status(200).json({user_email, token});
+        res.status(200).json({userEmail, token});
         
     } catch (error) {
         res.status(400).json({error: error.message});

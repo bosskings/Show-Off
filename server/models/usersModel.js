@@ -3,39 +3,43 @@ import bcrypt from "bcrypt";
 import validator from "validator";
 
 const UserSchema = new Mongoose.Schema({
-    user_type:{
+    name:{
+        type:String,
+        required:[true, "Name must be provided"]
+    },
+    userType:{
         type:String,
         required:[true,"Please select a User Type"]
     },
-    user_email:{
+    userEmail:{
         type : String ,
         required  : [ true ,"Email is Required..."],
         unique   : [true,'This Email Already Exist'],
     },
-    user_password:{
+    userPassword:{
         type:String,
         required: [true, "Password cannot be left empty"]
     }
 })
 
 // create a static signup function
-UserSchema.statics.signup = async function(type, email, password){
+UserSchema.statics.signup = async function(name, userType, userEmail, userPassword){
     
     // validate users input
-    if(!email || !password || !type){
-        throw Error("All Fields Must be filled");
+    if(!userEmail || !userPassword || !name || !userType){
+        throw Error("All Fields Must be filled..");
     }
     
-    if(!validator.isEmail(email)){
+    if(!validator.isEmail(userEmail)){
         throw Error("email is not valid!");
     }
     
-    if(!validator.isStrongPassword(password)){
+    if(!validator.isStrongPassword(userPassword)){
         throw Error('Your Password must contain atleast one lowercase letter and one uppercase letter');
     }
     
     // Check if email already exists
-    const exists = await this.findOne({user_email:email});    
+    const exists = await this.findOne({userEmail});    
     if(exists){
         throw Error("Email already in use!")
     }
@@ -43,10 +47,10 @@ UserSchema.statics.signup = async function(type, email, password){
     // Generate salt for password hashing
     const salt = await bcrypt.genSalt(10);
     // Hash password using salt
-    const hash = await bcrypt.hash(password, salt);
+    const hash = await bcrypt.hash(userPassword, salt);
 
     // Create new user with hashed password
-    const user = await this.create({user_type:type, user_email:email, user_password:hash})
+    const user = await this.create({name, userType, userEmail, userPassword:hash})
 
     // Return created user
     return user
@@ -55,20 +59,20 @@ UserSchema.statics.signup = async function(type, email, password){
 }
 
 // signin users
-UserSchema.statics.signin = async function(user_email, user_password){
+UserSchema.statics.signin = async function(userEmail, userPassword){
 
-    if(!user_email || !user_password){
+    if(!userEmail || !userPassword){ //make sure email and pass are available
         throw Error("Both fields are required!");
     }
     
-    const user = await this.findOne({user_email});
+    const user = await this.findOne({userEmail});
     
     if (!user){
         throw Error("Account does not exists")
     }
 
     // check if passwords match
-    const match = await bcrypt.compare(user_password, user.user_password)
+    const match = await bcrypt.compare(userPassword, user.userPassword)
     if ( !match ) {
         throw Error("Password does not match the email")
     }

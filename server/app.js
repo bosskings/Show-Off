@@ -5,7 +5,6 @@ import mongoose from 'mongoose';
 import artsRoutes from "./routes/artsRoutes.js"
 import usersRoutes from "./routes/userRoutes.js"
 
-
 dotenv.config()
 
 // create an express app
