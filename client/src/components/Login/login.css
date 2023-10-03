@@ -63,13 +63,22 @@
 .form__right__top {
   text-align: left;
 }
-.form__right__top h3 {
+#form__right__top__hey {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+#form__right__top__hey h3 {
   color: var(--black-color);
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  margin-bottom: 0.9rem;
+}
+#form__right__top__hey a {
+  font-size: 13px;
+  color: var(--red-color);
 }
 .form__right__top p {
   font-size: 0.9rem;
@@ -95,6 +104,7 @@ form {
   border-radius: 5px;
   border: 1px solid grey;
   background-color: var(--white-color);
+  color: var(--black-color);
 }
 #input__field input::placeholder {
   font-weight: 500;
@@ -276,8 +286,8 @@ form {
   #input__field input {
     padding: 0.5rem;
     border-radius: 5px;
-    border: 1px solid var(--black-color);
-    background-color: var(--white-color);
+    border: none;
+    background-color: var(--white-grey);
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
   }

@@ -34,7 +34,9 @@ const Footer = () => {
                         <i className="uil uil-instagram"></i>
                         <i className="uil uil-twitter"></i>
                         <i className="uil uil-github"></i>
-                        <button>Sign Up</button>
+                        <Link to="/register">
+                            <button>Sign Up</button>
+                        </Link>
                     </div>
                 </div>
 
