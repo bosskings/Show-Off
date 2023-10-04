@@ -31,7 +31,10 @@ const LoginForm = () => {
                     <video src={LoginVideo} autoPlay loop muted id='media__video'></video>
                     <div className='form__right__inner'>
                         <div className='form__right__top'>
-                            <h3>Hey, hello 👋</h3>
+                            <div id='form__right__top__hey'>
+                                <h3>Hey, hello 👋</h3>
+                                <Link to="/"><i className="uil uil-arrow-left"></i> Back Home</Link>
+                            </div>
                             <p>Enter the information you entered  while registering</p>
                         </div>
 

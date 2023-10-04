@@ -12,7 +12,7 @@ const GetStarted = () => {
                     </div>
                     <div className='get__started__right'>
                         <p>
-                            See why over 60,000 leading brands and business builders use Dribbble to attract, engage, and hire their best design talent.
+                            See why over 60,000 leading brands and business builders use ShowOff to attract, engage, and hire their best design talent.
                         </p>
                         <div>
                             <button>

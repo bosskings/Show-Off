@@ -33,7 +33,7 @@ const Banner = () => {
                             <h1>Digital Art Creation</h1>
                             <p>
                                 Millions of designers and agencies around the world showcase their
-                                portfolio work on ShowOff <br />
+                                portfolio work on ShowOff
                                 home to the world’s best design and creative professionals.
                             </p>
                         </div>

@@ -47,6 +47,10 @@
 }
 .text__holder1,
 .text__holder2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   width: 100%;
   top: 35%;
@@ -60,6 +64,7 @@
   font-size: 3.5rem;
 }
 .text__holder1 p {
+  width: 60%;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -342,4 +347,336 @@
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: inherit;
+}
+
+@media screen and (max-width: 426px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .small__section {
+    padding: 6rem 0 4rem;
+  }
+  /* =========================Banner ======================== */
+  .text__holder1,
+  .text__holder2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    z-index: 2;
+    text-align: center;
+  }
+  .text__holder1 h2 {
+    font-size: 1rem;
+  }
+  .text__holder1 h1 {
+    font-size: 2rem;
+  }
+  .text__holder1 p {
+    width: 99%;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .text__holder2 h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .text__holder2 p {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .image__holder img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ============================= GetStarted =================== */
+  .get__started {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .get__started__head h2 {
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 68px;
+    color: var(--black-color);
+  }
+  .get__started__right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 0;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  /* =========================== ReasonHire ======================= */
+  .reason__hire {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .reason__hire__head h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    width: 100%;
+    color: var(--black-color);
+  }
+  .reason {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .reason p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--black-color);
+  }
+
+  /* ============================== Why ======================= */
+  .why__head h3 {
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 48px;
+    width: 100%;
+    color: var(--black-color);
+    text-align: left;
+  }
+  .why__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+    margin-top: 50px;
+    gap: 40px;
+    justify-items: start;
+  }
+  .why__right {
+    width: 100%;
+    max-width: 627px;
+    margin-top: 41px;
+  }
+  .why__item h3 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .why__item p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .container {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .small__section {
+    padding: 6rem 0 4rem;
+  }
+  /* =========================Banner ======================== */
+  .text__holder1 h2 {
+    font-size: 1.1rem;
+  }
+  .text__holder1 h1 {
+    font-size: 3rem;
+  }
+  .text__holder1 p {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .text__holder2 h1 {
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  .text__holder2 p {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 70%;
+  }
+
+  /* ============================= GetStarted =================== */
+  .get__started {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .get__started__head h2 {
+    font-size: 70px;
+    line-height: 90px;
+    font-weight: 250;
+    color: var(--black-color);
+  }
+  .get__started__right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 0;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  /* =========================== ReasonHire ======================= */
+  .reason__hire__head h3 {
+    font-size: 2.7rem;
+    font-weight: 400;
+    line-height: 3.5rem;
+    width: 100%;
+    color: var(--black-color);
+  }
+  .reason {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .reason p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--black-color);
+  }
+
+  /* ============================== Why ======================= */
+  .why__head h3 {
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 400;
+    width: 100%;
+    color: var(--black-color);
+  }
+  .why__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+    margin-top: 88px;
+    gap: 40px;
+    justify-items: start;
+  }
+  .why__right {
+    width: 100%;
+    max-width: 627px;
+    margin-top: 41px;
+  }
+  .why__item h3 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .why__item p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .small__section {
+    padding: 6rem 0 4rem;
+  }
+  /* =========================Banner ======================== */
+  .text__holder1 h2 {
+    font-size: 1.3rem;
+  }
+  .text__holder1 h1 {
+    font-size: 3.2rem;
+  }
+  .text__holder1 p {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .text__holder2 h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .text__holder2 p {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 60%;
+  }
+
+  /* ============================ Get Started =================== */
+  .get__started__head h2 {
+    font-size: 55px;
+    line-height: 75px;
+    font-weight: 250;
+    color: var(--black-color);
+  }
+  .get__started__right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 26px;
+    width: 100%;
+    gap: 1rem;
+  }
+  .get__started__right p {
+    color: var(--black-color);
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .get__started__right button {
+    padding: 0.7rem 1rem;
+    align-self: center;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    background-color: var(--red-color);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* =================================== ReasonToHire ========================= */
+  .reason__hire__head h3 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 3.5rem;
+    width: 50%;
+    color: var(--black-color);
+  }
+  .reason h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--black-color);
+    margin-bottom: 15px;
+  }
+  .reason p {
+    font-size: 13px;
+    color: var(--black-color);
+  }
+
+  /* ================================ Why ===================== */
+  .why__head h3 {
+    font-size: 50px;
+    line-height: 72px;
+    font-weight: 400;
+    width: 90%;
+    color: var(--black-color);
+  }
+  .why__content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+    margin-top: 88px;
+    gap: 40px;
+    justify-items: start;
+  }
+  .why__right {
+    width: 100%;
+    max-width: 627px;
+    margin-top: 41px;
+  }
+  .why__item h3 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .why__item p {
+    font-size: 14px;
+  }
 }

@@ -77,20 +77,22 @@
   width: 100%;
   padding: 10px;
   border-radius: 7px;
-  border: 1px solid rgb(204, 202, 202);
+  border: none;
   margin-bottom: 15px;
   margin-top: 10px;
-  background-color: var(--white-color);
+  background-color: var(--white-grey);
+  color: var(--black-color);
 }
 .second_section form textarea {
   display: block;
   width: 100%;
   padding: 10px;
   border-radius: 7px;
-  border: 1px solid rgb(204, 202, 202);
+  border: none;
   margin-bottom: 15px;
   margin-top: 10px;
-  background-color: var(--white-color);
+  background-color: var(--white-grey);
+  color: var(--black-color);
 }
 .second_section form button {
   padding: 10px;
@@ -108,9 +110,6 @@
 }
 
 @media screen and (max-width: 769px) {
-  .container {
-    padding: 4vw 4vw 4vw 4vw;
-  }
   .container .contact {
     grid-template-columns: 1fr;
   }
