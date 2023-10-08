@@ -1,5 +1,5 @@
 // src/components/DesignGallery.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 // import axios from 'axios';
 import DesignItem from './DesignItem';
@@ -8,6 +8,23 @@ import { designs } from './mockData';
 const DesignGallery = () => {
     const [showCount, setShowCount] = useState(4);
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [arts, setArts] = useState(null)
+
+
+    // fetch arts from API end point
+    useEffect(()=>{
+        
+        const getArts = async()=>{
+    
+            const result = await fetch('api/arts/galleryArts');
+            const arts = await result.json();
+            setArts(arts)
+            
+        }
+
+        getArts();
+
+    }, [])
 
     const loadMore = () => {
         setShowCount((prevCount) => prevCount + 4);
@@ -21,15 +38,11 @@ const DesignGallery = () => {
         });
     });
 
-    const filterDesignsByCategory = (category) => {
-        setSelectedCategory(category);
-    };
-
     const filteredDesigns = selectedCategory
         ? designs.filter((design) => design.category === selectedCategory)
         : designs;
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <h1>Loading...</h1>;
     if (error) return <p>Error: {error.message}</p>;
 
     return (
@@ -43,31 +56,31 @@ const DesignGallery = () => {
                                 <button>submit</button>
                             </div>
                             <div className='category__buttons'>
-                                <button onClick={() => filterDesignsByCategory(null)}>All</button>
-                                <button onClick={() => filterDesignsByCategory('Animations')}>
+                                <button onClick={() => setSelectedCategory(null)}>All</button>
+                                <button onClick={() => setSelectedCategory('Animations')}>
                                     Animations
                                 </button>
-                                <button onClick={() => filterDesignsByCategory('Branding')}>
+                                <button onClick={() => setSelectedCategory('Branding')}>
                                     Branding
                                 </button>
-                                <button onClick={() => filterDesignsByCategory('Illustrations')}>
+                                <button onClick={() => setSelectedCategory('Illustrations')}>
                                     Illustrations
                                 </button>
-                                <button onClick={() => filterDesignsByCategory('Paint')}>
+                                <button onClick={() => setSelectedCategory('Paint')}>
                                     Paint
                                 </button>
-                                <button onClick={() => filterDesignsByCategory('Web Design')}>
+                                <button onClick={() => setSelectedCategory('Web Design')}>
                                     Web Design
                                 </button>
-                                <button onClick={() => filterDesignsByCategory('Print')}>
+                                <button onClick={() => setSelectedCategory('Print')}>
                                     Print
                                 </button>
                             </div>
                             <div></div>
                         </div>
                         <div className="content">
-                            {filteredDesigns.slice(0, showCount).map((design) => (
-                                <DesignItem key={design.id} design={design} />
+                            {arts.map((design) => (
+                                <DesignItem key={design._id} design={design} />
                             ))}
                         </div>
                         <div className='load__more'>

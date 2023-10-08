@@ -16,7 +16,7 @@ const DesignItem = ({ design }) => {
                         src={design.profilePic}
                         alt=""
                     />
-                    <p>{design.username}</p>
+                    <p>{design.art_name}</p>
                 </div>
                 <ul>
                     <li onClick={handleLike}><i className="uil uil-heart"></i> {like}</li>

@@ -1,3 +1,4 @@
+import { Router } from "express";
 import { 
     createArt, 
     deleteArt, 
@@ -5,9 +6,13 @@ import {
     getSingleArt, 
     updateArt 
 } from "../controllers/artsController.js"
-import { Router } from "express";
+
+import usersAuth from "../middleware/usersAuth.js";
 
 const router = Router()
+
+// use authorization constume middleware for all routes
+// router.use(usersAuth)
 
 // GET all arts 
 router.get('/galleryArts', getAllArts);

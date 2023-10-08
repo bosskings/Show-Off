@@ -17,6 +17,11 @@ const artsSchema = new Schema({
         required:true
     },
 
+    art_category:{
+        type:String,
+        required:true
+    },
+
     artist_id:{
         type: Number,
         required:true
