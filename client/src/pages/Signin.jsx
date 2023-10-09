@@ -1,20 +1,8 @@
 import { Link } from 'react-router-dom'
-
 import "../components/Login/login.css"
 import LoginVideo from '../assets/video/walking_illustration_video_process.mp4'
-import { useState } from 'react'
 
 const LoginForm = () => {
-
-    // create states for user inputs
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleSubmit = async (e) =>{
-        e.preventDefault();
-
-        console.log(email, password);
-    } 
 
     return (
         <div className='login'>
@@ -35,15 +23,15 @@ const LoginForm = () => {
                             <p>Enter the information you entered  while registering</p>
                         </div>
 
-                        <form onSubmit={handleSubmit}>
+                        <form >
                             <div id='input__field'>
                                 <label>Email</label>
-                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" required />
                             </div>
 
                             <div id='input__field'>
                                 <label>Password</label>
-                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                <input type="password" required />
                             </div>
                             
                             <div id='login__terms'>
