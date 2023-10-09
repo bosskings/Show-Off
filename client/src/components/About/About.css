@@ -60,7 +60,7 @@
 /* ============================================ Trusted By ========================================== */
 .trusted_by {
   display: grid;
-  rid-auto-columns: -webkit-min-content;
+  grid-auto-columns: -webkit-min-content;
   grid-auto-columns: min-content;
   grid-auto-flow: column;
   -ms-flex-pack: justify;
