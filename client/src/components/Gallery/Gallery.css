@@ -5,12 +5,21 @@
   background-color: var(--white-color);
 }
 
+/* =============================================== Banner ========================================== */
+.gallery__banner {
+  background-image: url(../../assets/Logos/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 60vh;
+}
+
 /* ============================================== DesignGallery =============================== */
 .design_gallery {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
 }
 .design__gallery__container {
   display: flex;
@@ -33,12 +42,12 @@
 }
 #gallery__search input {
   padding: 0.8rem;
-  width: 250px;
+  width: 290px;
   background-color: var(--white-grey);
   border: none;
   border-radius: 5px;
 }
-#gallery__search button {
+/* #gallery__search button {
   background-color: var(--red-color);
   border: none;
   padding: 0 0.7rem;
@@ -50,7 +59,7 @@
 }
 #gallery__search button:hover {
   background-color: var(--dark-red-color);
-}
+} */
 
 .category__buttons {
   display: flex;
@@ -79,14 +88,15 @@
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 50px;
-  background-color: var(--red-color);
-  color: #fff;
+  background-color: var(--white-grey);
+  color: var(--black-color);
   font-weight: 600;
   cursor: pointer;
   transition: 0.5s;
 }
 #load__more:hover {
-  background-color: var(--dark-red-color);
+  background-color: var(--red-color);
+  color: #fff;
 }
 
 #shot__main__img {
@@ -109,7 +119,7 @@
   width: 24px;
   height: 24px;
 }
-.shot_sec div p {
+.shot_sec div a {
   font-size: 13px;
   font-weight: 500;
   margin-left: 5px;

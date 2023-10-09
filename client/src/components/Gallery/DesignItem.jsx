@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 const DesignItem = ({ design }) => {
     const [like, setLike] = useState(design.likes)
@@ -16,7 +17,7 @@ const DesignItem = ({ design }) => {
                         src={design.profilePic}
                         alt=""
                     />
-                    <p>{design.username}</p>
+                    <Link to="">{design.username}</Link>
                 </div>
                 <ul>
                     <li onClick={handleLike}><i className="uil uil-heart"></i> {like}</li>

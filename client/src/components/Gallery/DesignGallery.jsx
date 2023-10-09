@@ -33,14 +33,14 @@ const DesignGallery = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div className="bg2 section">
+        <div className="bg2 smaller__section">
             <div className="container">
                 <div className="design_gallery">
                     <div className='design__gallery__container'>
                         <div className="gallery__buttons">
                             <div id='gallery__search'>
                                 <input type="text" placeholder='Search..' />
-                                <button>submit</button>
+                                {/* <button>submit</button> */}
                             </div>
                             <div className='category__buttons'>
                                 <button onClick={() => filterDesignsByCategory(null)}>All</button>
