@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import img6 from "../../assets/show5.webp";
+import profileIcon from "../../assets/Profile-Icon.png";
+
 
 const DesignItem = ({ design }) => {
     const [like, setLike] = useState(design.likes)
@@ -9,11 +12,11 @@ const DesignItem = ({ design }) => {
 
     return (
         <div className="design">
-            <img id='shot__main__img' src={design.img} alt="" />
+            <img id='shot__main__img' src={img6} alt="" />
             <div className="shot_sec">
                 <div>
                     <img
-                        src={design.profilePic}
+                        src={profileIcon}
                         alt=""
                     />
                     <p>{design.art_name}</p>

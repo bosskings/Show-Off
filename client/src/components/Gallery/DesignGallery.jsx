@@ -39,8 +39,10 @@ const DesignGallery = () => {
     });
 
     const filteredDesigns = selectedCategory
-        ? designs.filter((design) => design.category === selectedCategory)
-        : designs;
+        ? arts.filter((design) => design.art_category === selectedCategory)
+        : arts;
+
+        console.log(filteredDesigns);
 
     if (isLoading) return <h1>Loading...</h1>;
     if (error) return <p>Error: {error.message}</p>;
@@ -57,7 +59,7 @@ const DesignGallery = () => {
                             </div>
                             <div className='category__buttons'>
                                 <button onClick={() => setSelectedCategory(null)}>All</button>
-                                <button onClick={() => setSelectedCategory('Animations')}>
+                                <button onClick={() => setSelectedCategory('Animation')}>
                                     Animations
                                 </button>
                                 <button onClick={() => setSelectedCategory('Branding')}>
@@ -66,7 +68,7 @@ const DesignGallery = () => {
                                 <button onClick={() => setSelectedCategory('Illustrations')}>
                                     Illustrations
                                 </button>
-                                <button onClick={() => setSelectedCategory('Paint')}>
+                                <button onClick={() => setSelectedCategory('Painting')}>
                                     Paint
                                 </button>
                                 <button onClick={() => setSelectedCategory('Web Design')}>
@@ -79,7 +81,7 @@ const DesignGallery = () => {
                             <div></div>
                         </div>
                         <div className="content">
-                            {arts.map((design) => (
+                            {filteredDesigns.map((design) => (
                                 <DesignItem key={design._id} design={design} />
                             ))}
                         </div>
