@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import "../components/Register/register.css"
 import LoginVideo from '../assets/video/walking_illustration_video_process.mp4'
-import { useState } from 'react'
 
 const SignupForm = () => {
     return (
