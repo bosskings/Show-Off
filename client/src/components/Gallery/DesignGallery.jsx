@@ -1,16 +1,16 @@
-// src/components/DesignGallery.js
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-// import axios from 'axios';
+
+
 import DesignItem from './DesignItem';
 import { designs } from './mockData';
 
 const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(4);
+    const [showCount, setShowCount] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     const loadMore = () => {
-        setShowCount((prevCount) => prevCount + 4);
+        setShowCount((prevCount) => prevCount + 8);
     };
 
     const { isLoading, error } = useQuery('designs', () => {

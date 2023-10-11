@@ -6,8 +6,10 @@
 }
 
 /* =============================================== Banner ========================================== */
-.gallery__banner {
-  background-image: url(../../assets/Logos/banner.jpg);
+
+.shop__banner {
+  background: url(../../assets/Logos/flat-lay-assortment-artistic-tools.jpg),
+    rgba(0, 0, 0, 0.4);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,43 +106,34 @@
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.shot_sec {
+.shop__sec {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.shop__sec__details {
+  flex: 2;
+  width: 100%;
+}
+.shop__sec__details p {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--black-color);
 }
 
-.shot_sec div {
+.shop__sec__icons {
+  flex: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
-.shot_sec div img {
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-}
-.shot_sec div a {
-  font-size: 13px;
-  font-weight: 500;
-  margin-left: 5px;
-  color: var(--black-color);
-}
-.shot_sec ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.shot_sec ul li {
-  font-size: 12px;
+.shop__sec__icons i {
   font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
   color: var(--black-color);
-  margin-left: 5px;
-}
-.shot_sec ul li i {
-  color: #aeaeae;
-}
-.shot_sec ul li i:hover {
-  color: var(--red-color);
 }
 
 @media screen and (max-width: 426px) {

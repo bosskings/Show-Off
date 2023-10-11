@@ -13,30 +13,33 @@ import Contact from "./pages/Contact";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 
 function App() {
   const queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div>
-        <Router>
-          <Routes>
-            <Route element={<PrivateRoutes />}>
-              <Route path="/dashboard/:userId" element={<Dashboard />} />
-            </Route>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/artists" element={<Artists />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/contact-us" element={<Contact />} />
-            <Route path="/login" element={<Signin />} />
-            <Route path="/register" element={<Signup />} />
-          </Routes>
-        </Router>
-      </div>
+      <ShoppingCartProvider>
+        <div>
+          <Router>
+            <Routes>
+              <Route element={<PrivateRoutes />}>
+                <Route path="/dashboard/:userId" element={<Dashboard />} />
+              </Route>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/artists" element={<Artists />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/contact-us" element={<Contact />} />
+              <Route path="/login" element={<Signin />} />
+              <Route path="/register" element={<Signup />} />
+            </Routes>
+          </Router>
+        </div>
+      </ShoppingCartProvider>
     </QueryClientProvider>
   );
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import "./GeneralNav.css"
 import ProfileIcon from '../../../assets/Profile-Icon.png'
 import DarkThemeToggle from './ThemeButton'
+import { useShoppingCart } from '../../../contexts/ShoppingCartContext';
 
 const Navbar = () => {
     const [removeMenu, setShowMenu] = useState('remove-menu')
@@ -33,6 +34,8 @@ const Navbar = () => {
         setShowMenu((curr) => (curr === "remove-menu" && "nav__menu"))
     }
 
+    const { cart } = useShoppingCart();
+
     return (
         <nav className={`narve-bar ${isScrollHeader ? 'scroll-header' : ''}`}>
             <div className='nav__toggle' onClick={toggleShowMenu}>
@@ -53,7 +56,12 @@ const Navbar = () => {
                 </ul>
 
                 <div className="narve_right">
-                    <Link to='/cart'><i className="uil uil-shopping-cart first"></i></Link>
+                    <Link to='/cart'>
+                        <i className="uil uil-shopping-cart first"></i>
+                        {cart.length > 0 && (
+                            <span className="cart-item-count">{cart.length}</span>
+                        )}
+                    </Link>
                     <DarkThemeToggle />
                     {user ? (
                         <>
