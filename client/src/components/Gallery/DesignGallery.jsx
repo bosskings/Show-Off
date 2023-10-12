@@ -8,25 +8,28 @@ const DesignGallery = () => {
     const [showCount, setShowCount] = useState(4);
     const [selectedCategory, setSelectedCategory] = useState(null);
     
-    
+    console.log(useArtsContext());
     const {arts, dispatch} = useArtsContext()
 
 
     // fetch arts from API end point
     useEffect(()=>{
         
-        const getArts = async()=>{
+        const getArts = async ()=>{
             
             const result = await fetch('api/arts/galleryArts');
             const json = await result.json();
+
+            if (result.ok) {
+                dispatch({type:'SET_ARTS', payload:json})
+            }
             
-            dispatch({type:'SET_ARTS', payload:json})
-            
+            console.log(json)
         }
 
         getArts();
         
-    }, [])
+    }, [dispatch])
 
     const loadMore = async () => {
         setShowCount((prevCount) => prevCount + 4);
