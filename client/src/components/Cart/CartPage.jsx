@@ -1,4 +1,6 @@
 import React from 'react';
+
+import RatingStars from '../Shop/RatingStars';
 import { useShoppingCart } from '../../contexts/ShoppingCartContext';
 
 const CartPage = () => {
@@ -27,29 +29,61 @@ const CartPage = () => {
 
     return (
         <div className='bg2 section'>
-            <h1>Cart</h1>
-            {cart.length > 0 ? (
-                cart.map(item => (
-                    <div key={item.id}>
-                        <img src={item.img} alt={item.title} />
-                        <p>{item.title}</p>
-                        <p>Price: ${item.price}</p>
-                        <p>Quantity: {item.quantity}</p>
-                        <button onClick={() => handleIncrement(item)}>+</button>
-                        <button onClick={() => handleDecrement(item)}>-</button>
+            <div className='container'>
+                <div className='cart'>
+                    <div className='cart__left'>
+                        <h1 className='cart__head'>Shopping Cart</h1>
+                        <p className='cart__item-quantity'>{totalQuantity} Item in Cart</p>
+                        <hr className='line' />
+                        {cart.length > 0
+                            ? <div className='cart__items' >
+                                {
+                                    cart.map(item => (
+                                        <div key={item.id} className='cart__item'>
+                                            <img id='cart__item-img' src={item.img} alt={item.title} width={150} />
+                                            <div className='cart__sec'>
+                                                <div className='cart__sec__details'>
+                                                    <p id='cart__sec__details-title'>{item.title}</p>
+                                                    <div className='rating'>
+                                                        <RatingStars rating={item.rating} />
+                                                    </div>
+                                                    <p className='cart__sec__details-price'>Price: ${item.price}</p>
+                                                </div>
+                                                <div className='cart__sec__icons'>
+                                                    <button onClick={() => handleIncrement(item)}>+</button>
+                                                    <p>{item.quantity}</p>
+                                                    <button onClick={() => handleDecrement(item)}>-</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                            : (
+                                <div className="empty-cart">
+                                    {/* Display "Empty Cart" image or message */}
+                                    {/* <img src="../../assets/9005390.jpg" alt="Empty Cart" /> */}
+                                    {/* Or a simple text message */}
+                                    <p>Your cart is empty.</p>
+                                </div>
+                            )
+                        }
                     </div>
-                ))
-            ) : (
-                <div className="empty-cart">
-                    {/* Display "Empty Cart" image or message */}
-                    {/* <img src="../../assets/9005390.jpg" alt="Empty Cart" /> */}
-                    {/* Or a simple text message */}
-                    <p>Your cart is empty.</p>
+
+                    <div className='cart__right'>
+                        <div className='cart__right-inner'>
+                            <div className='cart__right-inner__div'>
+                                <p className='cart__item-total'>Total:</p>
+                                <p className='cart__item-price'> ${totalPrice}</p>
+                            </div>
+                            <div>
+                                <button>Check Out</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            )}
-            <p>Total Price: ${totalPrice}</p>
-            <p>Total Quantity: {totalQuantity}</p>
-        </div>
+            </div>
+        </div >
     );
 }
 
