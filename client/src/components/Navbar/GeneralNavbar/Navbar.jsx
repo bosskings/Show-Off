@@ -50,7 +50,7 @@ const Navbar = () => {
                 <i className="uil uil-times nav__close" onClick={toggleRemoveMenu}></i>
                 <ul className="narv_ul">
                     <Link to='/about'><li>About</li></Link>
-                    <Link to='artists'><li>Artist</li></Link>
+                    <Link to='/artists'><li>Artist</li></Link>
                     <Link to='/gallery'><li>Gallery</li></Link>
                     <Link to='/shop'><li>Shop</li></Link>
                 </ul>
