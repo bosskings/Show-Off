@@ -1,11 +1,11 @@
-// src/components/DesignGallery.js
 import  { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
+
 import DesignItem from './DesignItem';
 import { useArtsContext } from '../../hooks/useArtsContext';
 
 const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(4);
+    const [showCount, setShowCount] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState(null);
     
     console.log(useArtsContext());
@@ -33,6 +33,7 @@ const DesignGallery = () => {
 
     const loadMore = async () => {
         setShowCount((prevCount) => prevCount + 4);
+
     };
 
 
@@ -53,14 +54,14 @@ const DesignGallery = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div className="bg2 section">
+        <div className="bg2 smaller__section">
             <div className="container">
                 <div className="design_gallery">
                     <div className='design__gallery__container'>
                         <div className="gallery__buttons">
                             <div id='gallery__search'>
                                 <input type="text" placeholder='Search..' />
-                                <button>submit</button>
+                                {/* <button>submit</button> */}
                             </div>
                             <div className='category__buttons'>
                                 <button onClick={() => setSelectedCategory(null)}>All</button>
