@@ -1,39 +1,46 @@
-// src/components/DesignGallery.js
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
-// import axios from 'axios';
+
 import DesignItem from './DesignItem';
-import { designs } from './mockData';
+import { useArtsContext } from '../../hooks/useArtsContext';
 
 const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(4);
+    const [showCount, setShowCount] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState(null);
-    const [arts, setArts] = useState(null)
+    
+    console.log(useArtsContext());
+    const {arts, dispatch} = useArtsContext()
 
 
     // fetch arts from API end point
     useEffect(()=>{
         
-        const getArts = async()=>{
-    
-            const result = await fetch('api/arts/galleryArts');
-            const arts = await result.json();
-            setArts(arts)
+        const getArts = async ()=>{
             
+            const result = await fetch('api/arts/galleryArts');
+            const json = await result.json();
+
+            if (result.ok) {
+                dispatch({type:'SET_ARTS', payload:json})
+            }
+            
+            console.log(json)
         }
 
         getArts();
+        
+    }, [dispatch])
 
-    }, [])
-
-    const loadMore = () => {
+    const loadMore = async () => {
         setShowCount((prevCount) => prevCount + 4);
+
     };
 
-    const { isLoading, error } = useQuery('designs', () => {
+
+    const { isLoading, error } = useQuery(arts, () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve({ data: designs.slice(0, showCount) });
+                resolve({ data: arts.slice(0, showCount) });
             }, 1000);
         });
     });
@@ -42,20 +49,19 @@ const DesignGallery = () => {
         ? arts.filter((design) => design.art_category === selectedCategory)
         : arts;
 
-        console.log(filteredDesigns);
 
     if (isLoading) return <h1>Loading...</h1>;
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div className="bg2 section">
+        <div className="bg2 smaller__section">
             <div className="container">
                 <div className="design_gallery">
                     <div className='design__gallery__container'>
                         <div className="gallery__buttons">
                             <div id='gallery__search'>
                                 <input type="text" placeholder='Search..' />
-                                <button>submit</button>
+                                {/* <button>submit</button> */}
                             </div>
                             <div className='category__buttons'>
                                 <button onClick={() => setSelectedCategory(null)}>All</button>
@@ -81,7 +87,7 @@ const DesignGallery = () => {
                             <div></div>
                         </div>
                         <div className="content">
-                            {filteredDesigns.map((design) => (
+                            {filteredDesigns && filteredDesigns.map((design) => (
                                 <DesignItem key={design._id} design={design} />
                             ))}
                         </div>
