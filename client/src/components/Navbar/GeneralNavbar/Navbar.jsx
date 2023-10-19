@@ -87,9 +87,11 @@ const Navbar = () => {
                                     {user.userEmail}
                                 </div>
                             </Link>
-                            <button onClick={handleSubmit}>
-                                LogOut
-                            </button>   
+                            <Link>
+                                <button onClick={handleSubmit}>
+                                    LogOut
+                                </button>
+                            </Link>   
                         </>
                     ) : ( 
                         <>
