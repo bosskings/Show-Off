@@ -1,8 +1,8 @@
 import  { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
-
 import DesignItem from './DesignItem';
 import { useArtsContext } from '../../hooks/useArtsContext';
+import { useUsersContext } from '../../hooks/useUsersContext'
 
 const DesignGallery = () => {
     const [showCount, setShowCount] = useState(8);
@@ -10,6 +10,9 @@ const DesignGallery = () => {
     
     console.log(useArtsContext());
     const {arts, dispatch} = useArtsContext()
+    const {user} = useUsersContext()
+
+    console.log(useUsersContext())
 
 
     // fetch arts from API end point
@@ -17,7 +20,11 @@ const DesignGallery = () => {
         
         const getArts = async ()=>{
             
-            const result = await fetch('api/arts/galleryArts');
+            const result = await fetch('api/arts/galleryArts',{
+                headers: {
+                    "Authorization": `Bearer ${user.token}`
+                }
+            });
             const json = await result.json();
 
             if (result.ok) {
@@ -27,9 +34,11 @@ const DesignGallery = () => {
             console.log(json)
         }
 
-        getArts();
+        if(user){
+            getArts();
+        }
         
-    }, [dispatch])
+    }, [dispatch, user])
 
     const loadMore = async () => {
         setShowCount((prevCount) => prevCount + 4);
