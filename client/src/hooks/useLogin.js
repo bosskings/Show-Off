@@ -21,6 +21,9 @@ const useLogin = ()=>{
         if (!result.ok) {
             setIsLoading(false)
             setError(json.error);
+
+            // redirect user to home page once verification is done
+            window.location.href = '/';
         }else{
             // save user to local storeage
             setIsLoading(false);

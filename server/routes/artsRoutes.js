@@ -11,8 +11,8 @@ import usersAuth from "../middleware/usersAuth.js";
 
 const router = Router()
 
-// use authorization constume middleware for all routes
-// router.use(usersAuth)
+// use authorization middleware for all routes
+router.use(usersAuth)
 
 // GET all arts 
 router.get('/galleryArts', getAllArts);
