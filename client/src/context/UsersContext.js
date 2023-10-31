@@ -1,33 +1,32 @@
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer } from "react";
 
 const AuthContext = createContext();
 
-const authReducer = (state,action)=>{
-   
-    switch(action.type){
-        case 'LOGIN':
-            return {user: action.payload};
+const authReducer = (state, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      return { user: action.payload };
 
-        case 'LOGOUT':
-            return {user: null};
+    case "LOGOUT":
+      return { user: null };
 
-        default:
-            return state    
-    }
-}
+    default:
+      return state;
+  }
+};
 
-const AuthContextProvider = ({children}) => {
-    const [state, dispatch] = useReducer(authReducer, {
-        user: null
-    })
+const AuthContextProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(authReducer, {
+    user: null,
+  });
 
-    console.log('AuthcontextState: ', state);
+  console.log("AuthcontextState: ", state);
 
-    return (
-        <AuthContext.Provider value={{...state, dispatch}}>
-            {children}
-        </AuthContext.Provider>
-    )
-}
- 
-export {AuthContextProvider, authReducer, AuthContext }
+  return (
+    <AuthContext.Provider value={{ ...state, dispatch }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export { AuthContextProvider, authReducer, AuthContext };

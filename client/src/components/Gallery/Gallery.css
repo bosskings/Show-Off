@@ -61,6 +61,16 @@
   background-color: var(--dark-red-color);
 } */
 
+.cat {
+  padding: 0.8rem;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: var(--red-color);
+}
 .category__buttons {
   display: flex;
   justify-content: center;
@@ -68,8 +78,7 @@
   gap: 1.5rem;
 }
 
-.category__buttons button {
-  background-color: var(--white-grey);
+.category__button {
   padding: 0.8rem;
   border-radius: 50px;
   border: none;
@@ -77,6 +86,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.5s;
+  background-color: transparent;
 }
 
 .content {

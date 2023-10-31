@@ -7,7 +7,7 @@ import Sorting from './Sorting'
 const ArtistContent = () => {
     return (
         <div className='bg2 section'>
-            <div className="container">
+            <div className="ArtistContent__container">
                 <div className="Artists__container">
                     <TypeOfSearch />
                     <Artist />

@@ -5,6 +5,15 @@
   background-color: var(--white-color);
 }
 
+.light-theme {
+  --artist-container-yellow: #ffbf00;
+  --artist-container-red: #ff5959;
+}
+.dark-theme {
+  --artist-container-yellow: #ff5959;
+  --artist-container-red: #ffbf00;
+}
+
 .Artists__container {
   display: flex;
   justify-content: space-between;
@@ -64,8 +73,99 @@
 .artist {
   flex: 2;
   overflow-y: auto;
+  align-self: flex-start;
   border-left: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
+  color: var(--black-color);
+}
+
+.artist__container {
+  padding: 1rem 2.5rem;
+}
+
+.artist__top h2 {
+  font-size: 30px;
+}
+.artist__top-content {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dddddd;
+}
+#artist__p1 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #7e7e7e;
+}
+.artist__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding: 24px;
+  border-radius: 9px;
+  background: linear-gradient(
+    269deg,
+    var(--artist-container-yellow) 0%,
+    var(--artist-container-red) 100%
+  );
+}
+.artist__stats p {
+  color: #fff;
+  font-size: 15px;
+}
+.artist__stats button {
+  padding: 10px 20px;
+  border-radius: 9999999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+#numberof__talents {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7e7e7e;
+  margin-top: 16px;
+}
+
+.designer__container {
+  padding: 1rem 2.5rem;
+  /* border-bottom: 1px solid #dddddd; */
+}
+.designer__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+#designer__img {
+  width: 100px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.designer__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#designer__name {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#designer__job {
+  font-weight: 500;
+  color: #7e7e7e;
+}
+.designer__button button {
+  padding: 10px 20px;
+  border-radius: 9999999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background-color: var(--red-color);
+  color: #fff;
 }
 
 /* ===================================== SORTING ========================================= */
@@ -146,8 +246,8 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 2000px) {
-  .container {
-    margin-left: 5%;
-    margin-right: 5%;
+  .ArtistContent__container {
+    margin-left: 3%;
+    margin-right: 3%;
   }
 }

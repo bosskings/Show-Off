@@ -1,12 +1,20 @@
 import React from 'react'
 
+import { useArtistsList } from '../../contexts/ArtistsContexts'
+
 const Sorting = () => {
+    const { keyWord, setKeyWord } = useArtistsList()
     return (
         <div className='sorting'>
             <div className='sorting__container'>
                 <div className="field__wrapper">
                     <p>Keyword Search</p>
-                    <input type="text" placeholder='Search keywords...' />
+                    <input
+                        type="text"
+                        placeholder='Search keywords...'
+                    // onChange={setKeyWord(e.target.value)}
+                    // value={keyWord}
+                    />
                 </div>
                 <div className="field__wrapper">
                     <p>Specialties</p>

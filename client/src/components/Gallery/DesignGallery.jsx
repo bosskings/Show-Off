@@ -8,6 +8,7 @@ import { designs } from './mockData';
 const DesignGallery = () => {
     const [showCount, setShowCount] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState(null);
+    const [activeButton, setActiveButton] = useState(0);
 
     const loadMore = () => {
         setShowCount((prevCount) => prevCount + 8);
@@ -22,8 +23,14 @@ const DesignGallery = () => {
     });
 
     const filterDesignsByCategory = (category) => {
-        setSelectedCategory(category);
+        setSelectedCategory(category === "All" ? null : category);
     };
+
+
+    const handleClick = (index, button) => {
+        setActiveButton(index)
+        filterDesignsByCategory(button)
+    }
 
     const filteredDesigns = selectedCategory
         ? designs.filter((design) => design.category === selectedCategory)
@@ -31,6 +38,8 @@ const DesignGallery = () => {
 
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
+
+    const buttons = ["All", "Animations", "Branding", "Illustrations", "Paint", "Web Design", "Print"]
 
     return (
         <div className="bg2 smaller__section">
@@ -43,25 +52,15 @@ const DesignGallery = () => {
                                 {/* <button>submit</button> */}
                             </div>
                             <div className='category__buttons'>
-                                <button onClick={() => filterDesignsByCategory(null)}>All</button>
-                                <button onClick={() => filterDesignsByCategory('Animations')}>
-                                    Animations
-                                </button>
-                                <button onClick={() => filterDesignsByCategory('Branding')}>
-                                    Branding
-                                </button>
-                                <button onClick={() => filterDesignsByCategory('Illustrations')}>
-                                    Illustrations
-                                </button>
-                                <button onClick={() => filterDesignsByCategory('Paint')}>
-                                    Paint
-                                </button>
-                                <button onClick={() => filterDesignsByCategory('Web Design')}>
-                                    Web Design
-                                </button>
-                                <button onClick={() => filterDesignsByCategory('Print')}>
-                                    Print
-                                </button>
+                                {buttons.map((button, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleClick(index, button)}
+                                        className={index === activeButton ? "cat" : "category__button"}
+                                    >
+                                        {button}
+                                    </button>
+                                ))}
                             </div>
                             <div></div>
                         </div>

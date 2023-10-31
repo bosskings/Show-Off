@@ -19,9 +19,10 @@
 }
 .nav__menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   transition: 0.3s;
+  gap: 3rem;
 }
 .nav__close {
   display: none;
