@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import PrivateRoutes from "./utils/PrivateRoute";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { useUsersContext } from "./hooks/useUsersContext";
@@ -16,32 +16,38 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 
+
 function App() {
   const queryClient = new QueryClient();
-  const {user} = useUsersContext();
+  const {user} = useUsersContext()
+
 
 
   return (
     <QueryClientProvider client={queryClient}>
       <ShoppingCartProvider>
-        <div>
-          <Router>
-            <Routes>
-              <Route element={<PrivateRoutes />}>
-                <Route path="/dashboard/:userId" element={ user ? <Dashboard /> : <Navigate to="/login" /> } />
-              </Route>
-              <Route path="/" element={ user ? <Home /> : <Navigate to="/login" /> } />
-              <Route path="/about" element={ user ? <About /> : <Navigate to="/login" /> } />
-              <Route path="/artists" element={ user ? <Artists /> : <Navigate to="/login" /> } />
-              <Route path="/gallery" element={ user ? <Gallery /> : <Navigate to="/login" /> } />
-              <Route path="/shop" element={ user ? <Shop /> : <Navigate to="/login" /> } />
-              <Route path="/cart" element={ user ? <Cart /> : <Navigate to="/login" /> } />
-              <Route path="/contact-us" element={ user ?<Contact />: <Navigate to="/login"  />} />
-              <Route path="/login" element={<Signin />} />
-              <Route path="/register" element={<Signup />} />
-            </Routes>
-          </Router>
-        </div>
+          <div>
+            <Router>
+              <Routes>
+              
+                <Route element={<PrivateRoutes />}>
+
+                  <Route path="/dashboard/:userId" element={ <Dashboard />  } />
+                  <Route path="/" element={ <Home /> } />
+                  <Route path="/about" element={ <About /> } />
+                  <Route path="/artists" element={ <Artists /> } />
+                  <Route path="/gallery" element={ <Gallery /> } />
+                  <Route path="/shop" element={ <Shop /> } />
+                  <Route path="/cart" element={ <Cart /> } />
+                  <Route path="/contact-us" element={ <Contact />} />
+                  <Route path="/login" element={<Signin />} />
+                  <Route path="/register" element={<Signup />} />
+                  
+                </Route>
+              
+              </Routes>
+            </Router>
+          </div>
       </ShoppingCartProvider>
     </QueryClientProvider>
   );

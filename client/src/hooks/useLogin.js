@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useUsersContext } from "./useUsersContext";
+import { useNavigate  } from "react-router-dom";
 
 const useLogin = ()=>{
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null)
     const {dispatch} = useUsersContext();
+    const navigate  = useNavigate();
 
     const login = async (userEmail, userPassword)=>{
         setIsLoading(true)
@@ -22,8 +24,6 @@ const useLogin = ()=>{
             setIsLoading(false)
             setError(json.error);
 
-            // redirect user to home page once verification is done
-            window.location.href = '/';
         }else{
             // save user to local storeage
             setIsLoading(false);
@@ -31,6 +31,10 @@ const useLogin = ()=>{
             
             // update user contetext
             dispatch({type:"LOGIN", payload:json})        
+            
+            // redirect user to home page once verification is done
+            navigate("/");
+            
         }
 
 

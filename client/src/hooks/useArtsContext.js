@@ -1,7 +1,7 @@
 import { ArtsContext } from "../context/ArtsContext";
 import { useContext } from "react";
 
-const useArtsContext = () => {
+const useArtsContext =() => {
     
     const context = useContext(ArtsContext)
     
