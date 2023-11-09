@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
+import { useArtistsList } from "../../contexts/ArtistsContexts";
+
 const TypeOfSearch = () => {
     const [activeButton, setActiveButton] = useState(0);
-    const buttons = ["Digital", "Hands-on"];
+    const { filterArtists } = useArtistsList();
 
-    const handleButtonClick = (index) => {
+    const buttons = ["Digital", "Hand-on"];
+
+    const handleButtonClick = (index, button) => {
         setActiveButton(index);
+        filterArtists(button)
+        console.log(filterArtists)
     };
     return (
         <div className="typeof__search">
@@ -14,7 +20,7 @@ const TypeOfSearch = () => {
                 {buttons.map((button, index) => (
                     <button
                         key={index}
-                        onClick={() => handleButtonClick(index)}
+                        onClick={() => handleButtonClick(index, button)}
                         className={index === activeButton ? "active" : "typeof__button"}
                     >
                         {button}

@@ -23,6 +23,7 @@
   --white-grey: rgb(244, 244, 244);
   --button-red-color: #ffe2e2;
   --linear_bg: #ffbcbc;
+  --logo: url(./assets/Logos/light.png);
 }
 
 .dark-theme {
@@ -33,4 +34,5 @@
   --white-grey: rgb(13, 12, 12);
   --button-red-color: #484847;
   --linear_bg: #ac8100;
+  --logo: url(./assets/Logos/dark.png);
 }
