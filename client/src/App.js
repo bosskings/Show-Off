@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import PrivateRoutes from "./utils/PrivateRoute";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { useUsersContext } from "./hooks/useUsersContext";
 
 import "./App.css";
 import Home from "./pages/Home";
@@ -19,9 +18,6 @@ import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 
 function App() {
   const queryClient = new QueryClient();
-  const {user} = useUsersContext()
-
-
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -31,7 +27,6 @@ function App() {
               <Routes>
               
                 <Route element={<PrivateRoutes />}>
-
                   <Route path="/dashboard/:userId" element={ <Dashboard />  } />
                   <Route path="/" element={ <Home /> } />
                   <Route path="/about" element={ <About /> } />
@@ -40,10 +35,10 @@ function App() {
                   <Route path="/shop" element={ <Shop /> } />
                   <Route path="/cart" element={ <Cart /> } />
                   <Route path="/contact-us" element={ <Contact />} />
+                </Route>
+
                   <Route path="/login" element={<Signin />} />
                   <Route path="/register" element={<Signup />} />
-                  
-                </Route>
               
               </Routes>
             </Router>

@@ -13,6 +13,7 @@ const DesignGallery = () => {
 
     // fetch arts from API end point
     useEffect(()=>{
+
         
         const getArts = async ()=>{
             
@@ -27,7 +28,6 @@ const DesignGallery = () => {
                 dispatch({type:'SET_ARTS', payload:json})
             }
             
-            console.log(json)
         }
 
         if(user){
@@ -45,18 +45,20 @@ const DesignGallery = () => {
     const { isLoading, error } = useQuery(arts, () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve({ data: arts.slice(0, showCount) });
+                resolve({ data: arts.slice(4, showCount) });
             }, 1000);
         });
     });
 
+    console.log(arts, showCount);
+    
+        if (isLoading) return <h1>Loading...</h1>;
+        if (error) return <p>Error: {error.message}</p>;
+
+    // return null
     const filteredDesigns = selectedCategory
         ? arts.filter((design) => design.art_category === selectedCategory)
         : arts;
-
-
-    if (isLoading) return <h1>Loading...</h1>;
-    if (error) return <p>Error: {error.message}</p>;
 
     return (
         <div className="bg2 smaller__section">
