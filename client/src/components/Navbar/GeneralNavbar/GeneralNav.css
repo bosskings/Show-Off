@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--white-color);
-  padding: 15px 10%;
+  padding: 11px 10%;
   width: 100%;
   z-index: 9;
 }
@@ -63,6 +63,24 @@
   font-weight: 600;
 }
 .narve_right button:hover {
+  background-color: var(--dark-red-color);
+  transition: all ease-in-out 0.5s;
+}
+.image {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+#logout-btn {
+  padding: 13px 20px;
+  color: white;
+  background-color: var(--red-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+#logout-btn:hover {
   background-color: var(--dark-red-color);
   transition: all ease-in-out 0.5s;
 }

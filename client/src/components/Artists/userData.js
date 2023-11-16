@@ -1,9 +1,9 @@
-import profileIcon from "../../assets/Profile-Icon.png";
+import profileIcon from "../../assets/show1.webp";
 
 export const users = [
   {
     id: 1,
-    username: "JohnDoe123",
+    username: "Carazan Brands",
     position: "Remote",
     rating: 4,
     yearsOfExperience: 5,

@@ -1,42 +1,20 @@
-import React, { useState } from 'react';
-import { useQuery } from 'react-query';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 import DesignItem from './DesignItem';
-import { designs } from './mockData';
 
-const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(8);
-    const [selectedCategory, setSelectedCategory] = useState(null);
-    const [activeButton, setActiveButton] = useState(0);
+import { useArtWorkList } from '../../contexts/ArtWorks';
 
-    const loadMore = () => {
-        setShowCount((prevCount) => prevCount + 8);
-    };
+const DesignGallery = ({ handleOpen, handleClose }) => {
+    const { showCount, activeButton, isLoading, error, loadMore, handleClick, filteredDesigns, } = useArtWorkList()
 
-    const { isLoading, error } = useQuery('designs', () => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({ data: designs.slice(0, showCount) });
-            }, 1000);
-        });
-    });
-
-    const filterDesignsByCategory = (category) => {
-        setSelectedCategory(category === "All" ? null : category);
-    };
-
-
-    const handleClick = (index, button) => {
-        setActiveButton(index)
-        filterDesignsByCategory(button)
-    }
-
-    const filteredDesigns = selectedCategory
-        ? designs.filter((design) => design.category === selectedCategory)
-        : designs;
-
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return (
+        <div className='loading'>
+            <div className='loading_inner'>
+                <CircularProgress color='error' /> Loading..
+            </div>
+        </div>
+    );
     if (error) return <p>Error: {error.message}</p>;
 
     const buttons = ["All", "Animations", "Branding", "Illustrations", "Paint", "Web Design", "Print"]
@@ -66,7 +44,7 @@ const DesignGallery = () => {
                         </div>
                         <div className="content">
                             {filteredDesigns.slice(0, showCount).map((design) => (
-                                <DesignItem key={design.id} design={design} />
+                                <DesignItem key={design.id} design={design} handleOpen={handleOpen} />
                             ))}
                         </div>
                         <div className='load__more'>
