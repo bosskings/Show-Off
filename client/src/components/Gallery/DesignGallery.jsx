@@ -46,6 +46,7 @@ const DesignGallery = () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve({ data: arts.slice(4, showCount) });
+                console.log('data---'  );
             }, 1000);
         });
     });
