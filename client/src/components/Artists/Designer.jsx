@@ -1,7 +1,9 @@
 import React from 'react'
 import RatingStars from '../Shop/RatingStars'
+import { Link } from 'react-router-dom'
 
 const Designer = ({ user }) => {
+    const userId = user.id
     return (
         <div className='designer__container'>
             <div className="designer__item">
@@ -15,7 +17,7 @@ const Designer = ({ user }) => {
                         </div>
                     </div>
                     <div className="designer__button">
-                        <button>View More</button>
+                        <Link to={`/dashboard/${userId}`}>View More</Link>
                     </div>
                 </div>
             </div>

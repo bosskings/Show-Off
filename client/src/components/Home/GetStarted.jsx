@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const GetStarted = () => {
     return (
@@ -15,9 +16,9 @@ const GetStarted = () => {
                             See why over 60,000 leading brands and business builders use ShowOff to attract, engage, and hire their best design talent.
                         </p>
                         <div>
-                            <button>
+                            <Link to="/artists">
                                 Get Started <i className="uil uil-arrow-right"></i>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

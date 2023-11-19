@@ -4,23 +4,24 @@ import img3 from "../../assets/show3.webp";
 import img4 from "../../assets/show4.webp";
 import img5 from "../../assets/show6.webp";
 import img6 from "../../assets/show5.webp";
-import profileIcon from "../../assets/Profile-Icon.png";
+import vid1 from "../../assets/video/media-video2.mp4";
+import profileIcon from "../../assets/show1.webp";
 
 export const designs = [
   {
     id: 1,
-    username: "Carazan Brands",
+    username: "CarazanBrands",
     profilePic: profileIcon,
     category: "Animations",
-    title: "A Software Engineer",
-    img: img1,
+    title: "IOS UI/UX",
+    img: vid1,
     likes: 200,
     views: 17.5,
     rating: 5,
   },
   {
     id: 2,
-    username: "Carazan Brands",
+    username: "SarahSmith",
     profilePic: profileIcon,
     category: "Branding",
     title: "EpochOs Brand",
@@ -31,7 +32,7 @@ export const designs = [
   },
   {
     id: 3,
-    username: "Carazan Brands",
+    username: "AlexJohnson",
     profilePic: profileIcon,
     category: "Illustrations",
     title: "Artist",
@@ -42,7 +43,7 @@ export const designs = [
   },
   {
     id: 4,
-    username: "Carazan Brands",
+    username: "EmmaDavis",
     profilePic: profileIcon,
     category: "Paint",
     title: "Queen of England",
@@ -55,7 +56,7 @@ export const designs = [
   },
   {
     id: 5,
-    username: "Carazan Brands",
+    username: "MarkWilson",
     profilePic: profileIcon,
     category: "Web Design",
     title: "E-commerce site",
@@ -66,13 +67,24 @@ export const designs = [
   },
   {
     id: 6,
-    username: "Carazan Brands",
+    username: "LindaWhite",
     profilePic: profileIcon,
     category: "Print",
     title: "construction Document",
     img: img6,
     likes: 200,
     views: 20,
+    rating: 5,
+  },
+  {
+    id: 1,
+    username: "CarazanBrands",
+    profilePic: profileIcon,
+    category: "Illustrations",
+    title: "Product Designer",
+    img: img1,
+    likes: 100,
+    views: 290,
     rating: 5,
   },
 ];

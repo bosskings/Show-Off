@@ -16,13 +16,13 @@ export function ArtistsListProvider({ children }) {
   const [experienceFilter, setExperienceFilter] = useState([]);
   const [checked, setChecked] = useState({});
 
-  const [removeMenu, setShowMenu] = useState("remove-menu");
+  const [removeMenu, setShowMenu] = useState("remove-filter");
 
   const toggleRemoveMenu = () => {
-    setShowMenu((curr) => curr === "filter__media" && "remove-menu");
+    setShowMenu((curr) => curr === "filter__media" && "remove-filter");
   };
   const toggleShowMenu = () => {
-    setShowMenu((curr) => curr === "remove-menu" && "filter__media");
+    setShowMenu((curr) => curr === "remove-filter" && "filter__media");
   };
 
   const filterArtists = (selectedSearch) => {

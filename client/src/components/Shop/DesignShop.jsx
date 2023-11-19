@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 
 import ShopItem from '../Shop/ShopItem';
 import { designs } from '../Gallery/mockData';
+import { CircularProgress } from '@mui/material';
 
 const DesignShop = () => {
     const [showCount, setShowCount] = useState(8);
@@ -18,7 +19,7 @@ const DesignShop = () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve({ data: designs.slice(0, showCount) });
-            }, 1000);
+            }, 2000);
         });
     });
 
@@ -41,12 +42,12 @@ const DesignShop = () => {
     }, [selectedCategory]);
 
     if (fetchData.isLoading) return (
-        <div className='loader-container'>
-            <div className='spinner'>
-
+        <div className='loading'>
+            <div className='loading_inner'>
+                <CircularProgress color='error' /> Loading..
             </div>
         </div>
-    )
+    );
     if (fetchData.error) return <p>Error: {fetchData.error.message}</p>;
 
     const buttons = ["All", "Animations", "Branding", "Illustrations", "Paint", "Web Design", "Print"]

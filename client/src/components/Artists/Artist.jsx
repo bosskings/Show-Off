@@ -26,7 +26,9 @@ const Artist = () => {
                 <div className='artist__bottom'>
                     {Array.isArray(filteredArtists) ? (
                         filteredArtists.map((user) => (
-                            <Designer key={user.id} user={user} />
+                            <>
+                                <Designer key={user.id} user={user} />
+                            </>
                         ))
                     ) : (
                         <p>No artists found</p>
