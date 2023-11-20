@@ -10,19 +10,19 @@ export function useArtWorkList() {
 }
 
 export function ArtWorkListProvider({ children }) {
-  const [showCount, setShowCount] = useState(2);
+  const [showCount, setShowCount] = useState(8);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [activeButton, setActiveButton] = useState(0);
 
   const loadMore = () => {
-    setShowCount((prevCount) => prevCount + 2);
+    setShowCount((prevCount) => prevCount + 8);
   };
 
   const { isLoading, error } = useQuery("designs", () => {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ data: designs.slice(0, showCount) });
-      }, 1000);
+      }, 2000);
     });
   });
 
