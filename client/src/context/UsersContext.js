@@ -35,11 +35,8 @@ const AuthContextProvider = ({children}) => {
     // update users context with data from local storage if isset when page first loads
     useEffect(()=>{
         const user = JSON.parse( localStorage.getItem('user') )
-        console.log(user);
         if(user){
             dispatch({type: "LOGIN", payload:user})
-        }else{
-           dispatch({type: "LOGOUT"})
         }
 
         setIsLocalStorageLoaded(true);
