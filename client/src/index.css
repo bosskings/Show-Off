@@ -20,9 +20,12 @@
   --black-color: black;
   --red-color: #ff5959;
   --dark-red-color: #dc3535;
+  --yellow-color: rgb(255, 191, 0);
+  --dark-yellow-color: rgb(238, 179, 0);
   --white-grey: rgb(244, 244, 244);
   --button-red-color: #ffe2e2;
   --linear_bg: #ffbcbc;
+  --logo: url(./assets/Logos/light.png);
 }
 
 .dark-theme {
@@ -30,7 +33,10 @@
   --black-color: #fafafa;
   --red-color: rgb(255, 191, 0);
   --dark-red-color: rgb(238, 179, 0);
+  --yellow-color: #ff5959;
+  --dark-yellow-color: #dc3535;
   --white-grey: rgb(13, 12, 12);
   --button-red-color: #484847;
   --linear_bg: #ac8100;
+  --logo: url(./assets/Logos/dark.png);
 }

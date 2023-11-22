@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-
 import "../components/Login/login.css"
 import LoginVideo from '../assets/video/walking_illustration_video_process.mp4'
+<<<<<<< HEAD
 import { useState } from 'react'
 import { useLogin } from '../hooks/useLogin'
 
@@ -19,6 +19,11 @@ const LoginForm = () => {
         await login(email, password);
     } 
 
+=======
+
+const LoginForm = () => {
+
+>>>>>>> client
     return (
         <div className='login'>
             <div className='Login__form__div'>
@@ -38,15 +43,23 @@ const LoginForm = () => {
                             <p>Enter the information you entered  while registering</p>
                         </div>
 
-                        <form onSubmit={handleSubmit}>
+                        <form >
                             <div id='input__field'>
                                 <label>Email</label>
+<<<<<<< HEAD
                                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete='on' />
+=======
+                                <input type="email" required />
+>>>>>>> client
                             </div>
 
                             <div id='input__field'>
                                 <label>Password</label>
+<<<<<<< HEAD
                                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete='on' />
+=======
+                                <input type="password" required />
+>>>>>>> client
                             </div>
                             
                             <div id='login__terms'>

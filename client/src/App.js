@@ -14,6 +14,10 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
+import { ArtistsListProvider } from "./contexts/ArtistsContexts";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import ErrorPage from "./pages/404";
+import { ArtWorkListProvider } from "./contexts/ArtWorks";
 
 
 function App() {
@@ -22,6 +26,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ShoppingCartProvider>
+<<<<<<< HEAD
           <div>
             <Router>
               <Routes>
@@ -43,6 +48,36 @@ function App() {
               </Routes>
             </Router>
           </div>
+=======
+        <ArtistsListProvider>
+          <ArtWorkListProvider>
+            <ThemeProvider>
+              <div>
+                <Router>
+                  <Routes>
+                    <Route element={<PrivateRoutes />}>
+                      <Route
+                        path="/dashboard/:userId"
+                        element={<Dashboard />}
+                      />
+                    </Route>
+                    <Route path="*" element={<ErrorPage />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/artists" element={<Artists />} />
+                    <Route path="/gallery" element={<Gallery />} />
+                    <Route path="/shop" element={<Shop />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/contact-us" element={<Contact />} />
+                    <Route path="/login" element={<Signin />} />
+                    <Route path="/register" element={<Signup />} />
+                  </Routes>
+                </Router>
+              </div>
+            </ThemeProvider>
+          </ArtWorkListProvider>
+        </ArtistsListProvider>
+>>>>>>> client
       </ShoppingCartProvider>
     </QueryClientProvider>
   );

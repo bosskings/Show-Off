@@ -15,6 +15,19 @@
   height: 60vh;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30vh;
+  color: var(--black-color);
+}
+.loading_inner {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
 /* ============================================== DesignGallery =============================== */
 .design_gallery {
   display: flex;
@@ -61,6 +74,16 @@
   background-color: var(--dark-red-color);
 } */
 
+.cat {
+  padding: 0.8rem;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: var(--red-color);
+}
 .category__buttons {
   display: flex;
   justify-content: center;
@@ -68,8 +91,7 @@
   gap: 1.5rem;
 }
 
-.category__buttons button {
-  background-color: var(--white-grey);
+.category__button {
   padding: 0.8rem;
   border-radius: 50px;
   border: none;
@@ -77,6 +99,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.5s;
+  background-color: transparent;
 }
 
 .content {
@@ -96,6 +119,15 @@
 }
 #load__more:hover {
   background-color: var(--red-color);
+  color: #fff;
+}
+
+.design {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.design:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
   color: #fff;
 }
 
@@ -143,6 +175,29 @@
   color: var(--red-color);
 }
 
+/* =============================================== DesignDetails ====================================== */
+.design__details {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 10%;
+
+  overflow: auto;
+  padding: 3vw 14vw;
+  border-radius: 20px 0 0 0;
+  background-color: #fff;
+}
+.design__details i {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  right: 16px;
+  color: #6e6d7a;
+  font-size: 25px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 426px) {
   /* ============================================== DesignGallery =============================== */
   .gallery__buttons {
@@ -185,6 +240,16 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
+  }
+  .cat {
+    padding: 0.8rem;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--red-color);
   }
 }
 
@@ -230,6 +295,16 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+  .cat {
+    padding: 0.8rem;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--red-color);
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -262,5 +337,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+  .cat {
+    padding: 0.8rem;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--red-color);
   }
 }

@@ -9,6 +9,7 @@ import Navbar from '../Navbar/GeneralNavbar/Navbar'
 import Bg1 from '../../assets/fullscreen-pieces-background1-img-2.png'
 import Bg2 from '../../assets/fullscreen-pieces-background2-img-2.png'
 import Bg3 from '../../assets/fullscreen-pieces-background3-img-2.png'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -49,7 +50,7 @@ const Banner = () => {
                             <p>
                                 Connect with a community of millions of top-rated designers & agencies around the world.
                             </p>
-                            <button>Start hiring today!</button>
+                            <Link to="/artists">Start hiring today!</Link>
                         </div>
                     </div>
                 </SwiperSlide>

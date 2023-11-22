@@ -5,7 +5,7 @@ import { useArtsContext } from '../../hooks/useArtsContext';
 import { useUsersContext } from '../../hooks/useUsersContext'
 
 const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(2);
+    const [showCount, setShowCount] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState(null);
     
     const {arts, dispatch} = useArtsContext()
@@ -37,7 +37,7 @@ const DesignGallery = () => {
     }, [dispatch, user])
 
     const loadMore = async () => {
-        setShowCount((prevCount) => prevCount + 2);
+        setShowCount((prevCount) => prevCount + 4);
 
     };
 
@@ -45,7 +45,7 @@ const DesignGallery = () => {
     const { isLoading, error } = useQuery(arts, () => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve({ data: arts.slice(2, showCount) });
+                resolve({ data: arts.slice(4, showCount) });
                 console.log('data---'  );
             }, 1000);
         });

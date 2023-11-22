@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
+  height: 80vh;
 }
 .cart__left {
   flex: 2;
