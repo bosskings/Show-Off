@@ -65,6 +65,7 @@ const LoginForm = () => {
                             <div id='login__terms'>
                                 <div>
                                     <input type="checkbox" name="checkbox" autoComplete='on' />
+                                    <input type="checkbox" name="checkbox" autoComplete='on' />
                                     Remember me
                                 </div>
                                 <div>
