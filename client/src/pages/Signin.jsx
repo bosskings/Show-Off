@@ -46,25 +46,16 @@ const LoginForm = () => {
                         <form >
                             <div id='input__field'>
                                 <label>Email</label>
-<<<<<<< HEAD
                                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete='on' />
-=======
-                                <input type="email" required />
->>>>>>> client
                             </div>
 
                             <div id='input__field'>
                                 <label>Password</label>
-<<<<<<< HEAD
                                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete='on' />
-=======
-                                <input type="password" required />
->>>>>>> client
                             </div>
                             
                             <div id='login__terms'>
                                 <div>
-                                    <input type="checkbox" name="checkbox" autoComplete='on' />
                                     <input type="checkbox" name="checkbox" autoComplete='on' />
                                     Remember me
                                 </div>
