@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import "./GeneralNav.css"
+import ProfileIcon from '../../../assets/Profile-Icon.png'
 import DarkThemeToggle from './ThemeButton'
 import useLogout from '../../../hooks/useLogout'
 import { useUsersContext } from '../../../hooks/useUsersContext'
 import { useShoppingCart } from '../../../contexts/ShoppingCartContext';
-import { users } from '../../Artists/userData'
 
 
 const Navbar = () => {
@@ -32,15 +32,6 @@ const Navbar = () => {
         };
     }, []);
 
-<<<<<<< HEAD
-=======
-    const [user, setUser] = useState(true)
-    const userId = users[0].id;
-
-    const handleLogout = () => {
-        setUser(!user)
-    }
->>>>>>> client
 
     const toggleRemoveMenu = () => {
         setShowMenu((curr) => (curr === "nav__menu" && "remove-menu"))
@@ -85,7 +76,6 @@ const Navbar = () => {
                     <DarkThemeToggle />
                     {user ? (
                         <>
-<<<<<<< HEAD
                             <Link to='/dashboard/:userId'>
                                 <div className="select">
                                     <img
@@ -102,16 +92,6 @@ const Navbar = () => {
                                     LogOut
                                 </button>
                             </Link>   
-=======
-                            <Link to={`/dashboard/${userId}`}>
-                                <img
-                                    src={users[0].profilePic}
-                                    alt={users[0].username}
-                                    className="image"
-                                />
-                            </Link>
-                            <button id="logout-btn" onClick={handleLogout}>Logout</button>
->>>>>>> client
                         </>
                     ) : ( 
                         <>
@@ -125,7 +105,7 @@ const Navbar = () => {
                     )} 
                 </div>
             </div>
-        </nav >
+        </nav>
     )
 }
 
