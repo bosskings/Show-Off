@@ -21,6 +21,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s;
 }
 .nav__close {
   display: none;
@@ -42,11 +43,16 @@
   align-items: center;
   gap: 1.5rem;
 }
-.narve_right {
+.narve_right a {
+  position: relative;
   color: var(--black-color);
   font-weight: 600;
 }
-.narve_right button {
+.narve_right a span {
+  position: absolute;
+  font-size: 12px;
+}
+.narve_right a button {
   padding: 13px 20px;
   color: white;
   background-color: var(--red-color);
@@ -94,6 +100,7 @@
     height: 112vh;
     padding: 5% 0 0 5%;
     background-color: var(--white-color);
+    transition: 0.3s;
   }
   .remove-menu {
     left: 100%;
@@ -144,6 +151,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    transition: 0.3s;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -163,5 +171,6 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    transition: 0.3s;
   }
 }

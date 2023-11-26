@@ -6,7 +6,7 @@ import ProfileIcon from '../../../assets/Profile-Icon.png'
 import DarkThemeToggle from './ThemeButton'
 import useLogout from '../../../hooks/useLogout'
 import { useUsersContext } from '../../../hooks/useUsersContext'
-
+import { useShoppingCart } from '../../../contexts/ShoppingCartContext';
 
 
 const Navbar = () => {
@@ -45,6 +45,8 @@ const Navbar = () => {
         logout()
     }
 
+    const { cart } = useShoppingCart();
+
     return (
         <nav className={`narve-bar ${isScrollHeader ? 'scroll-header' : ''}`}>
             <div className='nav__toggle' onClick={toggleShowMenu}>
@@ -59,13 +61,18 @@ const Navbar = () => {
                 <i className="uil uil-times nav__close" onClick={toggleRemoveMenu}></i>
                 <ul className="narv_ul">
                     <Link to='/about'><li>About</li></Link>
-                    <Link to='artists'><li>Artist</li></Link>
+                    <Link to='/artists'><li>Artist</li></Link>
                     <Link to='/gallery'><li>Gallery</li></Link>
                     <Link to='/shop'><li>Shop</li></Link>
                 </ul>
 
                 <div className="narve_right">
-                    <Link to='/cart'><i className="uil uil-shopping-cart first"></i></Link>
+                    <Link to='/cart'>
+                        <i className="uil uil-shopping-cart first"></i>
+                        {cart.length > 0 && (
+                            <span className="cart-item-count">{cart.length}</span>
+                        )}
+                    </Link>
                     <DarkThemeToggle />
                     {user ? (
                         <>
@@ -80,9 +87,11 @@ const Navbar = () => {
                                     {user.userEmail}
                                 </div>
                             </Link>
-                            <button onClick={handleSubmit}>
-                                LogOut
-                            </button>   
+                            <Link>
+                                <button onClick={handleSubmit}>
+                                    LogOut
+                                </button>
+                            </Link>   
                         </>
                     ) : ( 
                         <>

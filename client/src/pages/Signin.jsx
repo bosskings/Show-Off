@@ -41,17 +41,17 @@ const LoginForm = () => {
                         <form onSubmit={handleSubmit}>
                             <div id='input__field'>
                                 <label>Email</label>
-                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete='on' />
                             </div>
 
                             <div id='input__field'>
                                 <label>Password</label>
-                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete='on' />
                             </div>
                             
                             <div id='login__terms'>
                                 <div>
-                                    <input type="checkbox" name="checkbox" />
+                                    <input type="checkbox" name="checkbox" autoComplete='on' />
                                     Remember me
                                 </div>
                                 <div>

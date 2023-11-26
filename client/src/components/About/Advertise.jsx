@@ -32,7 +32,9 @@ const Advertise = () => {
         <div className='bg2 section'>
             <div className="container">
                 <div className="advertise__container">
-                    <h2 id='advertise__head'>Connect with creative, product, & business decision makers worldwide</h2>
+                    <div id='advertise__head'>
+                        <h2 >Connect with creative, product, & business decision makers worldwide</h2>
+                    </div>
                     <div className="advert">
                         <div className="advert__content">
                             <h2>
@@ -82,7 +84,6 @@ const Advertise = () => {
                                 </div>
                             </Carousel>
                         </div>
-
                     </div>
                 </div>
             </div>

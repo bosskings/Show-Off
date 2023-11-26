@@ -1,9 +1,15 @@
 import { Outlet, Navigate } from "react-router-dom";
-// import { useContext } from "react";
+import { useUsersContext } from "../hooks/useUsersContext";
+
 
 const PrivateRoutes = () => {
-    const user = false
-    return user ? <Outlet /> : <Navigate to="/" />;
+    const {user, isLoading} =   useUsersContext();
+    
+    if (isLoading) {
+        return <div>Loading.....</div> 
+    }
+
+    return user ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default PrivateRoutes;

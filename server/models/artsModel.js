@@ -23,12 +23,17 @@ const artsSchema = new Schema({
     },
 
     artist_id:{
-        type: Number,
+        type: String,
         required:true
     },
 
     art_rating:{
         type: Number,
+        required:true
+    },
+
+    art_description:{
+        type:String,
         required:true
     }
 

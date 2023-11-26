@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import img6 from "../../assets/show5.webp";
 import profileIcon from "../../assets/Profile-Icon.png";
-
+import { Link } from 'react-router-dom'
 
 const DesignItem = ({ design }) => {
     const [like, setLike] = useState(design.likes)
@@ -19,7 +19,8 @@ const DesignItem = ({ design }) => {
                         src={profileIcon}
                         alt=""
                     />
-                    <p>{design.art_name}</p>
+
+                    <Link to="">{design.art_name}</Link>
                 </div>
                 <ul>
                     <li onClick={handleLike}><i className="uil uil-heart"></i> {like}</li>

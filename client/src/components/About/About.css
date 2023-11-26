@@ -15,6 +15,11 @@
   justify-content: center;
   align-items: center;
   height: 70vh;
+  background: url(../../assets/Logos/about\ Banner.jpg), rgba(6, 6, 6, 0.4);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .linear_bg {
   background: linear-gradient(
@@ -35,13 +40,13 @@
   color: var(--black-color);
 }
 .about_head_container h3 {
-  color: var(--black-color);
   font-size: 1rem;
   color: var(--red-color);
   font-weight: 600;
   margin-bottom: 15px;
 }
 .about_head_container h2 {
+  color: #fff;
   font-size: 3rem;
   font-weight: 500;
   width: 70%;
@@ -49,12 +54,12 @@
 }
 .about_head_container p {
   font-size: 1rem;
+  color: #fff;
 }
 
 /* ============================================ Trusted By ========================================== */
 .trusted_by {
   display: grid;
-  -ms-flex-align: center;
   grid-auto-columns: -webkit-min-content;
   grid-auto-columns: min-content;
   grid-auto-flow: column;
@@ -191,24 +196,28 @@
 .advertise__container {
   width: 100%;
   color: var(--black-color);
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
   align-items: center;
   gap: 3rem;
 }
 #advertise__head {
-  font-size: 3rem;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#advertise__head h2 {
+  font-size: 3rem;
   font-weight: 400;
   letter-spacing: -1.5px;
   width: 70%;
-  margin-bottom: 20px;
 }
 
 .advert {
-  display: grid;
-  grid-template-columns: 1fr 600px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 2.5rem;
 }
@@ -238,16 +247,20 @@
   background-color: var(--dark-red-color);
 }
 .ads {
+  display: grid;
   width: 100%;
 }
 .ad {
   position: relative;
-  overflow: hidden;
-  border-radius: 10px;
 }
 .ad video,
 img {
   width: 100%;
+  border-radius: 10px;
+}
+.ad video {
+  position: absolute;
+  overflow: hidden;
 }
 
 /* ============================================ Why Advertise With us ========================================== */
@@ -425,4 +438,311 @@ form textarea {
   cursor: pointer;
   color: rgb(255, 255, 255);
   z-index: 1;
+}
+
+@media screen and (max-width: 426px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .small__section {
+    padding: 6rem 0 4rem;
+  }
+  /* ============================================= About Head ================================= */
+  .about_head_container h2 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .about_head_container p {
+    font-size: 0.8rem;
+    color: #fff;
+  }
+
+  /* ============================================ Trusted By ========================================== */
+  .trusted_by {
+    display: grid;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 44px;
+    justify-items: center;
+    max-width: 340px;
+    grid-auto-columns: 0;
+    grid-auto-flow: row;
+  }
+  #dont_show {
+    display: none;
+  }
+
+  /* ============================================ Goal and Number ========================================== */
+  .goal_and_nubmer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* ============================================ Testimonials ========================================== */
+  .testimonies__container h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--black-color);
+  }
+  .testimonies {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  /* ============================================ Advertise ========================================== */
+  #advertise__head h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  #advertise__head h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .advert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+  .advert__content h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 22px;
+    line-height: 2.3rem;
+    width: 90%;
+  }
+  .ads {
+    display: grid;
+    width: 100%;
+  }
+
+  /* ============================================ Why Advertise With us ========================================== */
+  .why-advertise_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    color: var(--black-color);
+  }
+  .why-advertise_line {
+    display: none;
+  }
+  .why-advertise__numbers {
+    width: 100%;
+  }
+
+  /* ========================================================= Advert Details ===================================== */
+  .advertisement__details__head h2 {
+    font-weight: 500;
+    color: var(--black-color);
+    font-size: 1.4rem;
+  }
+  form textarea {
+    display: inline-block;
+    width: 100%;
+    line-height: 1.4em;
+    outline: none;
+    border: none;
+    height: 150px;
+    min-height: 0;
+    padding: 15px;
+    resize: vertical;
+    border-radius: 12px;
+    background: var(
+        --token-eb13911e-0e46-45df-b063-ffd9f17aeac1,
+        rgb(243, 243, 244)
+      )
+      /* {"name":"Gray / 6"} */;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    box-shadow: inset 0 0 0 1px transparent;
+  }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+  .container {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .small__section {
+    padding: 6rem 0 4rem;
+  }
+
+  /* ============================================ Trusted By ========================================== */
+  #dont_show {
+    display: none;
+  }
+
+  /* ============================================= About Head ================================= */
+  .about_head_container h2 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  /* ============================================ Goal and Number ========================================== */
+  .goal_and_nubmer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* ============================================ Testimonials ========================================== */
+  .testimonies__container h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--black-color);
+  }
+  .testimonies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* ============================================ Advertise ========================================== */
+  #advertise__head h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  #advertise__head h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .advert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+  .advert__content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 22px;
+    line-height: 2.3rem;
+  }
+  .ads {
+    display: grid;
+    width: 100%;
+  }
+
+  /* ============================================ Why Advertise With us ========================================== */
+  .why-advertise_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    color: var(--black-color);
+  }
+  .why-advertise_line {
+    display: none;
+  }
+  .why-advertise__numbers {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .small__section {
+    padding: 6rem 0 4rem;
+  }
+
+  /* ============================================ Trusted By ========================================== */
+  #dont_show {
+    display: none;
+  }
+
+  /* ============================================ Goal and Number ========================================== */
+  .goal_and_nubmer_left {
+    flex: 2;
+    width: 100%;
+  }
+
+  .goal_and_nubmer_right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 1rem;
+    padding-left: 27px;
+  }
+
+  /* ============================================ Testimonials ========================================== */
+  .testimonies__container h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--black-color);
+  }
+  .testimonies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* ============================================ Advertise ========================================== */
+  #advertise__head h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .advert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .advert__content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 22px;
+  }
+  .ads {
+    display: grid;
+    width: 100%;
+  }
 }

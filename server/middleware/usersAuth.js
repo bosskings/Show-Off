@@ -6,8 +6,9 @@ const usersAuth = async (req, res, next) =>{
     // very authentication
     const { authorization } = req.headers;
 
+
     if (!authorization) {
-        res.status(404).json({error:"Authentication token is requried"})
+        res.status(404).json({error:"Authentication token is requried-"})
     }else{
 
         const token = authorization.split(' ')[1];
