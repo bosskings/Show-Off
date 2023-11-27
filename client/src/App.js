@@ -10,7 +10,7 @@ import Gallery from "./pages/Gallery";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";

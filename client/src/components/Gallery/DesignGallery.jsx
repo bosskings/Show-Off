@@ -1,11 +1,10 @@
 import CircularProgress from '@mui/material/CircularProgress';
 
-
 import DesignItem from './DesignItem';
 
 import { useArtWorkList } from '../../contexts/ArtWorks';
 
-const DesignGallery = ({ handleOpen, handleClose }) => {
+const DesignGallery = () => {
     const { showCount, activeButton, isLoading, error, loadMore, handleClick, filteredDesigns, } = useArtWorkList()
 
     if (isLoading) return (
@@ -44,7 +43,9 @@ const DesignGallery = ({ handleOpen, handleClose }) => {
                         </div>
                         <div className="content">
                             {filteredDesigns.slice(0, showCount).map((design) => (
-                                <DesignItem key={design.id} design={design} handleOpen={handleOpen} />
+                                <>
+                                    <DesignItem key={design.id} design={design} />
+                                </>
                             ))}
                         </div>
                         <div className='load__more'>
