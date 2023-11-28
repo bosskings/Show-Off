@@ -312,14 +312,30 @@
     display: block;
   }
 
+  .artist__stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding: 24px;
+    border-radius: 9px;
+    gap: 5px;
+    background: linear-gradient(
+      269deg,
+      var(--artist-container-yellow) 0%,
+      var(--artist-container-red) 100%
+    );
+  }
   .artist__stats p {
+    flex: 4;
     color: #fff;
     font-size: 13px;
   }
   .artist__stats button {
+    flex: 10px;
     padding: 10px 20px;
     border-radius: 9999999px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     cursor: pointer;
     border: none;
@@ -391,12 +407,12 @@
     left: 100%;
   }
   #designer__img {
-    width: 70px;
+    width: 80px;
     border-radius: 10px;
     margin-bottom: 10px;
   }
   #designer__name {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -406,7 +422,7 @@
     color: #7e7e7e;
   }
   .designer__button button {
-    padding: 10px 15px;
+    padding: 10px 10px;
     border-radius: 9999999px;
     font-size: 10px;
     font-weight: 600;
@@ -460,6 +476,7 @@
   }
 
   .artist__stats p {
+    flex: 4;
     color: #fff;
     font-size: 13px;
   }

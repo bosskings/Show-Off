@@ -32,7 +32,7 @@ const DesignItem = ({ design }) => {
     const handleClose = () => {
         if (selectedItemId === design?.id) {
             setOpen(false);
-            setSelectedItemId(null); // Reset the selected item ID
+            setSelectedItemId(null);
         }
 
         setOpen(false)

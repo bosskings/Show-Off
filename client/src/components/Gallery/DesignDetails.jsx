@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Backdrop } from '@mui/material';
@@ -11,6 +11,7 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
     const [isFollowing, setIsFollowing] = useState(false);
     const [like, setLike] = useState(design?.likes || 0);
     const [selectedWork, setSelectedWork] = useState(null);
+
 
     const userId = design?.user?.id;
 
@@ -34,22 +35,6 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
         setSelectedWork(work);
         handleOpen();
     };
-
-    const parseHtmlContent = (htmlString) => {
-        const headingRegex = /<h1>(.*?)<\/h1>/g;
-        const paragraphRegex = /<p>(.*?)<\/p>/g;
-
-        const headings = htmlString.match(headingRegex) || [];
-        const paragraphs = htmlString.match(paragraphRegex) || [];
-
-        return { headings, paragraphs };
-    };
-
-    useEffect(() => {
-        const { headings, paragraphs } = parseHtmlContent(design.description);
-        console.log('Headings:', headings);
-        console.log('Paragraphs:', paragraphs);
-    }, [design.description]);
 
     return (
         <div className='design__details'>
@@ -112,13 +97,17 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
                             )}
                         </div>
                         <div className='design__detail-shot-content'>
-                            {/* Render the parsed headings and paragraphs */}
-                            {parseHtmlContent(design.description).headings.map((heading, index) => (
-                                <h1 key={index} dangerouslySetInnerHTML={{ __html: heading }} />
-                            ))}
-                            {parseHtmlContent(design.description).paragraphs.map((paragraph, index) => (
-                                <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
-                            ))}
+                            {design.desc && design.desc.head && (
+                                <h1 dangerouslySetInnerHTML={{ __html: design.desc.head }} />
+                            )}
+                            {design.desc && design.desc.body && (
+                                <>
+                                    <p dangerouslySetInnerHTML={{ __html: design.desc.body.body1 }} />
+                                    <p dangerouslySetInnerHTML={{ __html: design.desc.body.body2 }} />
+                                    <p dangerouslySetInnerHTML={{ __html: design.desc.body.body3 }} />
+                                    <p dangerouslySetInnerHTML={{ __html: design.desc.body.body4 }} />
+                                </>
+                            )}
                         </div>
                     </div>
 

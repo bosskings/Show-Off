@@ -4,6 +4,7 @@ import img3 from "../../assets/show3.webp";
 import img4 from "../../assets/show4.webp";
 import img5 from "../../assets/show6.webp";
 import img6 from "../../assets/show5.webp";
+import img7 from "../../assets/show7.jpg";
 import vid1 from "../../assets/video/media-video2.mp4";
 import profileIcon from "../../assets/show1.webp";
 
@@ -20,11 +21,21 @@ export const designs = [
     category: "Animations",
     title: "IOS UI/UX",
     img: vid1,
-    description:
-      "<h1>Hello everyone,</h1> <p>I'm happy to share with you the approved logo design that I created for DropDown.</p> <p>DropDown is a bespoke paint company specializing in personalized color solutions, from architectural coatings to automotive finishes.</p> <p>With a commitment to innovation and environmental responsibility, they blend cutting-edge technology with a diverse palette to transform spaces into vibrant works of art.</p> <p>Feedback is welcome!</p>",
     likes: 200,
     views: 17.5,
     rating: 5,
+    desc: {
+      head: "Hello everyone,",
+      body: {
+        body1:
+          "I'm happy to share with you the approved logo design that I created for DropDown.",
+        body2:
+          "DropDown is a bespoke paint company specializing in personalized color solutions, from architectural coatings to automotive finishes.",
+        body3:
+          "With a commitment to innovation and environmental responsibility, they blend cutting-edge technology with a diverse palette to transform spaces into vibrant works of art.",
+        body4: " Feedback is welcome!",
+      },
+    },
   },
   {
     id: 2,
@@ -32,7 +43,7 @@ export const designs = [
       id: 2,
       username: "Sarah Smith",
       profilePic: profileIcon,
-      bio: "Artist & Painter",
+      bio: "Productor Designer & Branding",
       availability: "Available to work",
     },
     category: "Branding",
@@ -66,7 +77,7 @@ export const designs = [
       id: 4,
       username: "Emma Davis",
       profilePic: profileIcon,
-      bio: "Productor Designer & Branding",
+      bio: "Artist & Painter",
       availability: "Available to work",
     },
     category: "Paint",
@@ -129,5 +140,24 @@ export const designs = [
     likes: 100,
     views: 290,
     rating: 5,
+  },
+  {
+    id: 8,
+    user: {
+      id: 4,
+      username: "Emma Davis",
+      profilePic: profileIcon,
+      bio: "Artist & Painter",
+      availability: "Available to work",
+    },
+    category: "Paint",
+    title: "Africa Black Beauty",
+    img: img7,
+    description: "",
+    price: 500.0,
+    likes: 200,
+    views: 30.5,
+    rating: 5,
+    quantity: 1,
   },
 ];
