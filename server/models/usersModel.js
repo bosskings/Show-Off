@@ -1,5 +1,5 @@
 import Mongoose  from "mongoose";
-import bcrypt from "bcrypt";
+import bcryptjs from "bcryptjs";
 import validator from "validator";
 
 const UserSchema = new Mongoose.Schema({
@@ -45,9 +45,9 @@ UserSchema.statics.signup = async function(name, userType, userEmail, userPasswo
     }
 
     // Generate salt for password hashing
-    const salt = await bcrypt.genSalt(10);
+    const salt = await bcryptjs.genSalt(10);
     // Hash password using salt
-    const hash = await bcrypt.hash(userPassword, salt);
+    const hash = await bcryptjs.hash(userPassword, salt);
 
     // Create new user with hashed password
     const user = await this.create({name, userType, userEmail, userPassword:hash})
@@ -72,7 +72,7 @@ UserSchema.statics.signin = async function(userEmail, userPassword){
     }
 
     // check if passwords match
-    const match = await bcrypt.compare(userPassword, user.userPassword)
+    const match = await bcryptjs.compare(userPassword, user.userPassword)
     if ( !match ) {
         throw Error("Password does not match the email")
     }
