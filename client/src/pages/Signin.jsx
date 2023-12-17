@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import "../components/Login/login.css"
 import LoginVideo from '../assets/video/walking_illustration_video_process.mp4'
-<<<<<<< HEAD
 import { useState } from 'react'
 import { useLogin } from '../hooks/useLogin'
 
@@ -19,11 +18,7 @@ const LoginForm = () => {
         await login(email, password);
     } 
 
-=======
 
-const LoginForm = () => {
-
->>>>>>> client
     return (
         <div className='login'>
             <div className='Login__form__div'>
