@@ -7,7 +7,6 @@ const useUsersContext = () =>{
     if (!context) {
         throw Error ('useUserContext must be inside a useUserContext provider!')
     }
-
     return context;
 }
 

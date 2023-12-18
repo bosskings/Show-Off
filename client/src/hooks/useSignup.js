@@ -36,4 +36,4 @@ const useSignup = ()=>{
     return {signup, isLoading, error}
 }
 
-export {useSignup}
+export {useSignup};

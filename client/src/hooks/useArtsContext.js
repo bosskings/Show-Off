@@ -13,4 +13,4 @@ const useArtsContext =() => {
     
 }
  
-export {useArtsContext} ;
+export {useArtsContext};
