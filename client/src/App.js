@@ -15,7 +15,6 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 
-
 function App() {
   const queryClient = new QueryClient();
 

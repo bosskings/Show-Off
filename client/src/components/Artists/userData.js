@@ -1,11 +1,11 @@
-import profileIcon from "../../assets/Profile-Icon.png";
+import profileIcon from "../../assets/show1.webp";
 
 export const users = [
   {
     id: 1,
-    username: "JohnDoe123",
+    username: "Carazan Brands",
     position: "Remote",
-    rating: 4.8,
+    rating: 4,
     yearsOfExperience: 5,
     location: "New York",
     specialty: "Web Designer",
@@ -15,12 +15,12 @@ export const users = [
   {
     id: 2,
     username: "SarahSmith",
-    position: "Onsite",
+    position: "On-site",
     rating: 4.5,
     yearsOfExperience: 8,
     location: "Los Angeles",
     specialty: "Painter",
-    productType: "Hand-on",
+    productType: "Digital",
     profilePic: profileIcon,
   },
   {
@@ -31,13 +31,13 @@ export const users = [
     yearsOfExperience: 10,
     location: "Chicago",
     specialty: "Animator",
-    productType: "Digital",
+    productType: "Hand-on",
     profilePic: profileIcon,
   },
   {
     id: 4,
     username: "EmmaDavis",
-    position: "Onsite",
+    position: "On-site",
     rating: 4.7,
     yearsOfExperience: 6,
     location: "San Francisco",
@@ -59,8 +59,8 @@ export const users = [
   {
     id: 6,
     username: "LindaWhite",
-    position: "Onsite",
-    rating: 4.9,
+    position: "On-site",
+    rating: 5,
     yearsOfExperience: 9,
     location: "Boston",
     specialty: "Printer",

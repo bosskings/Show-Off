@@ -3,11 +3,13 @@ import { useQuery } from 'react-query';
 
 import ShopItem from '../Shop/ShopItem';
 import { designs } from '../Gallery/mockData';
+import { CircularProgress } from '@mui/material';
 
 const DesignShop = () => {
     const [showCount, setShowCount] = useState(8);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [filteredDesigns, setFilteredDesigns] = useState([]);
+    const [activeButton, setActiveButton] = useState(0);
 
     const incrementShowCount = () => {
         setShowCount((prevCount) => prevCount + 8);
@@ -17,13 +19,18 @@ const DesignShop = () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve({ data: designs.slice(0, showCount) });
-            }, 1000);
+            }, 2000);
         });
     });
 
     const filterDesigns = (category) => {
-        setSelectedCategory(category);
+        setSelectedCategory(category === "All" ? null : category);
     };
+
+    const handleClick = (index, button) => {
+        setActiveButton(index)
+        filterDesigns(button)
+    }
 
     useEffect(() => {
         // Filter designs based on selected category and price
@@ -34,8 +41,16 @@ const DesignShop = () => {
         setFilteredDesigns(filtered);
     }, [selectedCategory]);
 
-    if (fetchData.isLoading) return <p>Loading...</p>;
+    if (fetchData.isLoading) return (
+        <div className='loading'>
+            <div className='loading_inner'>
+                <CircularProgress color='error' /> Loading..
+            </div>
+        </div>
+    );
     if (fetchData.error) return <p>Error: {fetchData.error.message}</p>;
+
+    const buttons = ["All", "Animations", "Branding", "Illustrations", "Paint", "Web Design", "Print"]
 
     return (
         <div className='bg2 smaller__section'>
@@ -48,25 +63,15 @@ const DesignShop = () => {
                                 {/* <button>submit</button> */}
                             </div>
                             <div className='category__buttons'>
-                                <button onClick={() => filterDesigns(null)}>All</button>
-                                <button onClick={() => filterDesigns('Animations')}>
-                                    Animations
-                                </button>
-                                <button onClick={() => filterDesigns('Branding')}>
-                                    Branding
-                                </button>
-                                <button onClick={() => filterDesigns('Illustrations')}>
-                                    Illustrations
-                                </button>
-                                <button onClick={() => filterDesigns('Paint')}>
-                                    Paint
-                                </button>
-                                <button onClick={() => filterDesigns('Web Design')}>
-                                    Web Design
-                                </button>
-                                <button onClick={() => filterDesigns('Print')}>
-                                    Print
-                                </button>
+                                {buttons.map((button, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleClick(index, button)}
+                                        className={index === activeButton ? "cat" : "category__button"}
+                                    >
+                                        {button}
+                                    </button>
+                                ))}
                             </div>
                             <div></div>
                         </div>
