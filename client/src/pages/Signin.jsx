@@ -38,7 +38,7 @@ const LoginForm = () => {
                             <p>Enter the information you entered  while registering</p>
                         </div>
 
-                        <form >
+                        <form onSubmit={handleSubmit}>
                             <div id='input__field'>
                                 <label>Email</label>
                                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete='on' />
