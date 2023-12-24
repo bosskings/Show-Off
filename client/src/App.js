@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
   const queryClient = new QueryClient();
@@ -21,13 +22,14 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ShoppingCartProvider>
+        <ThemeProvider>
           <div>
             <Router>
               <Routes>
               
+                <Route path="/" element={ <Home /> } />
                 <Route element={<PrivateRoutes />}>
                   <Route path="/dashboard/:userId" element={ <Dashboard />  } />
-                  <Route path="/" element={ <Home /> } />
                   <Route path="/about" element={ <About /> } />
                   <Route path="/artists" element={ <Artists /> } />
                   <Route path="/gallery" element={ <Gallery /> } />
@@ -42,6 +44,7 @@ function App() {
               </Routes>
             </Router>
           </div>
+          </ThemeProvider>
       </ShoppingCartProvider>
     </QueryClientProvider>
   );
