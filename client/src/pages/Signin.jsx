@@ -18,7 +18,6 @@ const LoginForm = () => {
         await login(email, password);
     } 
 
-
     return (
         <div className='login'>
             <div className='Login__form__div'>
