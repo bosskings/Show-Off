@@ -77,7 +77,7 @@ export const designs = [
     rating: 5,
   },
   {
-    id: 1,
+    id: 7,
     username: "CarazanBrands",
     profilePic: profileIcon,
     category: "Illustrations",
