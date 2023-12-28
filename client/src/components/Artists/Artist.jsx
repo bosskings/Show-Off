@@ -2,7 +2,7 @@ import Designer from './Designer'
 
 import { useArtistsList } from '../../contexts/ArtistsContexts'
 const Artist = () => {
-    const { filteredArtists, toggleShowMenu, } = useArtistsList()
+    const { filteredArtists, toggleShowMenu } = useArtistsList()
 
     return (
         <div className='artist'>
@@ -26,9 +26,9 @@ const Artist = () => {
                 <div className='artist__bottom'>
                     {Array.isArray(filteredArtists) ? (
                         filteredArtists.map((user) => (
-                            <>
-                                <Designer key={user.id} user={user} />
-                            </>
+                            
+                            <Designer key={user.id} user={user} />
+                            
                         ))
                     ) : (
                         <p>No artists found</p>

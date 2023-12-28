@@ -15,7 +15,7 @@ const Filter = () => {
     const handleButtonClick = (index, button) => {
         setActiveButton(index);
         filterArtists(button)
-        console.log(filterArtists)
+        console.log(filterArtists, '----')
     };
     return (
         <div className={`filter__media ${removeMenu}`}>

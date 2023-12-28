@@ -96,10 +96,10 @@ export function ArtistsListProvider({ children }) {
           user.yearsOfExperience > 8
             ? "9+"
             : user.yearsOfExperience > 5
-            ? "6-8"
-            : user.yearsOfExperience > 2
-            ? "3-5"
-            : "1-2"
+              ? "6-8"
+              : user.yearsOfExperience > 2
+                ? "3-5"
+                : "1-2"
         )
       );
     }

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useUsersContext } from "./useUsersContext";
+import { useNavigate } from 'react-router-dom';
 
 const useSignup = ()=>{
+    const navigate = useNavigate();
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(null)
     const {dispatch} = useUsersContext();
@@ -27,7 +29,10 @@ const useSignup = ()=>{
             localStorage.setItem('user', JSON.stringify(json))
             
             // update user contetext
-            dispatch({type:"LOGIN", payload:json})        
+            dispatch({type:"LOGIN", payload:json})   
+            
+            //send user to home page
+            navigate('/')
         }
 
 
