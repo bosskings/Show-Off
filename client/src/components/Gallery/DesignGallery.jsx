@@ -5,7 +5,7 @@ import { useArtsContext } from '../../hooks/useArtsContext';
 import { useUsersContext } from '../../hooks/useUsersContext'
 
 const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(8);
+    const [showCount, setShowCount] = useState(5);
     const [selectedCategory, setSelectedCategory] = useState(null);
     
     const {arts, dispatch} = useArtsContext()

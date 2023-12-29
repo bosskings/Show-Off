@@ -25,11 +25,11 @@ const getSingleArt = async (req, res)=>{
 
 //create an art
 const createArt = async (req, res)=>{
-    const {art_name, artist_name, art_rating, art_category, art_dir, art_description} = req.body;
+    const {art_name, artist_name, art_rating, art_likes, art_category, art_dir, art_description} = req.body;
 
     try {
         const artist_id = req.user._id;
-        const art = await Art.create({art_name, artist_name, art_category, art_rating, artist_id, art_dir, art_description})
+        const art = await Art.create({art_name, artist_name, art_category, art_rating, art_likes, artist_id, art_dir, art_description})
         res.status(200).json(art)
     } catch (error) {        
         res.status(400).json({error: error.message})    

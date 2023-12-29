@@ -32,6 +32,11 @@ const artsSchema = new Schema({
         required:true
     },
 
+    art_likes:{
+        type:Number,
+        required:true
+    },
+
     art_description:{
         type:String,
         required:true
