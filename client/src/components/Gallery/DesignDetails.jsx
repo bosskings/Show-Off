@@ -121,7 +121,7 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
                         <Link className='design__detail-user-name' to={`/dashboard/${userId}`}>{design.user.username}</Link>
                         <p className='design__detail-user-bio'>{design.user.bio}</p>
                         <div className='design__detail-user-hire_container'>
-                            <button className='design__detail-user-hire'><i class="uil uil-envelope-alt"></i> Hire Me</button>
+                            <button className='design__detail-user-hire'><i className="uil uil-envelope-alt"></i> Hire Me</button>
                         </div>
                     </div>
 

@@ -43,9 +43,7 @@ const DesignGallery = () => {
                         </div>
                         <div className="content">
                             {filteredDesigns.slice(0, showCount).map((design) => (
-                                <>
                                     <DesignItem key={design.id} design={design} />
-                                </>
                             ))}
                         </div>
                         <div className='load__more'>
