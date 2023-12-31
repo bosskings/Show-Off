@@ -23,6 +23,7 @@ const DesignGallery = () => {
                 }
             });
             const json = await result.json();
+            console.log(json, user.token);
 
             if (result.ok) {
                 dispatch({type:'SET_ARTS', payload:json})
