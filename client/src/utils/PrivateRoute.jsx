@@ -15,16 +15,14 @@ const PrivateRoutes = () => {
             // send user to login page
             return <Navigate to="/login" />;
         } 
-        
         if (isLoading) {
             return <div>Loading.....</div> 
         }
         return <Outlet /> 
-        
+
     }else{
         return <Navigate to="/login" />;
     } 
-    
     
 
 };

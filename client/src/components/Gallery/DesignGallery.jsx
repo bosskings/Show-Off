@@ -23,7 +23,6 @@ const DesignGallery = () => {
                 }
             });
             const json = await result.json();
-            console.log(json, user.token);
 
             if (result.ok) {
                 dispatch({type:'SET_ARTS', payload:json})
@@ -51,7 +50,6 @@ const DesignGallery = () => {
         });
     });
 
-    console.log(arts, showCount);
     
         if (isLoading) return <h1>Loading...</h1>;
         if (error) return <p>Error: {error.message}</p>;

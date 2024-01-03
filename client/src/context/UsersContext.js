@@ -25,7 +25,7 @@ const authReducer = (state,action)=>{
 
 const AuthContextProvider = ({children}) => {
     const [isLocalStorageLoaded, setIsLocalStorageLoaded] = useState(false);
-
+ 
     const [state, dispatch] = useReducer(authReducer, {
         user: null,
         isLoading: true // Set isLoading to true initially

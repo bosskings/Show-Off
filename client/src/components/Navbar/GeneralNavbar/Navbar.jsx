@@ -13,7 +13,7 @@ const Navbar = () => {
     const [removeMenu, setShowMenu] = useState('remove-menu')
     const [isScrollHeader, setIsScrollHeader] = useState(false);
     const {user} = useUsersContext();
-
+    
     // logout context
     const {logout} = useLogout()
 
@@ -42,7 +42,9 @@ const Navbar = () => {
 
     // log user out
     const handleSubmit = () =>{
+        
         logout()
+        console.log('came ------------');
     }
 
     const { cart } = useShoppingCart();
@@ -87,7 +89,7 @@ const Navbar = () => {
                                     {user.userEmail}
                                 </div>
                             </Link>
-                            <Link>
+                            <Link to='/login' >
                                 <button onClick={handleSubmit}>
                                     LogOut
                                 </button>
