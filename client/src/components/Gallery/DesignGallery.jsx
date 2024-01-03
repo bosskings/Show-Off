@@ -5,7 +5,7 @@ import { useArtsContext } from '../../hooks/useArtsContext';
 import { useUsersContext } from '../../hooks/useUsersContext'
 
 const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(8);
+    const [showCount, setShowCount] = useState(5);
     const [selectedCategory, setSelectedCategory] = useState(null);
     
     const {arts, dispatch} = useArtsContext()
@@ -50,7 +50,6 @@ const DesignGallery = () => {
         });
     });
 
-    console.log(arts, showCount);
     
         if (isLoading) return <h1>Loading...</h1>;
         if (error) return <p>Error: {error.message}</p>;

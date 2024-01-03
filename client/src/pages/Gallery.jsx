@@ -21,13 +21,11 @@ const Gallery = () => {
     return (
         <>
             <Navbar />
-            <GalleryBanner />
-            <DesignGallery handleOpen={handleOpen} />
-            <Backdrop
-                open={open}
-            >
-                <DesignDetails handleClose={handleClose} />
-            </Backdrop>
+                <GalleryBanner />
+                <DesignGallery handleOpen={handleOpen} />
+                <Backdrop open={open}>
+                    <DesignDetails handleClose={handleClose} />
+                </Backdrop>
             <Footer />
         </>
     )

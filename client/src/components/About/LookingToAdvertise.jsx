@@ -18,7 +18,7 @@ const LookingToAdvertise = () => {
                                     <input type="text" placeholder='Full name' />
                                     <input type="email" placeholder='Email address' />
                                 </div>
-                                <textarea class="framer-formspark-input" placeholder="Company, budget info, and any other details" name="message"></textarea>
+                                <textarea className="framer-formspark-input" placeholder="Company, budget info, and any other details" name="message"></textarea>
                                 <div id='advertisement__details__submit'>
                                     <input type="submit" value="Submit" />
                                 </div>

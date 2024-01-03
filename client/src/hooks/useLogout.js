@@ -1,19 +1,21 @@
 import { useUsersContext } from "./useUsersContext";
 
 const useLogout = () => {
-    const {dispatch} = useUsersContext();
+    const { dispatch } = useUsersContext();
     
-    // function to log user out 
-    const logout = () =>{
-        // clear local storage
-        localStorage.removeItem('user')
-
-        // update global state
-        dispatch({type:"LOGOUT"})
-    }
-
-    return {logout}
+    // Function to log the user out 
+    const logout = () => {
+        // Clear local storage
+        localStorage.removeItem('user');
+        
+        // Update global state
+        dispatch({ type: "LOGOUT" });
+        
+    };
     
-}
- 
+    
+    return {logout};
+        
+};
+
 export default useLogout;
