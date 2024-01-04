@@ -17,7 +17,7 @@ const Artist = () => {
                             <p id='artist__p1'>Find the world’s best designers on ShowOff – the largest independent community for digital designers.</p>
                             <div className='artist__stats'>
                                 <p>Want to be at the top? Subscribe to increase your stats</p>
-                                <button>Get Started</button>
+                                <button>Start Now</button>
                             </div>
                             <p id='numberof__talents'>Viewing 10,000+ designers available for hire</p>
                         </div>
@@ -26,9 +26,7 @@ const Artist = () => {
                 <div className='artist__bottom'>
                     {Array.isArray(filteredArtists) ? (
                         filteredArtists.map((user) => (
-                            
                             <Designer key={user.id} user={user} />
-                            
                         ))
                     ) : (
                         <p>No artists found</p>

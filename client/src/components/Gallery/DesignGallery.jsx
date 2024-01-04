@@ -1,58 +1,20 @@
-import  { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
+import CircularProgress from '@mui/material/CircularProgress';
+
 import DesignItem from './DesignItem';
 import { useArtsContext } from '../../hooks/useArtsContext';
 import { useUsersContext } from '../../hooks/useUsersContext'
 
 const DesignGallery = () => {
-    const [showCount, setShowCount] = useState(5);
-    const [selectedCategory, setSelectedCategory] = useState(null);
-    
-    const {arts, dispatch} = useArtsContext()
-    const {user} = useUsersContext()
+    const { showCount, activeButton, isLoading, error, loadMore, handleClick, filteredDesigns, } = useArtWorkList()
 
-    // fetch arts from API end point
-    useEffect(()=>{
-
-        
-        const getArts = async ()=>{
-            
-            const result = await fetch('api/arts/galleryArts',{
-                headers: {
-                    "Authorization": `Bearer ${user.token}`
-                }
-            });
-            const json = await result.json();
-
-            if (result.ok) {
-                dispatch({type:'SET_ARTS', payload:json})
-            }
-            
-        }
-
-        if(user){
-            getArts();
-        }
-        
-    }, [dispatch, user])
-
-    const loadMore = async () => {
-        setShowCount((prevCount) => prevCount + 4);
-
-    };
-
-
-    const { isLoading, error } = useQuery(arts, () => {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve({ data: arts.slice(4, showCount) });
-            }, 1000);
-        });
-    });
-
-    
-        if (isLoading) return <h1>Loading...</h1>;
-        if (error) return <p>Error: {error.message}</p>;
+    if (isLoading) return (
+        <div className='loading'>
+            <div className='loading_inner'>
+                <CircularProgress color='error' /> Loading..
+            </div>
+        </div>
+    );
+    if (error) return <p>Error: {error.message}</p>;
 
     // return null
     const filteredDesigns = selectedCategory
@@ -93,8 +55,8 @@ const DesignGallery = () => {
                             <div></div>
                         </div>
                         <div className="content">
-                            {filteredDesigns && filteredDesigns.map((design) => (
-                                <DesignItem key={design._id} design={design} />
+                            {filteredDesigns.slice(0, showCount).map((design) => (
+                                    <DesignItem key={design.id} design={design} />
                             ))}
                         </div>
                         <div className='load__more'>
