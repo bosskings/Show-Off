@@ -10,12 +10,12 @@ export function useArtWorkList() {
 }
 
 export function ArtWorkListProvider({ children }) {
-  const [showCount, setShowCount] = useState(8);
+  const [showCount, setShowCount] = useState(4);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [activeButton, setActiveButton] = useState(0);
 
   const loadMore = () => {
-    setShowCount((prevCount) => prevCount + 8);
+    setShowCount((prevCount) => prevCount + 4);
   };
 
   const { isLoading, error } = useQuery("designs", () => {
