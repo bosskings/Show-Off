@@ -4,6 +4,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { Backdrop } from '@mui/material';
 
 import { designs } from './mockData';
+import profileIcon from "../../assets/show1.webp";
 
 const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, waiting }) => {
     const [follow, setFollow] = useState('Follow');
@@ -50,14 +51,14 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
                         <div className='sticky__header-container'>
                             <div className='sticky__header-user-container'>
                                 <div className='sticky__header-user-photo'>
-                                    <img className='sticky__header-user-avatar' src={design.user.profilePic} alt="" />
+                                    <img className='sticky__header-user-avatar' src={profileIcon} alt="" />
                                 </div>
                                 <div className='sticky__header-user-details'>
-                                    <Link to={`/dashboard/${userId}`}>{design.user.username}</Link>
+                                    <Link to={`/dashboard/${userId}`}>{design.artist_name}</Link>
                                     <div className='sticky__header-user-status'>
                                         <div className='sticky-header__available'>
                                             <span className='sticky-header__available-circle'></span>
-                                            {design.user.availability}
+                                            {design.artist_name}
                                         </div>
                                         <div className='follow_prompt'>
                                             <p onClick={handleFollow}>
@@ -88,11 +89,11 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
 
                     <div className='design__detail-shot'>
                         <div className='design__detail-shot-img'>
-                            {design.img && (
-                                design.img.endsWith('.mp4') ? (
-                                    <video muted loop autoPlay src={design.img} />
+                            {design.art_dir && (
+                                design.art_dir.endsWith('.mp4') ? (
+                                    <video muted loop autoPlay src={design.art_dir} />
                                 ) : (
-                                    <img src={design.img} alt={design.title} />
+                                    <img src={design.art_dir} alt={design.art_description} />
                                 )
                             )}
                         </div>
@@ -114,12 +115,12 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
                     <div className='design__detail-user-details'>
                         <div className='design__detail-user-avatar-container'>
                             <span className='design__detail-user-avatar-line'></span>
-                            <img src={design.user.profilePic} className='design__detail-user-avatar' alt="" />
+                            <img src={profileIcon} className='design__detail-user-avatar' alt="" />
                             <span className='design__detail-user-avatar-line'></span>
                         </div>
 
-                        <Link className='design__detail-user-name' to={`/dashboard/${userId}`}>{design.user.username}</Link>
-                        <p className='design__detail-user-bio'>{design.user.bio}</p>
+                        <Link className='design__detail-user-name' to={`/dashboard/${userId}`}>{design.artist_name}</Link>
+                        <p className='design__detail-user-bio'>{design.art_description}</p>
                         <div className='design__detail-user-hire_container'>
                             <button className='design__detail-user-hire'><i className="uil uil-envelope-alt"></i> Hire Me</button>
                         </div>
@@ -127,7 +128,7 @@ const DesignDetails = ({ handleOpen, handleClose, design, handleLike, likeIcon, 
 
                     <div className='design__detail-user-works'>
                         <div className='more__by-heading'>
-                            <h4>More by {design.user.username}</h4>
+                            <h4>More by {design.artist_name}</h4>
                             <Link to={`/dashboard/${userId}`}>View profile</Link>
                         </div>
                         <div className='more__by-thumbnail_container'>

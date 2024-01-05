@@ -15,6 +15,8 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { ArtWorkListProvider } from "./contexts/ArtWorks";
+import { ArtistsListProvider } from "./contexts/ArtistsContexts";
 
 function App() {
 	const queryClient = new QueryClient();
@@ -22,30 +24,34 @@ function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<ShoppingCartProvider>
-				<ThemeProvider>
-					<div>
-						<Router>
-							<Routes>
+				<ArtistsListProvider>
+					<ArtWorkListProvider>
+						<ThemeProvider>
+							<div>
+								<Router>
+									<Routes>
 
-								<Route path="/" element={<Home />} />
-								<Route element={<PrivateRoutes />}>
-									<Route path="/dashboard/:userId" element={<Dashboard />} />
-								</Route>
+										<Route path="/" element={<Home />} />
+										<Route element={<PrivateRoutes />}>
+											<Route path="/dashboard/:userId" element={<Dashboard />} />
+										</Route>
 
-								<Route path="/about" element={<About />} />
-								<Route path="/artists" element={<Artists />} />
-								<Route path="/gallery" element={<Gallery />} />
-								<Route path="/shop" element={<Shop />} />
-								<Route path="/cart" element={<Cart />} />
-								<Route path="/contact-us" element={<Contact />} />
+										<Route path="/about" element={<About />} />
+										<Route path="/artists" element={<Artists />} />
+										<Route path="/gallery" element={<Gallery />} />
+										<Route path="/shop" element={<Shop />} />
+										<Route path="/cart" element={<Cart />} />
+										<Route path="/contact-us" element={<Contact />} />
 
-								<Route path="/login" element={<Signin />} />
-								<Route path="/register" element={<Signup />} />
+										<Route path="/login" element={<Signin />} />
+										<Route path="/register" element={<Signup />} />
 
-							</Routes>
-						</Router>
-					</div>
-				</ThemeProvider>
+									</Routes>
+								</Router>
+							</div>
+						</ThemeProvider>
+					</ArtWorkListProvider>
+				</ArtistsListProvider>
 			</ShoppingCartProvider>
 		</QueryClientProvider>
 	);

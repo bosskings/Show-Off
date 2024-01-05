@@ -1,11 +1,10 @@
 import CircularProgress from '@mui/material/CircularProgress';
-
 import DesignItem from './DesignItem';
-import { useArtsContext } from '../../hooks/useArtsContext';
-import { useUsersContext } from '../../hooks/useUsersContext'
+import { useArtWorkList } from '../../contexts/ArtWorks';
 
 const DesignGallery = () => {
-    const { showCount, activeButton, isLoading, error, loadMore, handleClick, filteredDesigns, } = useArtWorkList()
+    
+    const { showCount, activeButton, isLoading, error, loadMore, handleClick, filteredDesigns } = useArtWorkList()
 
     if (isLoading) return (
         <div className='loading'>
@@ -16,10 +15,7 @@ const DesignGallery = () => {
     );
     if (error) return <p>Error: {error.message}</p>;
 
-    // return null
-    const filteredDesigns = selectedCategory
-        ? arts.filter((design) => design.art_category === selectedCategory)
-        : arts;
+    const buttons = ["All", "Animations", "Branding", "Illustrations", "Paint", "Web Design", "Print"]
 
     return (
         <div className="bg2 smaller__section">
@@ -32,35 +28,23 @@ const DesignGallery = () => {
                                 {/* <button>submit</button> */}
                             </div>
                             <div className='category__buttons'>
-                                <button onClick={() => setSelectedCategory(null)}>All</button>
-                                <button onClick={() => setSelectedCategory('Animation')}>
-                                    Animations
-                                </button>
-                                <button onClick={() => setSelectedCategory('Branding')}>
-                                    Branding
-                                </button>
-                                <button onClick={() => setSelectedCategory('Illustrations')}>
-                                    Illustrations
-                                </button>
-                                <button onClick={() => setSelectedCategory('Painting')}>
-                                    Paint
-                                </button>
-                                <button onClick={() => setSelectedCategory('Web Design')}>
-                                    Web Design
-                                </button>
-                                <button onClick={() => setSelectedCategory('Print')}>
-                                    Print
-                                </button>
+                                {buttons.map((button, index) => (
+                                    <button key={index} onClick={() => handleClick(index, button)}
+                                        className={index === activeButton ? "cat" : "category__button"}
+                                    >
+                                        {button}
+                                    </button>
+                                ))}
                             </div>
                             <div></div>
                         </div>
                         <div className="content">
                             {filteredDesigns.slice(0, showCount).map((design) => (
-                                    <DesignItem key={design.id} design={design} />
-                            ))}
+                                <DesignItem key={design._id} design={design} />
+                                ))}
                         </div>
                         <div className='load__more'>
-                            {showCount < filteredDesigns.length && (
+                            {showCount < Object.keys(filteredDesigns).length && (
                                 <button id='load__more' onClick={loadMore}>Load More</button>
                             )}
                         </div>

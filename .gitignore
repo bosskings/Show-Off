@@ -3,8 +3,8 @@
 # dependencies
 client/node_modules
 server/node_modules 
-client/package-lock.jsong
-server/package-lock.jsong
+client/package-lock.json
+server/package-lock.json
 client/src/pages/assets/video
 client/.pnp
 .pnp.js

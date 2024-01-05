@@ -2,6 +2,7 @@ import { Backdrop } from '@mui/material';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import DesignDetails from './DesignDetails';
+import profileIcon from "../../assets/show1.webp";
 
 const DesignItem = ({ design }) => {
     const [like, setLike] = useState(design?.likes || 0);
@@ -43,24 +44,24 @@ const DesignItem = ({ design }) => {
     return (
         <>
             <div className="design">
-                {design.img && (
-                    design.img.endsWith('.mp4') ? (
-                        <video id="shot__main__img" muted loop autoPlay src={design.img} onClick={handleOpen} />
+                {design.art_dir && (
+                    design.art_dir.endsWith('.mp4') ? (
+                        <video id="shot__main__img" muted loop autoPlay src={design.art_dir} onClick={handleOpen} />
                     ) : (
-                        <img id="shot__main__img" onClick={handleOpen} src={design.img} alt="" />
+                        <img id="shot__main__img" onClick={handleOpen} src={design.art_dir} alt="" />
                     )
                 )}
                 <div className="shot_sec">
                     <div>
-                        <img src={design?.user?.profilePic} alt="" />
-                        <Link to={`/dashboard/${userId}`}>{design?.user?.username}</Link>
+                        <img src={profileIcon} alt="" />
+                        <Link to={`/dashboard/${userId}`}>{design?.art_name}</Link>
                     </div>
                     <ul>
                         <li onClick={handleLike}>
-                            <i className="uil uil-heart"></i> {like}
+                            <i className="uil uil-heart"></i> {design?.art_rating}
                         </li>
                         <li>
-                            <i className="uil uil-eye"></i> {design?.views}K
+                            <i className="uil uil-eye"></i> {design?.art_likes}K
                         </li>
                     </ul>
                 </div>
